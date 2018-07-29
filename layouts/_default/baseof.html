@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh" class="han-la">
+<head>
+{{- partial "head.html" . -}}
+</head>
+<body>
+    <div class="head">
+        <div style="max-width: 1024px;margin: 0 auto;">
+            <div class="head-info">
+                <!--{{.Title}}-->
+                RedBlue|赤琦<br/>The Inspiration of RedBlue
+            </div>
+            <header>
+ {{- partial "header.html" . -}}
+            </header>
+            <div class="head-go">
+                去底部
+            </div>
+        </div>
+        <div class="head-shape">
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+  
+
+    <div class="container-fluid main-area clearfix">
+
+    {{- block "main" . }}{{- end }}
+    </div>
+
+
+    <div class="container-fluid floor ">
+        <div class="floor-shape"></div>
+        <footer>
+        {{- partial "footer.html" . -}}
+        </footer>
+    </div>
+</div>
+</body>
+</html>
