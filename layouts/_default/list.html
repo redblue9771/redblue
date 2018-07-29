@@ -1,0 +1,41 @@
+{{ define "main"}}
+            <main class="list">
+                <div class="list-left">
+                 {{ range $index,$value :=.Pages }}
+                 
+        {{if modBool $index 2}}
+                    <article class="list-item">
+                        <time class="list-item-time">{{ .Date.Format "2006-01-02" }}</time>
+                              <a href="{{.Permalink}}">
+                        <figure class="list-item-cover">
+                            <img src="{{ $value.Param "info.cover"}}" alt="" width="100%" height="auto" title="{{.Title}}">
+                            <figcaption class="list-item-title">{{.Title }}</figcaption>
+                            {{.Description}}
+                        </figure>
+                            </a>
+                    </article>
+
+        {{ end }}
+        
+    {{ end }}
+</div>
+<div class="list-right">
+                 {{ range $index,$value :=.Pages }}
+                 
+        {{if modBool $index 2}}
+        {{else}}
+                    <article class="list-item">
+                        <time class="list-item-time">{{ .Date.Format "2006-01-02" }}</time>
+                              <a href="{{.Permalink}}">
+                        <figure class="list-item-cover">
+                             <img src="{{ $value.Param "info.cover"}}" alt="" width="100%" height="auto" title="{{.Title}}">
+                            <figcaption class="list-item-title">{{.Title }}</figcaption>
+                                     {{.Description}}
+                        </figure>
+                            </a>
+                    </article>
+                    {{ end }}
+                    {{ end }}
+</div>
+           </main>
+{{ end }}
