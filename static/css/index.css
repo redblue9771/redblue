@@ -111,13 +111,11 @@ header {
     padding: 100px 40px 100px 40px;
 }
 
-header h1 {
+.display-1 {
     font-weight: 500 !important;
-    word-break: keep-all;
 }
 
 header time {
-    word-break: keep-all;
     margin-top: 50px;
     font-size: 2rem;
     margin-bottom: .5rem;
@@ -317,15 +315,15 @@ footer {
 
 @media (max-width: 575.98px) {
 
-    header h1 {
-        font-size: 4rem;
+   .display-1 {
+        font-size: 4rem!important;
     }
 }
 
 @media (max-width: 767.98px) {
 
-    header h1 {
-        font-size: 4rem;
+   .display-1{
+         font-size: 4rem!important;
     }
 }
 
