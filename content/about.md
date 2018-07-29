@@ -3,7 +3,7 @@ title: "About Me"
 description: "All About Me"
 date: "2015-08-18"
 type: "about"
-layout: "single"
+layout: "index"
 categories:
     - "bio"
     - "about"
