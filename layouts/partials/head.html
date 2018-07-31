@@ -2,13 +2,11 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   
-  {{if ne .Type "index"}}
+  {{if ne .Type "home"}}
 	<title>{{ .Title }} - {{.Site.Title}}</title>
 	{{else}}
 		<title>{{.Site.Title}}</title>
 	{{end}}
-	<link rel="stylesheet" href="/css/index.css" />
-
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,7 +35,7 @@
 	<meta property="og:title" content="Kaldi | Great coffee with a conscience">
 	<meta property="og:url" content="/">
 	<meta property="og:image" content="/img/og-image.jpg">
-
+	<link rel="stylesheet" href="/css/index.css" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 	     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>

@@ -1,7 +1,7 @@
 {{ define "main"}}
 <div class="container blog-list">
-   {{ range  (.Paginator 10).Pages }}
-  
+{{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }}
+{{ range $paginator.Pages }}
         <div class="row blog-list-item"> 
             <div class="col-md blog-list-item-left clearfix">
                   <a href="{{.Permalink}}">
@@ -16,8 +16,7 @@
                </a>
             </div> 
         </div>
-
 {{end}}
 {{ template "_internal/pagination.html" . }}
-    </div>
+</div>
 {{ end }}
