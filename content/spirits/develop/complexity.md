@@ -1,11 +1,9 @@
 ---
 title: "「复杂度」The Algorithm Complexity"
-description: "「复杂度」The Algorithm Complexity"
 date: "2018-05-23"
 "info":
     name: "赤琦"
-    description: "https://www.douban.com/note/557947118/"
-    cover: "/img/blog.jpg"
+    cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/04/2018052217401593.jpg"
 ---
 
 计算机科学中的复杂度
