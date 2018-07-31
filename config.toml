@@ -1,3 +1,6 @@
-baseURL = "https://redblue.ga/"
-languageCode = "zh-cn"
+baseURL = "http://example.org/"
+languageCode = "en-us"
 title = "RedBlue | 赤琦 - 新时代，新青年 The Inspiration of RedBlue"
+hasCJKLanguage = true
+sectionPagesMenu = "main"
+[taxonomies]

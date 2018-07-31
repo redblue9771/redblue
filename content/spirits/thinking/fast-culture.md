@@ -2,8 +2,6 @@
 title: "「快文化」崇拜的尽头是孤独海"
 description: "「快文化」崇拜的尽头是孤独海"
 date: "2018-05-11"
-categories:
-    - "post"
 "info":
     name: "Brian（微信公众号：Brian在深圳 | brianinshenzhen）"
     description: "https://www.douban.com/note/557947118/"
