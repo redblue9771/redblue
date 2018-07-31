@@ -1,4 +1,39 @@
 {{ define "main" }}
+<main class="single-post">
+  <address>
+      <figure class="cover img-shadow">
+          <img src="{{ .Page.Param "info.cover"}}" alt="" title="{{.Title}}" width="100%" height="auto">
+      </figure>
+      <table class="copyright ">
+           <tr>
+                <td>许可协议</td>
+                <td>采用
+                     <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                     知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+                     </a>
+                     进行许可
+                </td>
+             </tr>
+             <tr>
+                 <td>转载方式</td>
+                 <td>自由转载，注明出处</td>
+              </tr>
+              <tr>
+                  <td>原创作者</td>
+                   <td>{{ .Page.Param "info.name"}}</td>
+              </tr>
+              <tr>
+                        <td>原始链接</td>
+                        <td>{{.Permalink}}</td>
+                    </tr>
+         </table>
+</address>
 
-
+         <article>                 
+                {{ .Content }} 
+         </article>
+</main>     
+          <aside class="sticky-top">
+         {{ .TableOfContents }}
+          </aside>
 {{ end }}

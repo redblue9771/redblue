@@ -2,11 +2,13 @@
 {{ define "main"}}
 <main>
 <blockquote class="blockquote text-center">
+<img src="/img/404.gif" style="max-width:100%"/>
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+{{ with .Site.GetPage "page" "post" }}{{ .Content }}{{ end }}
 </blockquote>
     <div>
-        <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
+        <h1 id="title"><a href="{{ "/" | relURL }}">Go Home{{.Type}}</a></h1>
     </div>
 </main>
 {{ end }}

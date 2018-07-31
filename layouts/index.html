@@ -1,6 +1,7 @@
-{{define "main"}} 
+{{define "main"}}
 {{ .Content }} 
  <div class="container">
+ 
         <figure class="blog clearfix">
             <img src="https://i1.wp.com/themes.ishyoboy.com/qusq/wp/wp-content/uploads/2017/03/blog6.jpg?resize=768%2C576&ssl=1"
                  alt="" class="float-right blog-cover">
@@ -27,4 +28,17 @@
         <main class="blog-detial">
         </main>
     </div>
-    {{end}}
+{{- $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" .Type ) }}
+<div class="archive-container">
+    <div class="container content archive">
+      <h2>{{ i18n "latest_posts" }}{{ if $paginator.HasPrev }} <small>- {{ i18n "page" }} {{ $paginator.PageNumber }}</small>{{ end }}</h2>
+        <dl class="row">
+            {{ range $paginator.Pages -}}
+            <dt class="col-md-3">{{ .Date.Format (.Site.Params.dateFormatToUse | default "Mon 02 January 2006") }}</dt>
+            <dd class="col-md-9"><a href="{{ .URL }}">{{ .Title }}</a></dd>
+            {{ end }}
+        </dl>
+    </div>
+</div>
+
+{{end}}
