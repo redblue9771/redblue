@@ -2,8 +2,6 @@
 title: "「复杂度」The Algorithm Complexity"
 description: "「复杂度」The Algorithm Complexity"
 date: "2018-05-23"
-categories:
-    - "post"
 "info":
     name: "赤琦"
     description: "https://www.douban.com/note/557947118/"
