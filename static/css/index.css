@@ -21,7 +21,7 @@ img {
 
 .list-item:hover img {
     -webkit-transform: translateY(-1em);
-            transform: translateY(-1em);
+    transform: translateY(-1em);
     box-shadow: 0 1em 2em -1em rgba(0, 120, 215, .35);
 }
 
@@ -41,13 +41,15 @@ blockquote {
     font-weight: 400;
     border-left: 4px solid #ff5555;
 }
-a{
-    color: #2196f3!important;
+
+a {
+    color: #2196f3 !important;
 }
 
-a:hover{
-    color: blue!important;
+a:hover {
+    color: blue !important;
 }
+
 /*article img {*/
 /*display: block;*/
 /*margin: 0 auto;*/
@@ -58,7 +60,6 @@ a:hover{
     padding: 0;
     margin: 0;
 }
-
 
 .head {
     width: 100%;
@@ -108,27 +109,23 @@ a:hover{
     text-shadow: 0 0 2px #09a2ce;
 }
 
-header {
-    padding: 100px 40px 100px 40px;
+.header {
+    padding: 6rem 2rem 8rem 2rem;
 }
 
 .display-1 {
     font-weight: 500 !important;
-    word-break: keep-all;
 }
 
-header time {
-    word-break: keep-all;
-    margin-top: 50px;
+.header time {
     font-size: 2rem;
-    margin-bottom: .5rem;
     font-family: inherit;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.2em;
     color: inherit;
 }
 
-header time:before {
+.header time:before {
     content: '日期：';
     font-size: .6em;
 }
@@ -295,9 +292,8 @@ nav#TableOfContents ul {
     padding: 0 1.6rem;
 }
 
-.blog-cover {
-    width: 50%;
-    max-width: 100%;
+.blog-cover{
+    width: 100%;
 }
 
 .blog-title-left, .blog-title-right {
@@ -355,13 +351,13 @@ nav#TableOfContents ul {
     margin: auto 4em;
 }
 
-.blog-list-item-right p{
+.blog-list-item-right p {
     height: 3em;
     overflow: hidden;
-    color: #333!important;
+    color: #333 !important;
 }
 
-.blog-list-item-right h5{
+.blog-list-item-right h5 {
     font-weight: bold;
 }
 
@@ -369,10 +365,15 @@ nav#TableOfContents ul {
     float: right;
 }
 
-.pagination{
+.pagination {
     justify-content: center;
     margin: 1em 0;
 }
+
+.list-group-item{
+    background-color: transparent!important;
+}
+
 @media (max-width: 575.98px) {
 
     .display-1 {
@@ -381,6 +382,10 @@ nav#TableOfContents ul {
 }
 
 @media (max-width: 767.98px) {
+    .header {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
     .blog-list-item {
         margin-top: 2em;
     }
