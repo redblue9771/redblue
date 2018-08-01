@@ -3,4 +3,8 @@ languageCode = "zh-cn"
 title = "RedBlue | 赤琦 - 新时代，新青年 The Inspiration of RedBlue"
 hasCJKLanguage = true
 sectionPagesMenu = "main"
+theme = "redblue"
+math = true
+showTagCloud = false
 [taxonomies]
+tag = "tags"
