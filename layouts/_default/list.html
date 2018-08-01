@@ -1,5 +1,16 @@
 {{ define "main" }}
 <div class="container blog-list">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-end">
+{{- range $key,$name:=.CurrentSection.Parent.Sections}}
+    {{if ne $.CurrentSection $name}}
+     <li class="breadcrumb-item"><a href="{{ $name.Permalink }}">{{$name.Title}}</a></li>
+     {{else}}
+      <li class="breadcrumb-item active"  aria-current="page">{{  $name.Title}}</li>
+      {{end}}
+       {{end -}}
+    </ol>
+</nav>
    {{ range  (.Paginator 10).Pages }}
        <div class="row blog-list-item"> 
             <div class="col-md blog-list-item-left clearfix">

@@ -1,7 +1,15 @@
 {{ define "main"}}
 <div class="container blog-list">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-end">
+     <li class="breadcrumb-item active" aria-current="page">{{.Title}}</li>
+  {{range .Sections}}
+      <li class="breadcrumb-item"><a href="{{.Permalink }}">{{.Title}}</a></li>
+      {{end}}
+    </ol>
+</nav>
 {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }}
-{{ range $paginator.Pages }}
+{{- range $paginator.Pages}}
         <div class="row blog-list-item"> 
             <div class="col-md blog-list-item-left clearfix">
                   <a href="{{.Permalink}}">
