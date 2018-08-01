@@ -6,7 +6,7 @@ ver 1.0.0
 html, body {
     height: 100%;
     overflow-x: hidden;
-    background-color: #f2f2f2 !important;;
+    background-color: #fff !important;;
     font-size: 16px;
 }
 
@@ -14,9 +14,8 @@ hr {
     width: 100%;
 }
 
-img {
-    transition: all 0.5s;
-
+p{
+    line-height:1.8em;
 }
 
 .list-item:hover img {
@@ -33,6 +32,7 @@ img {
 pre {
     background-color: #24292e;
     color: #ffffff;
+    padding:.6em 1em;
 }
 
 blockquote {
@@ -42,12 +42,17 @@ blockquote {
     border-left: 4px solid #ff5555;
 }
 
-a {
-    color: #2196f3 !important;
+.main-nav{
+    background: linear-gradient(to bottom, #2196f3 0%, transparent);
 }
 
-a:hover {
-    color: blue !important;
+.main-nav a{
+   transition: all 0.3s;
+      color:#fff!important;
+}
+
+.main-nav a:hover{
+      color:#f44336!important;
 }
 
 /*article img {*/
@@ -76,7 +81,7 @@ a:hover {
     transform-origin: left bottom;
     -webkit-transform: rotate(-4deg);
     transform: rotate(-4deg);
-    background-color: #f2f2f2;
+    background-color: #fff;
     overflow: hidden;
     position: absolute;
     bottom: -100%;
@@ -115,6 +120,7 @@ a:hover {
 
 .display-1 {
     font-weight: 500 !important;
+    margin-bottom:1.6rem;
 }
 
 .header time {
@@ -125,9 +131,8 @@ a:hover {
     color: inherit;
 }
 
-.header time:before {
-    content: '日期：';
-    font-size: .6em;
+.header span{
+    font-size: 1.2rem;
 }
 
 .head-go {
@@ -210,12 +215,6 @@ a:hover {
     box-sizing: border-box;
 }
 
-.single-post img {
-    display: block;
-    margin: 2em auto;
-    max-width: 100%;
-    height: auto;
-}
 
 .list-item img {
     margin: 1em 0 !important;
@@ -238,27 +237,28 @@ a:hover {
     display: inline-block;
     width: 80%;
     padding: 1em;
-    word-break: break-all;
 }
 
 aside {
     display: inline-block;
     width: 20%;
     padding: 0 1em;
-    word-break: break-all;
     top: 10% !important;
     float: right;
 }
 
 nav#TableOfContents, nav#TableOfContents ul, nav#TableOfContents li, nav#TableOfContents a {
     color: #333333 !important;
-}
-
-nav#TableOfContents ul {
-    list-style: none;
     margin: 0;
     padding: 0;
-    border-left: 2px solid #00F7DE;
+ 
+}
+nav#TableOfContents ul{
+   list-style-type:none;
+}
+nav#TableOfContents ul li ul li{
+    padding-left:.6em;
+    border-left:2px solid #777;
 }
 
 .floor-shape {
@@ -268,7 +268,7 @@ nav#TableOfContents ul {
     transform-origin: right bottom;
     -webkit-transform: rotate(-4deg);
     transform: rotate(-4deg);
-    background-color: #f2f2f2;
+    background-color: #fff;
     position: absolute;
     top: -100%;
     left: -20%;
@@ -280,7 +280,7 @@ nav#TableOfContents ul {
     overflow: hidden;
     position: relative;
     color: #ffffff;
-    padding: 50px;
+    padding: 4em 1em;
 }
 
 .floor-info {
@@ -352,7 +352,7 @@ nav#TableOfContents ul {
 }
 
 .blog-list-item-right p {
-    height: 3em;
+    height: 3.6em;
     overflow: hidden;
     color: #333 !important;
 }
@@ -374,6 +374,10 @@ nav#TableOfContents ul {
     background-color: transparent!important;
 }
 
+.breadcrumb{
+background:none;
+}
+
 @media (max-width: 575.98px) {
 
     .display-1 {
@@ -385,7 +389,9 @@ nav#TableOfContents ul {
     .header {
         padding: 4rem 2rem 4rem 2rem;
     }
-
+    .single-post {
+       margin-top:2em;
+    }
     .blog-list-item {
         margin-top: 2em;
     }
@@ -429,6 +435,9 @@ nav#TableOfContents ul {
     }
 
     aside {
-        display: none !important;
+        width:100%;
+        float:none;
     }
 }
+
+

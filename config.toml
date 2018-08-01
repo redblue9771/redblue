@@ -9,3 +9,9 @@ tags = ["responsive", "white", "blog"]
 features = ["responsive", "blog"]
 [taxonomies]
 tag = "tags"
+
+[menu]
+    [[meanu.main]]
+    identifier = "spirits"
+    name = "博客"
+    url = "/spirits/"
