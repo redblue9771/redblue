@@ -1,8 +1,6 @@
 +++
-title = "原来我非不快乐"
-description = "JUST FOR MAN FASHION NEWISM"
-type = "home"
-layout = "index"
+title = "JUST FOR MAN FASHION NEWISM"
+description = "新男色主义"
 +++
 
 旧站点 https://redblue.cf

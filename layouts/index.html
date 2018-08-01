@@ -1,44 +1,23 @@
 {{define "main"}}
-{{ .Content }} 
  <div class="container">
- 
-        <figure class="blog clearfix">
+    <div class="row">
+        <div class="col-md">
+        {{- .Content -}}
+            <ul class="list-group list-group-flush">
+                    {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
+                <li class="list-group-item"><a href="{{.Permalink}}">  {{ .Date.Format "2006-01-02" }}：{{.Title}} </a></li>
+                    {{- end -}}
+            </ul>
+        </div>
+        <div class="col-md">
+             <figure class="blog clearfix">
             <img src="https://i1.wp.com/themes.ishyoboy.com/qusq/wp/wp-content/uploads/2017/03/blog6.jpg?resize=768%2C576&ssl=1"
                  alt="" class="float-right blog-cover">
             <figcaption class="blog-title-right">最新博文</figcaption>
         </figure>
         <main class="blog-detial">
         </main>
+        </div>
     </div>
-    <div class="container">
-        <figure class="blog clearfix">
-            <img src="https://i1.wp.com/themes.ishyoboy.com/qusq/wp/wp-content/uploads/2017/03/blog6.jpg?resize=768%2C576&ssl=1"
-                 alt="" class="blog-cover">
-            <figcaption class="blog-title-left">最新博文</figcaption>
-        </figure>
-        <main class="blog-detial">
-        </main>
-    </div>
-    <div class="container">
-        <figure class="blog clearfix">
-            <img src="https://i1.wp.com/themes.ishyoboy.com/qusq/wp/wp-content/uploads/2017/03/blog6.jpg?resize=768%2C576&ssl=1"
-                 alt="" class="float-right blog-cover">
-            <figcaption class="blog-title-right">最新博文</figcaption>
-        </figure>
-        <main class="blog-detial">
-        </main>
-    </div>
-{{- $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" .Type ) }}
-<div class="archive-container">
-    <div class="container content archive">
-      <h2>{{ i18n "latest_posts" }}{{ if $paginator.HasPrev }} <small>- {{ i18n "page" }} {{ $paginator.PageNumber }}</small>{{ end }}</h2>
-        <dl class="row">
-            {{ range $paginator.Pages -}}
-            <dt class="col-md-3">{{ .Date.Format (.Site.Params.dateFormatToUse | default "Mon 02 January 2006") }}</dt>
-            <dd class="col-md-9"><a href="{{ .URL }}">{{ .Title }}</a></dd>
-            {{ end }}
-        </dl>
-    </div>
-</div>
-
+ </div>
 {{end}}

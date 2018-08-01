@@ -1,6 +1,6 @@
 ---
 title: "「小程序」简述 MVVM 模式"
-date: "2018-05-3"
+date: "2018-05-03"
 "info":
     name: "赤琦"
     cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/05/mvvm.jpg"
