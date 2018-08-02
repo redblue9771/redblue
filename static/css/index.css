@@ -43,7 +43,7 @@ blockquote {
 }
 
 .main-nav{
-    background: linear-gradient(to bottom, #2196f3 0%, transparent);
+    background: linear-gradient(to bottom, #448AFF 0%, transparent);
 }
 
 .main-nav a{
@@ -69,7 +69,7 @@ blockquote {
 .head {
     width: 100%;
     height: auto;
-    background: linear-gradient(to bottom, #2196f3 0%, #186cfc);
+    background: linear-gradient(to bottom, #2196f3 50%, #448AFF);
     color: #fff;
     position: relative;
 }
@@ -91,9 +91,10 @@ blockquote {
 .shadow {
     width: 100%;
     height: 50vh;
-    box-shadow: 0 12px 45px -8px #186cfc;
+    box-shadow: 0 12px 45px -8px #448AFF;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
+    background:#448AFF;
 }
 
 .head-info {
@@ -111,7 +112,7 @@ blockquote {
     overflow: hidden;
     text-decoration: none;
     white-space: nowrap;
-    text-shadow: 0 0 2px #09a2ce;
+    text-shadow: 0 0 2px #448AFF;
 }
 
 .header {
@@ -276,7 +277,7 @@ nav#TableOfContents ul li ul li{
 
 .floor {
     text-align: center;
-    background: linear-gradient(to top, #f44336 0%, #eb193f);
+    background: linear-gradient(to top, #FF5252 50%, #F44336);
     overflow: hidden;
     position: relative;
     color: #ffffff;
