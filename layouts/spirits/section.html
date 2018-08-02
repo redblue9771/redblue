@@ -1,5 +1,5 @@
 {{ define "main"}}
-<div class="container position-relative">
+<div class="container position-relative blog-list">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
             <li class="breadcrumb-item active" aria-current="page">{{.Title}}</li>
@@ -11,20 +11,19 @@
         </ol>
     </nav>
     {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }} {{- range $paginator.Pages}}
-    <div class="row">
-        <div class="col-md-6 clearfix">
+    <ol>
+        <dt>
             <a href="{{.Permalink}}">
-                <time>{{ .Date.Format "2006-01-02" }}</time>
-                <img src="{{ .Param " info.cover "}}" title="{{ .Title}}" class="img-filter">
-            </a>
-        </div>
-        <div class="col-md-6 float-md-right">
+                <h5 class="text-nowarp">{{.Title }}</a>
+            <hr>
+            </h5>
+        </dt>
+        <dd>
             <a href="{{.Permalink}}">
-                <h5 class="text-nowarp">{{.Title }}</h5>
                 <p> {{.Summary}}</p>
             </a>
-        </div>
-    </div>
+        </dd>
+    </ol>
     {{end}} {{ template "_internal/pagination.html" . }}
 </div>
 {{ end }}

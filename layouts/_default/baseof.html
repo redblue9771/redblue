@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>{{ partial "header.html" . }}</head>
+
 <body class="han-la">
-  {{- partial "nav.html" . -}}
+    {{- partial "nav.html" . -}}
     <div class="head">
         <div style="max-width: 1024px;margin: 0 auto;">
             <div class="head-info">
                 <!--{{.Title}}-->
-                RedBlue|赤琦<br/>The Inspiration of RedBlue
+                RedBlue丨赤琦
+                <br/>The Inspiration of RedBlue
             </div>
             <header class="header">
-  {{- partial "head.html" . -}}
-             </header>
+                {{- partial "head.html" . -}}
+            </header>
             <div class="head-go">
                 去底部
             </div>
@@ -20,17 +23,18 @@
             <div class="shadow"></div>
         </div>
     </div>
-     <div class="container-fluid main-area clearfix">
-  {{ block "main" . }}{{ end }}
-     </div>
-     
+    <div class="container-fluid main-area clearfix">
+        {{ block "main" . }}{{ end }}
+    </div>
+
     <div class="container-fluid floor ">
         <div class="floor-shape"></div>
         <footer class="floor-info">
-  {{ partial "footer.html" . }}  
-          </footer>
+            {{ partial "footer.html" . }}
+        </footer>
     </div>
-</div>
-{{ partial "scripts.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
 </body>
+
 </html>
