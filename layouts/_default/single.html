@@ -1,53 +1,51 @@
 {{ define "main" }}
 <main class="single-post">
   <address>
-      <table class="copyright ">
-           <tr>
-                <td>协议</td>
-                <td>采用
-                     <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-                     知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
-                     </a>
-                     进行许可(即 转载注明出处)
-                </td>
-             </tr>
-              <tr>
-                  <td>作者</td>
-                   <td>{{ .Page.Param "info.name"}}</td>
-              </tr>
-              <tr>
-                        <td>原文</td>
-                        {{if le (.Page.Param "info.url") ""}}
-                        <td>{{$.Permalink}}</td>
-                        {{else}}
-                        <td>{{.Page.Param "info.url"}}</td>
-                         {{end}}
-                    </tr>
-         </table>
-</address>
-         <article class="post-content">              
-                {{ .Content }} 
-                （完）
-                 <hr>
-         </article>
+    <table class="copyright ">
+      <tr>
+        <td>协议</td>
+        <td>采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+            知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+          </a>
+          进行许可(即 转载注明出处)
+        </td>
+      </tr>
+      <tr>
+        <td>作者</td>
+        <td>{{ .Page.Param "info.name"}}</td>
+      </tr>
+      <tr>
+        <td>原文</td>
+        {{if le (.Page.Param "info.url") ""}}
+        <td>{{$.Permalink}}</td>
+        {{else}}
+        <td>{{.Page.Param "info.url"}}</td>
+        {{end}}
+      </tr>
+    </table>
+  </address>
+  <article class="post-content">
+    {{ .Content }} （完）
+    <hr>
+  </article>
 </main>
 <aside class="sticky-top">
-<p class="lead">目录：</p>
-{{.TableOfContents}}
-<hr>
-<dl>
-{{- range $key,$name:=.CurrentSection.Parent.Sections}}
-  {{if ne $.CurrentSection $name}}
-      <dd>其他：<a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dd>
-     {{else}}
-      <dt>当前：<a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dt>
-      {{end}}
-{{end -}}
-</ol>
-<hr>
-  {{ partial "related.html" . }}  
-<hr>
-{{ with .PrevInSection }}{{ if . }}<a href="{{ .Permalink }}">上一篇：{{.Title}}</a>{{ end }}{{ end }}
-{{ with .NextInSection }}{{ if . }}<a href="{{ .Permalink }}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+  <p class="lead">目录：</p>
+  {{.TableOfContents}}
+  <hr>
+  <dl>
+    {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
+    <dd>其他：
+      <a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dd>
+    {{else}}
+    <dt>当前：
+      <a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dt>
+    {{end}} {{end -}}
+    </ol>
+    <hr> {{ partial "related.html" . }}
+    <hr> {{ with .PrevInSection }}{{ if . }}
+    <a href="{{ .Permalink }}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
+    <a href="{{ .Permalink }}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
 </aside>
 {{ end }}
