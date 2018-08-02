@@ -2,7 +2,6 @@
 css for redblue
 ver 1.0.0
  */
-
 html, body {
     height: 100%;
     overflow-x: hidden;
@@ -16,6 +15,14 @@ hr {
 
 p{
     line-height:1.8em;
+}
+
+article h1::before, article h2::before,article h3::before,article h4::before,article h5::before,article h6::before {
+    display: block;
+    content: " ";
+    height: 2em;
+    margin-top: -2em;
+    visibility: hidden;
 }
 
 .list-item:hover img {
