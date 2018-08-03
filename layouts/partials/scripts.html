@@ -1,15 +1,4 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -17,6 +6,18 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
  <script>
     pangu.spacingPage();
+    if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+    $('.carousel').carousel({
+  interval: 2000
+})
+  }
 </script>
 {{ if .Site.Params.showtoc | default true }}
 {{ $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
@@ -31,7 +32,7 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
-  {{ if .Site.Params.showTagCloud | default true }}
+  {{ if .Site.Params.showTagCloud | default false }}
   if (document.getElementById("tag-cloud") !== null) { 
     if (prevScrollpos > currentScrollPos) { // scroll up
       document.getElementById("tag-cloud").style.visibility = "visible";
@@ -43,7 +44,7 @@ window.onscroll = function() {
   }
   {{ end }}
 
-  {{ if .Site.Params.showScrollToTop | default true }}
+  {{ if .Site.Params.showScrollToTop | default false }}
   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
       document.getElementById("scroll-to-top").style.display = "inline";
       document.getElementById("scroll-to-top").style.visibility = "visible";
@@ -55,36 +56,12 @@ window.onscroll = function() {
   {{ end }}
   prevScrollpos = currentScrollPos;
 }
-{{ if .Site.Params.showScrollToTop | default true }}
+{{ if .Site.Params.showScrollToTop | default false }}
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-{{ end }}
-
-{{ if .Site.Params.showtoc | default true }}
-{{ $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
-{{ $has_headers := ge (len $headers) 1 }}
-{{ if and $has_headers (ne .Params.toc false) }}
-if (document.getElementById("contents-list") !== null && document.getElementsByClassName("post-content").length !== 0) { 
-  tocbot.init({
-    // Where to render the table of contents.
-    tocSelector: '#contents-list',
-    // Where to grab the headings to build the table of contents.
-    contentSelector: '.post-content',
-    // Which headings to grab inside of the contentSelector element.
-    headingSelector: 'h1, h2, h3',
-    //  includeHtml可以设置为true以包含来自的HTML标记
-//  标题节点而不是仅包含textContent。
-includeHtml:false ,
-//  onclick函数应用于toc中的所有链接。将被召唤
-//  将事件作为第一个参数，这可用于停止，
-//  传播，防止默认或执行操作
-onClick:true 
-  });
-}
-{{ end }}
 {{ end }}
 </script>
 {{ end }}
