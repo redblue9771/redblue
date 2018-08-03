@@ -11,7 +11,7 @@
         </ol>
     </nav>
     {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }} {{- range $paginator.Pages}}
-    <div class="row border-bottom">
+    <div class="row border-bottom pd-1">
         <div class="col-md-6">
             <a href="{{.Permalink}}">
                 <h5 class="text-nowarp">{{.Title }} </h5>
