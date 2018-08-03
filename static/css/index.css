@@ -1,7 +1,9 @@
+
 /**
 css for redblue
 ver 1.0.0
  */
+ 
 html, body {
     height: 100%;
     overflow-x: hidden;
@@ -69,7 +71,7 @@ blockquote {
       color:#f44336!important;
 }
 
-.container-fluid {
+.container-fluid,.container {
     padding: 0;
     margin: 0;
 }
@@ -157,6 +159,7 @@ blockquote {
 .main-area {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 1em;
     position: relative;
 }
 
@@ -192,7 +195,7 @@ blockquote {
 .single-post {
     display: inline-block;
     width: 80%;
-    padding: 1em;
+
 }
 
 aside {
@@ -249,10 +252,14 @@ nav#TableOfContents ul li ul li{
 }
 
 .blog-list p {
-    height: 3.6em;
-    overflow: hidden;
-    color: #333 !important;
+    color: #333;
 }
+
+
+.blog-list a {
+    text-decoration: none;
+}
+
 
 .blog-list h5 {
     font-weight: bold;
@@ -268,7 +275,15 @@ nav#TableOfContents ul li ul li{
 }
 
 .breadcrumb{
-background:none;
+    background:none;
+}
+
+.blog-list .row{
+    margin-top: 2em;
+}
+
+.blog-list div.border-bottom:last-child{
+    border-bottom: none!important;
 }
 
 @media (max-width: 1199.98px) {

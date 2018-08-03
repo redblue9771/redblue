@@ -3,7 +3,7 @@
 
 <head>{{ partial "header.html" . }}</head>
 
-<body class="han-la">
+<body>
     {{- partial "nav.html" . -}}
     <div class="head">
         <div style="max-width: 1024px;margin: 0 auto;">
@@ -26,7 +26,6 @@
     <div class="container-fluid main-area clearfix">
         {{ block "main" . }}{{ end }}
     </div>
-
     <div class="container-fluid floor ">
         <div class="floor-shape"></div>
         <footer class="floor-info">
