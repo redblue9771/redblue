@@ -2,28 +2,34 @@
 <div class="container position-relative blog-list">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
-            <li class="breadcrumb-item active" aria-current="page">{{.Title}}</li>
+            <li>分类：</li>
             {{range .Sections}}
             <li class="breadcrumb-item">
-                <a href="{{.Permalink }}">{{.Title}}</a>
+                <a href="{{.Permalink }}">{{.Title}}({{len .Pages}})</a>
             </li>
             {{end}}
         </ol>
     </nav>
     {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }} {{- range $paginator.Pages}}
-    <ol>
-        <dt>
+    <div class="row border-bottom">
+        <div class="col-md-6">
             <a href="{{.Permalink}}">
-                <h5 class="text-nowarp">{{.Title }}</a>
-            <hr>
-            </h5>
-        </dt>
-        <dd>
-            <a href="{{.Permalink}}">
-                <p> {{.Summary}}</p>
+                <h5 class="text-nowarp">{{.Title }} </h5>
+                <time>{{- .Date.Format "02 Jan 2006" -}}</time>
+                <span>By：{{- .Param "info.name" -}}</span>
             </a>
-        </dd>
-    </ol>
+        </div>
+        <div class="col-md-6">
+            <a href="{{.Permalink}}">
+                {{- if le .Description "" }}
+                <p>{{.Summary}}</p>
+                {{else}}
+                <p>{{.Description}}</p>
+                {{end -}}
+            </a>
+        </div>
+    </div>
+    <hr/>
     {{end}} {{ template "_internal/pagination.html" . }}
 </div>
 {{ end }}
