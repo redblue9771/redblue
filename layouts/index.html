@@ -11,9 +11,9 @@
 <div class="limit-area text-center index-module-0">
     <h2>推荐</h2>
     {{- partial "discover.html" . -}}
-    <img src="/img/gopher_head.png" alt="" style="display:block;max-width:100%;margin: 0 auto">
+    <img src="/img/gopher_head.png" alt="" class="div-shadow" style="display:block;max-width:100%;margin: 0 auto">
 </div>
-<div class="index-module-1 text-center">
+<div class="index-module-1 text-center div-shadow">
     <h2>I'm RedBlue</h2>
     <h3>你好，我是赤琦</h3>
     <div class="row limit-area">
@@ -47,7 +47,7 @@
         <div class="col-md-4 pd-1 text-center bg-color-red">
             <dl>
                 <h4>
-                    <dt>其他</dt>
+                    <dt>分享</dt>
                 </h4>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
