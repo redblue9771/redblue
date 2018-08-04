@@ -1,6 +1,7 @@
 ---
 title: "「小程序」简述 MVVM 模式"
 date: "2018-05-03"
+description: "最近在学习开发微信小程序，其中用到了 MVVM 模式，与常见的 MVC 模式有所区别，简述其来备忘。"
 "info":
     name: "赤琦"
     cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/05/mvvm.jpg"

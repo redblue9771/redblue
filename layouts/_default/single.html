@@ -26,26 +26,56 @@
     </table>
   </address>
   <article class="post-content">
-    {{ .Content }} （完）
+    {{if ne .Page.Description ""}}
+    <blockquote>{{.Description}}</blockquote>
+    {{end}} {{ .Content }} （完）
     <hr>
   </article>
 </main>
 <aside class="sticky-top">
-  <p class="lead"><i class="fa fa-mortar-board"></i>目录：</p>
+  <p class="lead">
+    <i class="fa fa-mortar-board"></i>目录：</p>
   {{.TableOfContents}}
   <hr>
   <dl>
     {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
-    <dd>其他：
-      <a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dd>
+    <dd>
+      <details>
+        <summary>{{$name.Title}}({{len $name.Pages}})&nbsp;
+          <a href="{{ .Permalink }}" class="float-right">更多</a>
+        </summary>
+        <ol>
+          {{range first 5 $name.Pages}}
+          <li>
+            <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
+          </li>
+          {{end}}
+          <li>
+            <a href="{{$name.Permalink}}" title="{{$name.Title}}">...更多关于此分类</a>
+          </li>
+        </ol>
+      </details>
+    </dd>
     {{else}}
-    <dt>当前：
-      <a href="{{$name.Permalink }}">{{$name.Title}}</a>({{len $name.Pages}})</dt>
-    {{end}} {{end -}}
-    </ol>
-    <hr> {{ partial "related.html" . }}
-    <hr> {{ with .PrevInSection }}{{ if . }}
-    <a href="{{ .Permalink }}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
-    <a href="{{ .Permalink }}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+    <dt style="margin: .4em 0">
+      <details>
+        <summary>{{$name.Title}}({{len $name.Pages}})
+        </summary>
+        <ol>
+          {{range first 5 $name.Pages}}
+          <li>
+            <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
+          </li>
+          {{end}}
+          <li>
+            <a href="{{$name.Permalink}}" title="{{$name.Title}}">...更多关于此分类</a>
+          </li>
+        </ol>
+      </details>
+      {{end}} {{end -}}
+      </ol>
+      <hr> {{ with .PrevInSection }}{{ if . }}
+      <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
+      <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
 </aside>
 {{ end }}
