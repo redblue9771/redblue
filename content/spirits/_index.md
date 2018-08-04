@@ -1,4 +1,4 @@
 +++
 title = "博客"
-description = "The Inspritation of RedBlue"
+description = "饮水思源"
 +++

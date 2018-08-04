@@ -11,7 +11,7 @@
 <div class="limit-area text-center index-module-0">
     <h2>推荐</h2>
     {{- partial "discover.html" . -}}
-    <img src="/img/gopher_head.png" alt="" class="div-shadow" style="display:block;max-width:100%;margin: 0 auto">
+    <img src="/img/gopher_head.png" alt="" class="trans-img div-shadow">
 </div>
 <div class="index-module-1 text-center div-shadow">
     <h2>I'm RedBlue</h2>
@@ -24,7 +24,7 @@
                 </h4>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
-                    <a href="{{.Permalink}}" class="text-nowrap d-block"> {{- .Title -}} </a>
+                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
 
                     <time>{{- .Date.Format "02 Jan 2006" -}}</time>
                 </dd>
@@ -38,7 +38,7 @@
                 </h4>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
-                    <a href="{{.Permalink}}" class="text-nowrap d-block"> {{- .Title -}} </a>
+                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
                     <time>{{- .Date.Format "02 Jan 2006" -}}</time>
                 </dd>
                 {{- end -}}
@@ -52,7 +52,7 @@
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
 
-                    <a href="{{.Permalink}}" class="text-nowrap d-block"> {{- .Title -}} </a>
+                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
 
                     <time>{{- .Date.Format "02 Jan 2006" -}}</time>
                 </dd>
