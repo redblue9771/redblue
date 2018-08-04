@@ -292,7 +292,7 @@ nav#TableOfContents ul li ul li{
 .index-module-1{
     color: #fff;
     background:url("/img/bg-1.jpeg") center no-repeat fixed;
-    background-size: cover;
+    background-size: 100%;
     margin-bottom: 4rem;
     padding-top: 2rem;
 }
@@ -416,9 +416,5 @@ nav#TableOfContents ul li ul li{
 
     .display-1 {
         font-size: 3.2rem;
-    }
-
-    .index-module-1{
-        background-size: contain;
     }
 }
