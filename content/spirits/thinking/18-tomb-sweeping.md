@@ -1,10 +1,9 @@
 ---
 title: "再清明，似「野僧」"
 date: "2018-04-05"
+description: ""
 "info":
     name: "赤琦"
-    description: ""
-    cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/05/P80404-211831-1.jpg"
 ---
 
  > ——北宋王禹偁《清明》
