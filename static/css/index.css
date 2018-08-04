@@ -125,8 +125,8 @@ blockquote {
     text-shadow: 0 0 2px #448AFF;
 }
 
-.fa{
-    font-weight: normal;
+img{
+    max-width: 100%;
 }
 
 .header {
