@@ -41,9 +41,7 @@
     {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
     <dd>
       <details>
-        <summary>{{$name.Title}}({{len $name.Pages}})&nbsp;
-          <a href="{{ .Permalink }}" class="float-right">更多</a>
-        </summary>
+        <summary>{{$name.Title}}({{len $name.Pages}})</summary>
         <ol>
           {{range first 5 $name.Pages}}
           <li>
@@ -59,8 +57,7 @@
     {{else}}
     <dt style="margin: .4em 0">
       <details>
-        <summary>{{$name.Title}}({{len $name.Pages}})
-        </summary>
+        <summary>{{$name.Title}}({{len $name.Pages}})</summary>
         <ol>
           {{range first 5 $name.Pages}}
           <li>
