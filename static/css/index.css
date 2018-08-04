@@ -354,6 +354,13 @@ nav#TableOfContents ul li ul li{
     max-width: 1024px;
     margin: 0 auto;
 }
+
+.trans-img{
+    display:block;
+    max-width:100%;
+    margin: 0 auto
+}
+
 @media (max-width: 1199.98px) {
     .single-post {
         width: 100% !important;
@@ -385,18 +392,33 @@ nav#TableOfContents ul li ul li{
         filter: drop-shadow(  0 0 6px #2196f3) blur(2px) ;
     }
     .carousel font{
-        color:#333;
-        text-shadow: 0 0 1px #00F7DE;
+        color:#f44336;
+        text-shadow: 1px 1px 2px #fff;
     }
+    
+
 }
 
 
 
 @media (max-width: 575.98px) {
-    .header h2,.header span{
+    .trans-img{
+        width: 70%;
+    }
+
+    .header span{
+        font-size: 1rem;
+    }
+
+    .header h2,.header time{
         font-size: 1.8rem;
     }
+
     .display-1 {
         font-size: 3.2rem;
+    }
+
+    .index-module-1{
+        background-size: contain;
     }
 }
