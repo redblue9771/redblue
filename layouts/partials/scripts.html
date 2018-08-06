@@ -1,1 +1,32 @@
-<script src="/js/scripts.js"></script>
+<script src="/js/scripts.js"></script> {{if le .Type "repositories"}}
+<script>
+    var $html = "";
+    $.getJSON("https://api.github.com/users/redblue9771/repos", function (data) {
+        $.each(data, function () {
+            if (this.fork === false) {
+                console.log(this)
+                $html += '<div class="timeline-item">'
+                    + '<div class="timeline-point timeline-point-info">'
+                    + '<i class="fa fa-star"></i>'
+                    + '</div>'
+                    + '<div class="timeline-event border-info"><a href='+this.svn_url+'>'
+                    + '<div class="timeline-heading">'
+                    + '<h4>' + this.full_name + '</h4>'
+                    + '</div>'
+                    + '<div class="timeline-body">'
+                    + '<p>' + this.description + '</p>'
+                    + '<i class="fa fa-star">' + this.stargazers_count + '</i>'
+                    // + '<i class="fa fa-balance-scale"></i>'
+                    + '</div>'
+                    + '<div class="timeline-footer">'
+                    + '<p class="text-right">最近一次更新' + this.pushed_at + '</p>'
+                    + '</div>'
+                    + '</a></div>'
+                    + '</div>';
+
+            }
+        });
+        $html += '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
+        $("#github-list").append($html);
+    });
+</script> {{end}}
