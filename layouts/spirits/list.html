@@ -12,21 +12,36 @@
             {{end}} {{end -}}
         </ol>
     </nav>
-    {{ range (.Paginator 10).Pages }}
-    <div class="row border-bottom pd-1">
-        <div class="col-md-6">
-            <a href="{{.Permalink}}">
-                <h5 class="text-truncate">{{.Title }} </h5>
-                <time>{{- .Date.Format "02 Jan 2006" -}}</time>
-                <span>By&nbsp;{{- .Param "info.name" -}}</span>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a href="{{.Permalink}}">
-                <p> {{.Summary}}</p>
-            </a>
+    <div class="row">
+        <div class="timeline timeline-line-dotted">
+            {{ range (.Paginator 10).Pages }}
+            <span class="timeline-label">
+                <span class="label label-info">{{- .Date.Format "02 Jan 2006" -}}</span>
+            </span>
+            <div class="timeline-item">
+                <div class="timeline-point timeline-point-info">
+                    <i class="fa fa-circle"></i>
+                </div>
+                <div class="timeline-event timeline-event-info">
+                    <a href="{{.Permalink}}">
+                        <div class="timeline-heading">
+                            <h4>{{.Title}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            {{- if le .Description "" }}
+                            <p>{{.Summary}}</p>
+                            {{else}}
+                            <p>{{.Description}}</p>
+                            {{end -}}
+                        </div>
+                        <div class="timeline-footer">
+                            <p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{end}}
         </div>
     </div>
-    {{end}}
 </div>
 {{ end }}
