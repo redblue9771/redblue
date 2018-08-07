@@ -1,4 +1,5 @@
 +++
-title = "博客"
-description = "饮水思源"
+description = "学而时习之"
+title = "我非生而知之者"
+
 +++
