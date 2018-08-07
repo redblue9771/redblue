@@ -15,6 +15,12 @@ hasCJKLanguage = true
     name = "仓库"
     url = "/repositories/"
     
+enableRobotsTXT = true
+disableAliases = true
+
+[params]
+disallow_search_engines = false # set robots.txt to disallow everything
+
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
