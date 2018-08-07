@@ -31,11 +31,11 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 在你的理解中，一段音乐是什么呢？
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/a01c7723402192c4fb9fb1554f9fda82_r.jpg)
+![redblue](/img/2018/05/a01c7723402192c4fb9fb1554f9fda82_r.jpg)
 
 这是我们对音乐最普遍的理解，一个随着时间变化的震动。但我相信对于乐器小能手们来说，音乐更直观的理解是这样的：
 
-![](https://redblue.cf/wp-content/uploads/2018/05/7cc829d3gw1eh5v4w5m0xj20go05nwff.jpg)
+![](/img/2018/05/7cc829d3gw1eh5v4w5m0xj20go05nwff.jpg)
 
 好的！下课，同学们再见。
 
@@ -47,11 +47,11 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 时域：
 
-![](https://redblue.cf/wp-content/uploads/2018/05/7cc829d3gw1eh5v4xmosuj20go096t9l.jpg)
+![](/img/2018/05/7cc829d3gw1eh5v4xmosuj20go096t9l.jpg)
 
 频域：
 
-![](https://redblue.cf/wp-content/uploads/2018/05/7cc829d3gw1egu4n43a2gj203t05jq2r.jpg)
+![](/img/2018/05/7cc829d3gw1egu4n43a2gj203t05jq2r.jpg)
 
 在时域，我们观察到钢琴的琴弦一会上一会下的摆动，就如同一支股票的走势；而在频域，只有那一个永恒的音符。
 
@@ -66,7 +66,7 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 还是举个栗子并且有图有真相才好理解。
 
-如果我说我能用前面说的正弦曲线波叠加出一个带 90 度角的矩形波来，你会相信吗？你不会，就像当年的我一样。但是看看下图：![](https://redblue.cf/wp-content/uploads/2018/05/055bf33bb84555a952804c5dbeb75dd9_hd.jpg)
+如果我说我能用前面说的正弦曲线波叠加出一个带 90 度角的矩形波来，你会相信吗？你不会，就像当年的我一样。但是看看下图：![](/img/2018/05/055bf33bb84555a952804c5dbeb75dd9_hd.jpg)
 
 第一幅图是一个郁闷的正弦波 cos（x）
 
@@ -87,7 +87,7 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 还是上图的正弦波累加成矩形波，我们换一个角度来看看：
 
-![](https://redblue.cf/wp-content/uploads/2018/05/563deb4a6599d052b3ba108661872c57_hd.jpg)
+![](/img/2018/05/563deb4a6599d052b3ba108661872c57_hd.jpg)
 
 在这几幅图中，最前面黑色的线就是所有正弦波叠加而成的总和，也就是越来越接近矩形波的那个图形。而后面依不同颜色排列而成的正弦波就是组合为矩形波的各个分量。这些正弦波按照频率从低到高从前向后排列开来，而每一个波的振幅都是不同的。一定有细心的读者发现了，每两个正弦波之间都还有一条直线，那并不是分割线，而是振幅为 0 的正弦波！也就是说，为了组成特殊的曲线，有些正弦波成分是不需要的。
 
@@ -105,28 +105,28 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 接下来，让我们回到初中，回忆一下已经死去的八戒，啊不，已经死去的老师是怎么定义正弦波的吧。
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/81ca9447d6c45c162c2d76df75a6690a_hd.jpg)
+![redblue](/img/2018/05/81ca9447d6c45c162c2d76df75a6690a_hd.jpg)
 
 正弦波就是一个圆周运动在一条直线上的投影。所以频域的基本单元也可以理解为一个始终在旋转的圆
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/Fourier_series_square_wave_circles_animation.gif)
+![redblue](/img/2018/05/Fourier_series_square_wave_circles_animation.gif)
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/Fourier_series_sawtooth_wave_circles_animation.gif)
+![redblue](/img/2018/05/Fourier_series_sawtooth_wave_circles_animation.gif)
 
 介绍完了频域的基本组成单元，我们就可以看一看一个矩形波，在频域里的另一个模样了：
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/e2e3c0af3bdbcba721c5415a4c65da9e_hd.jpg)
+![redblue](/img/2018/05/e2e3c0af3bdbcba721c5415a4c65da9e_hd.jpg)
 
 这是什么奇怪的东西？  
 这就是矩形波在频域的样子，是不是完全认不出来了？教科书一般就给到这里然后留给了读者无穷的遐想，以及无穷的吐槽，其实教科书只要补一张图就足够了：频域图像，也就是俗称的频谱，就是——
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/19679c871bd33d94e2fc8b174f0d14ab_hd.jpg)  
+![redblue](/img/2018/05/19679c871bd33d94e2fc8b174f0d14ab_hd.jpg)  
 再清楚一点：  
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/40cf849e55ed95732a60b52d4019d609_hd.jpg)
+![redblue](/img/2018/05/40cf849e55ed95732a60b52d4019d609_hd.jpg)
 
 可以发现，在频谱中，偶数项的振幅都是 0，也就对应了图中的彩色直线。振幅为 0 的正弦波。
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/Fourier_series_and_transform.gif)  
+![redblue](/img/2018/05/Fourier_series_and_transform.gif)  
 老实说，在我学傅里叶变换时，维基的这个图还没有出现，那时我就想到了这种表达方法，而且，后面还会加入维基没有表示出来的另一个谱——相位谱。
 
 但是在讲相位谱之前，我们先回顾一下刚刚的这个例子究竟意味着什么。记得前面说过的那句“世界是静止的”吗？估计好多人对这句话都已经吐槽半天了。想象一下，世界上每一个看似混乱的表象，实际都是一条时间轴上不规则的曲线，但实际这些曲线都是由这些无穷无尽的正弦波组成。我们看似不规律的事情反而是规律的正弦波在时域上的投影，而正弦波又是一个旋转的圆在直线上的投影。那么你的脑海中会产生一个什么画面呢？
@@ -162,10 +162,10 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 通过时域到频域的变换，我们得到了一个从侧面看的频谱，但是这个频谱并没有包含时域中全部的信息。因为频谱只代表每一个对应的正弦波的振幅是多少，而没有提到相位。基础的正弦波 A.sin(![\omega](//s0.wp.com/latex.php?latex=%5Comega&bg=ffffff&fg=000&s=0 "\omega")t+θ)中，振幅，频率，相位缺一不可，不同相位决定了波的位置，所以对于频域分析，仅仅有频谱（振幅谱）是不够的，我们还需要一个相位谱。那么这个相位谱在哪呢？我们看下图，这次为了避免图片太混论，我们用 7 个波叠加的图。
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/07199fc0250791d768771b50c098e26a_hd.jpg)
+![redblue](/img/2018/05/07199fc0250791d768771b50c098e26a_hd.jpg)
 
 鉴于正弦波是周期的，我们需要设定一个用来标记正弦波位置的东西。在图中就是那些小红点。小红点是距离频率轴最近的波峰，而这个波峰所处的位置离频率轴有多远呢？为了看的更清楚，我们将红色的点投影到下平面，投影点我们用粉色点来表示。当然，这些粉色的点只标注了波峰距离频率轴的距离，并不是相位。  
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/e1985fe86283a7b14d1fc7e11d322fcb_hd.jpg)
+![redblue](/img/2018/05/e1985fe86283a7b14d1fc7e11d322fcb_hd.jpg)
 
 这里需要纠正一个概念：时间差并不是相位差。如果将全部周期看作 2Pi 或者 360 度的话，相位差则是时间差在一个周期中所占的比例。我们将时间差除周期再乘 2Pi，就得到了相位差。  
 在完整的立体图中，我们将投影得到的时间差依次除以所在频率的周期，就得到了最下面的相位谱。所以，频谱是从侧面看，相位谱是从下面看。下次偷看女生裙底被发现的话，可以告诉她：“对不起，我只是想看看你的相位谱。”
@@ -173,7 +173,7 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 注意到，相位谱中的相位除了 0，就是![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")。因为 cos（t+![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")）=-cos（t），所以实际上相位为![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")的波只是上下翻转了而已。对于周期方波的傅里叶级数，这样的相位谱已经是很简单的了。另外值得注意的是，由于 cos（t+2![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")）=cos（t），所以相位差是周期的，![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")和 3![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")，5![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")，7![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")都是相同的相位。人为定义相位谱的值域为(-![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")，![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi"))，所以图中的相位差均为![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")。
 
 最后来一张大集合：  
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/4695ce06197677bab880cd55b6846f12_hd.jpg)
+![redblue](/img/2018/05/4695ce06197677bab880cd55b6846f12_hd.jpg)
 
 四、傅里叶变换（Fourier Transformation）
 -------------------------------
@@ -196,7 +196,7 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 而在我们接下去要讲的傅里叶变换，则是将一个时域非周期的连续信号，转换为一个在频域非周期的连续信号。
 
 算了，还是上一张图方便大家理解吧：  
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/419cd0b2e965aca25d5f8a5a6362d728_hd.jpg)  
+![redblue](/img/2018/05/419cd0b2e965aca25d5f8a5a6362d728_hd.jpg)  
 或者我们也可以换一个角度理解：傅里叶变换实际上是对一个周期无限大的函数进行傅里叶变换。  
 所以说，钢琴谱其实并非一个连续的频谱，而是很多在时间上离散的频率，但是这样的一个贴切的比喻真的是很难找出第二个来了。
 
@@ -206,14 +206,14 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 为了方便大家对比，我们这次从另一个角度来看频谱，还是傅里叶级数中用到最多的那幅图，我们从频率较高的方向看。
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/a185be412974fd73a7925cf1f1cc5372_hd.jpg)
+![redblue](/img/2018/05/a185be412974fd73a7925cf1f1cc5372_hd.jpg)
 
 以上是离散谱，那么连续谱是什么样子呢？  
 尽情的发挥你的想象，想象这些离散的正弦波离得越来越近，逐渐变得连续……
 
 直到变得像波涛起伏的大海：
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/ece53f825c6de629befba3de12f929a7_hd.jpg)
+![redblue](/img/2018/05/ece53f825c6de629befba3de12f929a7_hd.jpg)
 
 很抱歉，为了能让这些波浪更清晰的看到，我没有选用正确的计算参数，而是选择了一些让图片更美观的参数，不然这图看起来就像屎一样了。
 
@@ -226,13 +226,13 @@ p.s.本文无论是 cos 还是 sin，都统一用“正弦波”（Sine Wave）�
 
 虚数 i 这个概念大家在高中就接触过，但那时我们只知道它是-1 的平方根，可是它真正的意义是什么呢?
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/42e1f6dc43e8868b4962f5ba389a5df4_hd.jpg)
+![redblue](/img/2018/05/42e1f6dc43e8868b4962f5ba389a5df4_hd.jpg)
 
 这里有一条数轴，在数轴上有一个红色的线段，它的长度是 1。当它乘以 3 的时候，它的长度发生了变化，变成了蓝色的线段，而当它乘以-1 的时候，就变成了绿色的线段，或者说线段在数轴上围绕原点旋转了 180 度。
 
 我们知道乘-1 其实就是乘了两次 i 使线段旋转了 180 度，那么乘一次 i 呢——答案很简单——旋转了 90 度。
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/3e88e9463e4667e50ebdda51dee88358_hd.jpg)
+![redblue](/img/2018/05/3e88e9463e4667e50ebdda51dee88358_hd.jpg)
 
 同时，我们获得了一个垂直的虚数轴。实数轴与虚数轴共同构成了一个复数的平面，也称复平面。这样我们就了解到，乘虚数 i 的一个功能——旋转。  
 现在，就有请宇宙第一耍帅公式欧拉公式隆重登场——
@@ -246,7 +246,7 @@ eiπ+1=0eiπ+1=0e^{i\\pi}+1=0
 经常有理工科的学生为了跟妹子表现自己的学术功底，用这个公式来给妹子解释数学之美：”石榴姐你看，这个公式里既有自然底数 e，自然数 1 和 0，虚数 i 还有圆周率![\pi](//s0.wp.com/latex.php?latex=%5Cpi&bg=ffffff&fg=000&s=0 "\pi")，它是这么简洁，这么美丽啊！“但是姑娘们心里往往只有一句话：”臭屌丝……“  
 这个公式关键的作用，是将正弦波统一成了简单的指数形式。我们来看看图像上的涵义：
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/974efc6a99e06dcd623193e960ccbe93_hd.jpg)
+![redblue](/img/2018/05/974efc6a99e06dcd623193e960ccbe93_hd.jpg)
 
 欧拉公式所描绘的，是一个随着时间变化，在复平面上做圆周运动的点，随着时间的改变，在时间轴上就成了一条螺旋线。如果只看它的实数部分，也就是螺旋线在左侧的投影，就是一个最基础的余弦函数。而右侧的投影则是一个正弦函数。  
 关于复数更深的理解，大家可以参考：
@@ -263,7 +263,7 @@ eiπ+1=0eiπ+1=0e^{i\\pi}+1=0
 **光波**
 
 高中时我们就学过，自然光是由不同颜色的光叠加而成的，而最著名的实验就是牛顿师傅的三棱镜实验：  
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/c2d7bfc819ebcbea8d6f2c8271d4791d_hd.jpg)
+![redblue](/img/2018/05/c2d7bfc819ebcbea8d6f2c8271d4791d_hd.jpg)
 
 所以其实我们在很早就接触到了光的频谱，只是并没有了解频谱更重要的意义。  
 但不同的是，傅里叶变换出来的频谱不仅仅是可见光这样频率范围有限的叠加，而是频率从 0 到无穷所有频率的组合。
@@ -308,12 +308,12 @@ cos(t)=eiπ+e−iπ2cos(t)=eiπ+e−iπ2cos(t)=\\frac{e^{i\\pi+e^{-i\\pi}}}2
 
 |
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/f116ae26859bdc80b28ea0f8f894ccc0_hd.jpg)
+![redblue](/img/2018/05/f116ae26859bdc80b28ea0f8f894ccc0_hd.jpg)
 
 是不是很漂亮？  
 你猜猜，这个图形在时域是什么样子？
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/0fdfa0a9b6eea036703ab2499381080c_hd.jpg)
+![redblue](/img/2018/05/0fdfa0a9b6eea036703ab2499381080c_hd.jpg)
 
 哈哈，是不是觉得被狠狠扇了一个耳光。数学就是这么一个把简单的问题搞得很复杂的东西。  
 顺便说一句，那个像大海螺一样的图，为了方便观看，我仅仅展示了其中正频率的部分，负频率的部分没有显示出来。
@@ -322,7 +322,7 @@ cos(t)=eiπ+e−iπ2cos(t)=eiπ+e−iπ2cos(t)=\\frac{e^{i\\pi+e^{-i\\pi}}}2
 
 好了，讲到这里，相信大家对傅里叶变换以及傅里叶级数都有了一个形象的理解了，我们最后用一张图来总结一下：
 
-![redblue](https://redblue.cf/wp-content/uploads/2018/05/097c9051af221c171730d4bc8f436a72_hd.jpg)
+![redblue](/img/2018/05/097c9051af221c171730d4bc8f436a72_hd.jpg)
 
 好了，傅里叶的故事终于讲完了，下面来讲讲我的故事：
 
