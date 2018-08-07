@@ -1,7 +1,6 @@
 baseURL = "https://redblue.ga/"
 languageCode = "zh-cn"
 title = "RedBlue | 赤琦 - 新时代，新青年 The Inspiration of RedBlue"
-hasCJKLanguage = true
 
 [taxonomies]
 
@@ -15,6 +14,12 @@ hasCJKLanguage = true
     name = "仓库"
     url = "/repositories/"
     
+enableRobotsTXT = true
+disableAliases = true
+
+[params]
+disallow_search_engines = false # set robots.txt to disallow everything
+
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
