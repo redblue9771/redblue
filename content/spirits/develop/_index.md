@@ -1,5 +1,6 @@
 +++
-title = "计算机相关"
-description = "开发的那些事"
-layout="list"
+description = "奇技淫巧"
+layout = "list"
+title = "开发的那些事"
+
 +++
