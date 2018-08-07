@@ -1,5 +1,5 @@
 +++
-title = "思源"
-description = "纳兰心事"
+title = "君有九思"
+description = "能断金刚般若波罗蜜多"
 layout="list"
 +++
