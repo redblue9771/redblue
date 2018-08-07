@@ -147,7 +147,7 @@ img{
 
 .main-area {
     max-width: 1024px;
-    margin: -12rem auto 0 auto;
+    margin: -14rem auto 0 auto;
     padding: 1rem;
 }
 
@@ -195,22 +195,23 @@ nav#TableOfContents, nav#TableOfContents ul, nav#TableOfContents li, nav#TableOf
     padding: 0;
 
 }
+
 nav#TableOfContents ul{
     list-style-type:none;
 }
+
 nav#TableOfContents ul li ul li{
     padding-left:.6em;
     border-left:2px solid #777;
 }
 
-
 .floor {
     text-align: center;
     background: linear-gradient(-186deg , transparent, transparent 34%,#f44336);
     color: #ffffff;
-    padding: 16rem 1rem 2rem 1rem;
-    margin-top:-14rem;
-}
+    padding: 14rem 1rem 2rem 1rem;
+    margin-top:-10rem;
+
 
 .floor-info {
     margin-top: 4%;
