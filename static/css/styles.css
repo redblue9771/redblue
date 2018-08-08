@@ -117,6 +117,14 @@ img{
     padding: 6rem 2rem 10rem 2rem;
 }
 
+.head a{
+    color:#f2f2f2;
+}
+
+.head a:hover{
+    color:#f2f2f2;
+}
+
 .display-1 {
     font-weight: normal;
     margin-bottom: 1.4rem;
@@ -140,7 +148,7 @@ img{
     height: auto;
     position: fixed;
     top: 100px;
-    left: calc(50% + 530px);
+    left: calc(50% + 512px);
     text-shadow: 0 0 2px #09a2ce;
     z-index: 1;
 }
@@ -184,7 +192,8 @@ img{
 aside {
     display: block;
     width: 20%;
-    padding: 0 1rem;
+    padding-left:1rem;
+    margin-bottom:2rem;
     top: 10% !important;
     float: right;
 }
