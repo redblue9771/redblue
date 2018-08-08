@@ -23,7 +23,7 @@
                 </h4>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
-                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
+                    <a href="{{.Permalink}}" class="d-block text-truncate"> {{- .Title -}} </a>
 
                     <time>{{- .Date.Format "02 Jan 2006" -}}</time>
                 </dd>
