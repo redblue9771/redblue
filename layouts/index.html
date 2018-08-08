@@ -31,31 +31,32 @@
             </dl>
         </div>
         <div class="col-md-4 pd-1 text-center bg-color-white">
-            <dl>
+            <dl id="github-list">
                 <h4>
                     <dt>项目</dt>
                 </h4>
-                {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
-                <dd>
-                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
-                    <time>{{- .Date.Format "02 Jan 2006" -}}</time>
-                </dd>
-                {{- end -}}
             </dl>
         </div>
         <div class="col-md-4 pd-1 text-center bg-color-red">
             <dl>
                 <h4>
-                    <dt>分享</dt>
+                    <dt>关于</dt>
                 </h4>
-                {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
-
-                    <a href="{{.Permalink}}" class="text-truncate d-block"> {{- .Title -}} </a>
-
-                    <time>{{- .Date.Format "02 Jan 2006" -}}</time>
+                    <p>
+                        <i class="fa fa-map-marker"> 坐标：</i>
+                        福州</p>
                 </dd>
-                {{- end -}}
+                <dd>
+                    <p>
+                        <i class="fa fa-mortar-board"> 专业：</i>
+                        物联网工程</p>
+                </dd>
+                <dd>
+                    <p>
+                        <i class="fa fa-id-card-o"> 简介：</i>
+                        我是一名普通90后大学生，闲暇无事爱折腾。编程，摄影，创作都干一点，不精不通，只因想做。不喜欢潮流，总做自己想做的。喜欢一切美好的事物，追求源于热爱</p>
+                </dd>
             </dl>
         </div>
     </div>
