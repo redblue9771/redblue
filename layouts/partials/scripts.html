@@ -1,4 +1,5 @@
-<script src="/js/scripts.js"></script> {{if le .Type "repositories"}}
+<script src="/js/scripts.js"></script>
+{{ template "_internal/google_analytics_async.html" . }}{{if le .Type "repositories"}}
 <script>
     var $html = "";
     $.getJSON("https://api.github.com/users/redblue9771/repos", function (data) {
