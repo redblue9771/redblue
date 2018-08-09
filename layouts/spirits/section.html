@@ -5,7 +5,7 @@
             <li>分类：</li>
             {{range .Sections}}
             <li class="breadcrumb-item">
-                <a href="{{.Permalink }}">{{.Title}}({{len .Pages}})</a>
+                <a href="{{.Permalink }}">{{.LinkTitle}}({{len .Pages}})</a>
             </li>
             {{end}}
         </ol>

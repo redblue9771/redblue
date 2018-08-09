@@ -5,10 +5,10 @@
             <li>分类：</li>
             {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
             <li class="breadcrumb-item">
-                <a href="{{ $name.Permalink }}">{{$name.Title}}({{len $name.Pages}})</a>
+                <a href="{{ $name.Permalink }}">{{$name.LinkTitle}}({{len $name.Pages}})</a>
             </li>
             {{else}}
-            <li class="breadcrumb-item active" aria-current="page">{{ $name.Title}}({{len $name.Pages}})</li>
+            <li class="breadcrumb-item active" aria-current="page">{{ $name.LinkTitle}}({{len $name.Pages}})</li>
             {{end}} {{end -}}
         </ol>
     </nav>
