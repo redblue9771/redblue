@@ -1,0 +1,36 @@
+---
+label: "「复杂度」The Algorithm Complexity"
+hide_body: 
+is_partial: 
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: info
+  label: Info
+  type: field_group
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - name: url
+    label: Url
+    type: text
+    hidden: false
+    default: ''
+  - name: cover
+    label: Cover
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
