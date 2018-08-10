@@ -25,7 +25,7 @@
                 <div class="timeline-event timeline-event-info">
                     <a href="{{.Permalink}}">
                         <div class="timeline-heading">
-                            <h4>{{.Title}}</h4>
+                            <h5><strong>{{.Title}}</strong></h5>
                         </div>
                         <div class="timeline-body">
                             {{- if le .Description "" }}
@@ -44,5 +44,6 @@
             {{end}}
         </div>
     </div>
+    {{ template "_internal/pagination.html" . }}
 </div>
 {{ end }}
