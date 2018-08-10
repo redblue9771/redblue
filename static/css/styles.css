@@ -26,8 +26,8 @@ hr {
     width: 100%;
 }
 
-p{
-    line-height:1.8em;
+.single-post p{
+    line-height:2em;
 }
 
 a {
@@ -171,6 +171,14 @@ img{
     filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.1)) brightness(105%);
 }
 
+.single-post {
+    display: inline-block;
+    width: 80%;
+}
+
+.main-area aside,.main-area .single-post{
+    word-break:break-all;
+}
 
 .copyright {
     width: 100%;
@@ -185,10 +193,7 @@ img{
     font-weight: 600;
 }
 
-.single-post {
-    display: inline-block;
-    width: 80%;
-}
+
 
 aside {
     display: block;
@@ -212,6 +217,11 @@ nav#TableOfContents ul{
 nav#TableOfContents ul li ul li{
     padding-left:.6em;
     border-left:2px solid #777;
+}
+
+aside details ol{
+    padding-left:1.6rem;
+    font-size:.8em;
 }
 
 .floor {
