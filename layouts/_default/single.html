@@ -14,11 +14,15 @@
       </tr>
       <tr>
         <td>作者</td>
-        <td>{{ .Page.Param "info.name"}}</td>
+        {{if eq (.Page.Param "info.name") ""}}
+        <td>赤琦</td>
+        {{else}}
+        <td>{{.Page.Param "info.name"}}</td>
+        {{end}}
       </tr>
       <tr>
         <td>原文</td>
-        {{if le (.Page.Param "info.url") ""}}
+        {{if eq (.Page.Param "info.url") ""}}
         <td>{{$.Permalink}}</td>
         {{else}}
         <td>{{.Page.Param "info.url"}}</td>

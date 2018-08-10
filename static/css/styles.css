@@ -19,7 +19,6 @@ ver 1.0.0
 
  html, body {
     background-color: #fff !important;;
-    font-weight:460;
 }
 
 hr {
@@ -180,7 +179,6 @@ img{
     width: 100%;
     border-left: 4px solid #00F7DE;
     color: #6c757d;
-
 }
 
 .copyright tr td:first-child {
