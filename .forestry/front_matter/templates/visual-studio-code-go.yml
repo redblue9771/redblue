@@ -1,7 +1,7 @@
 ---
-label: Visual Studio Code 中的「Go配置」
-hide_body: 
-is_partial: 
+label: 文章
+hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
@@ -11,6 +11,11 @@ fields:
 - name: date
   label: Date
   type: datetime
+  hidden: false
+  default: ''
+- name: slug
+  label: Slug
+  type: text
   hidden: false
   default: ''
 - name: info
@@ -27,15 +32,5 @@ fields:
     type: text
     hidden: false
     default: ''
-  - name: cover
-    label: Cover
-    type: text
-    hidden: false
-    default: ''
-  hidden: false
-  default: ''
-- name: slug
-  label: Slug
-  type: text
   hidden: false
   default: ''
