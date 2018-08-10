@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
             <li>分类：</li>
-            {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
+            {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{if ne $.CurrentSection $name}}
             <li class="breadcrumb-item">
                 <a href="{{ $name.Permalink }}">{{$name.LinkTitle}}({{len $name.Pages}})</a>
             </li>

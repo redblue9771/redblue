@@ -39,10 +39,10 @@
   {{.TableOfContents}}
   <hr>
   <dl>
-    {{- range $key,$name:=.CurrentSection.Parent.Sections}} {{if ne $.CurrentSection $name}}
+    {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{if ne $.CurrentSection $name}}
     <dd>
       <details>
-        <summary>{{$name.Title}}({{len $name.Pages}})</summary>
+        <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
         <ol>
           {{range first 5 $name.Pages}}
           <li>
@@ -58,7 +58,7 @@
     {{else}}
     <dt style="margin: .4em 0">
       <details>
-        <summary>{{$name.Title}}({{len $name.Pages}})</summary>
+        <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
         <ol>
           {{range first 5 $name.Pages}}
           <li>
