@@ -34,3 +34,5 @@ fields:
     default: ''
   hidden: false
   default: ''
+pages:
+- content/spirits/develop/visual-studio-code-go.md
