@@ -33,7 +33,8 @@
                             {{end -}}
                         </div>
                         <div class="timeline-footer">
-                            <p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>
+                        {{if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
+                        {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end}}
                         </div>
                     </a>
                 </div>
