@@ -26,10 +26,6 @@ hr {
     width: 100%;
 }
 
-.single-post p{
-    line-height:2em;
-}
-
 a {
     color: #2196f3;
 }
@@ -193,7 +189,9 @@ img{
     font-weight: 600;
 }
 
-
+.single-post p{
+    line-height:1.6em;
+}
 
 aside {
     display: block;
@@ -229,7 +227,7 @@ aside details ol{
     background: linear-gradient(-186deg , transparent, transparent 34%,#f44336);
     color: #ffffff;
     padding: 14rem 1rem 2rem 1rem;
-    margin-top:-10rem;
+    margin-top:-6rem;
 
 
 .floor-info {

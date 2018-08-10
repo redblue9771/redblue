@@ -1,9 +1,10 @@
 +++
 date = "2018-08-10T13:46:11+08:00"
 title = "Visual Studio Code 中的「Go配置」"
+slug = "visual-studio-code-for-go"
 [info]
-name = "赤琦"
-url = ""
+    name = "赤琦"
+    url = ""
 +++
 ## 发现问题
 
