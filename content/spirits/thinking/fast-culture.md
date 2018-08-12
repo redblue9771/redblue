@@ -4,7 +4,6 @@ date: "2018-05-11"
 "info":
     name: "Brian（微信公众号：Brian在深圳 | brianinshenzhen）"
     url: "https://www.douban.com/note/557947118/"
-    cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/05/abstract-architecture-art-672655.jpg"
 ---
 
 快餐
