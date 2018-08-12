@@ -3,7 +3,7 @@ title: "「复杂度」The Algorithm Complexity"
 date: "2018-05-23"
 "info":
     name: "赤琦"
-    cover: "https://cateensi-cdn.sirv.com/redblue_img/2018/04/2018052217401593.jpg"
+    url: ""
 ---
 
 计算机科学中的复杂度

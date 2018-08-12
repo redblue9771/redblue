@@ -3,6 +3,7 @@ title: "I'm 「赤琦」"
 date: "未知"
 "info":
     name: "赤琦"
+    url: ""
 ---
 
 ### 你好，中国
