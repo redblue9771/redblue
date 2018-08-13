@@ -81,6 +81,6 @@ url = ""
 
 ## 不止于CSDN和去广告
 
-现在你完全可以使用CSS和JavaScript定制任何网站的样式，无广告百度，超级任何主题的bilibili，享你所想！
+现在你完全可以使用CSS和JavaScript定制任何网站的样式，无广告百度，任何主题的bilibili，享你所想！
 
 扩展阅读：[CSS3选择器](http://www.w3school.com.cn/cssref/css_selectors.asp)
