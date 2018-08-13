@@ -19,15 +19,15 @@ url = ""
 
 ## 针对博客详情页
 
-其实有不少的替代方案：掘金，segmentfault等都是高质量的，可是一些比较偏的内容确实能在CSDN中快速检索得到，特别是经常百度一下全是CSDN的链接（：汗颜-，所以是免不了看它了
-
-于是在Chrome商店检索到了[stylish](https://github.com/stylish-userstyles/stylish/)和[stylus](https://github.com/openstyles/stylus)用于Custom CSS的神器（油猴脚本也可以哦，转为JavaScript就好了）
-
-当然不仅仅用于Chrome，上述插件在FireFox、Opera、Safari、Edge以及其他WebKit浏览器均有不同程度的支持，总之就是很方便了。P.S.:手机端也有，安卓Yandex等，不过我的代码适用于PC端，自行移植和修改定制
+其实有不少的替代方案：掘金，segmentfault等都是高质量的，可是一些比较偏的内容确实能在CSDN中快速检索得到，特别是经常百度一下全是CSDN的链接（：汗颜-，所以是免不了看它了，来吧，动手去广告
 
 ### 原理
 
 利用插件在加载完毕的页面中加入定制样式以及脚本内容
+
+在Chrome商店检索到了[stylish](https://github.com/stylish-userstyles/stylish/)和[stylus](https://github.com/openstyles/stylus)用于Custom CSS的神器（油猴脚本也可以哦，转为JavaScript就好了）
+
+当然不仅仅用于Chrome，上述插件在FireFox、Opera、Safari、Edge以及其他WebKit浏览器均有不同程度的支持，总之就是很方便了。P.S.:手机端也有，安卓Yandex等，不过我的代码适用于PC端，自行移植和修改定制
 
 ### 解决和实现
 
@@ -78,5 +78,9 @@ url = ""
 效果图
 
 ![](/img/CSDN-1.jpg)
+
+## 不止于CSDN和去广告
+
+现在你完全可以使用CSS和JavaScript定制任何网站的样式，无广告百度，超级任何主题的bilibili，享你所想！
 
 扩展阅读：[CSS3选择器](http://www.w3school.com.cn/cssref/css_selectors.asp)
