@@ -1,7 +1,7 @@
 +++
 date = "2018-08-13T16:39:45+08:00"
 slug = ""
-title = "利用「CSS」去 CSDN 广告"
+title = "利用「CSS3」去 CSDN 广告"
 [info]
 name = ""
 url = ""
@@ -15,7 +15,7 @@ url = ""
 
 一个连搜索引擎检索的SEO关键都是广告词！吃惊！！！
 
-知乎关于CSDN的讨伐 [https://www.zhihu.com/question/52061495](https://www.zhihu.com/question/52061495 "https://www.zhihu.com/question/52061495")
+[知乎关于CSDN的讨伐](https://www.zhihu.com/question/52061495 "https://www.zhihu.com/question/52061495")
 
 ## 针对博客详情页
 
@@ -29,7 +29,7 @@ url = ""
 
 一般的隐藏HTML元素大家想到的选择都是比较常见的，选中后隐藏，不能动态的选择，于是我就想能不能换个思路：我想留下的不隐藏
 
-于是打开CSS选择器文档发现了 \``not()\``选择器，也就是除了的意思。
+于是打开CSS选择器文档发现了 `:not()` 选择器，也就是除了的意思。
 
     div:not(p)//这个意思就是div下面的非p的所有标签
 
