@@ -174,8 +174,8 @@ img{
     width: calc(100% - 14rem);
 }
 
-.single-post>hr{
-    margin-bottom:2rem;
+.single-post>address{
+    margin-top:3rem;
 }
 
 .copyright {
