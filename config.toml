@@ -1,17 +1,15 @@
 baseURL = "https://redblue.ga/"
+copyright = "你所知的我其实是那面"
+googleAnalytics = "UA-123575709-1"
+hasCJKLanguage = true
 languageCode = "zh-cn"
 title = "RedBlue | 赤琦"
-hasCJKLanguage = true
-googleAnalytics = "UA-123575709-1"
-copyright = "你所知的我其实是那面"
+[[meanu.blog]]
+identifier = "spirits"
+name = "博客"
+url = "/spirits/"
+[[meanu.repos]]
+identifier = "repositories"
+name = "仓库"
+url = "/repositories/"
 [taxonomies]
-
-[menu]
-    [[meanu.blog]]
-    identifier = "spirits"
-    name = "博客"
-    url = "/spirits/"
-    [[meanu.repos]]
-    identifier = "repositories"
-    name = "仓库"
-    url = "/repositories/"
