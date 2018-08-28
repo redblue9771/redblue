@@ -32,7 +32,7 @@ MathJax.Hub.Config({
         });
         $("#github-list").append($html);
     });
-</script> {{end}}{{if eq .Type "repositories"}}
+</script>{{end}}{{if eq .Type "repositories"}}
 <script>
     var $html = "";
     $.getJSON("https://api.github.com/users/redblue9771/repos", function (data) {
@@ -45,16 +45,15 @@ MathJax.Hub.Config({
                     '<div class="timeline-event timeline-event-info"><a href=' + this.svn_url +
                     ' target="_blank">' +
                     '<div class="timeline-heading">' +
-                    '<h5><strong>' + this.full_name + '</strong></h5>' +
+                    '<h5 class="text-truncate"><strong>' + this.full_name + '</strong></h5>' +
                     '</div>' +
                     '<div class="timeline-body">' +
-                    '<p>' + this.description + '</p>' +
+                    '<p class="text-truncate">' + this.description + '</p>' +
                     '<i class="fa fa-star"> ' + this.stargazers_count + '</i>'
-                    // + '<i class="fa fa-balance-scale"></i>'
                     +
                     '</div>' +
                     '<div class="timeline-footer">' +
-                    '<p class="text-right">最近一次更新' + this.pushed_at + '</p>' +
+                    '<p class="text-right text-truncate">最近一次更新' + this.pushed_at + '</p>' +
                     '</div>' +
                     '</a></div>' +
                     '</div>';
@@ -62,6 +61,6 @@ MathJax.Hub.Config({
         });
         $html +=
             '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
-        $("#github-list").append($html);
+        $("#github-list").html($html);
     });
 </script> {{end}}

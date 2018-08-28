@@ -1,6 +1,6 @@
 <h1 class="display-1">{{.Title}}</h1>
 {{if ne .Kind "page"}}
-<h2>{{.Description}} </h2>{{else}}
+<h2>{{- .Description -}}</h2>{{else}}
 <span>日期：</span>
 <time>{{- .Date.Format "2006/01/02" -}}</time>
 {{end}}
