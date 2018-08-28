@@ -3,20 +3,31 @@
   <hr class="d-none d-md-block"/>
   <address>
     <table class="copyright">
-      <tr>
+    <tbody>
+         <tr>
+        {{if eq (.Page.Param "info.name") ""}}
         <td>协议</td>
         <td>采用
           <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-            知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+            <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
           </a>
           进行许可
         </td>
       </tr>
       <tr>
         <td>作者</td>
-        {{if eq (.Page.Param "info.name") ""}}
         <td>赤琦</td>
         {{else}}
+        <td>协议</td>
+        <td>遵照原文使用协议，详情查看原文出处。若原文中没有声明或者来源互联网时，默认采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+            <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+          </a>
+          进行许可
+        </td>
+      </tr>
+      <tr>
+        <td>作者</td>
         <td>{{.Page.Param "info.name"}}</td>
         {{end}}
       </tr>
@@ -25,26 +36,29 @@
         {{if eq (.Page.Param "info.url") ""}}
         <td>{{$.Permalink}}</td>
         {{else}}
-        <td>{{.Page.Param "info.url"}}</td>
+        <td><a href="{{.Page.Param "info.url"}}" target="_blank">{{.Page.Param "info.url"}}</a></td>
         {{end}}
       </tr>
+       </tbody>
     </table>
   </address>
   <article class="post-content">
-    {{if ne .Page.Description ""}}
+    {{- if ne .Page.Description ""}}
     <blockquote>{{.Description}}</blockquote>
-    {{end}} {{ .Content }} （完）
-    <hr>
+    {{end -}}
+    {{- .Content -}}
+    <p>（完）</p>
+    <hr/>
   </article>
 </main>
 <aside class="sticky-top float-md-right">
   <p class="lead">
     <i class="fa fa-mortar-board"></i>目录：</p>
-  {{.TableOfContents}}
+  {{- .TableOfContents -}}
   <hr>
-  <dl>
+  <ul class="list-unstyled">
     {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{if ne $.CurrentSection $name}}
-    <dd>
+    <li>
       <details>
         <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
         <ol>
@@ -58,11 +72,11 @@
           </li>
         </ol>
       </details>
-    </dd>
+    </li>
     {{else}}
-    <dt style="margin: .4em 0">
+    <li>
       <details>
-        <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
+        <summary><strong>{{- $name.LinkTitle -}}({{len $name.Pages}})</strong></summary>
         <ol>
           {{range first 5 $name.Pages}}
           <li>
@@ -74,8 +88,9 @@
           </li>
         </ol>
       </details>
+           </li>
       {{end}} {{end -}}
-      </ol>
+      </ul>
       <hr> {{ with .PrevInSection }}{{ if . }}
       <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
       <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}

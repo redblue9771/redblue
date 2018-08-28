@@ -48,12 +48,12 @@ MathJax.Hub.Config({
                     '<h5 class="text-truncate"><strong>' + this.full_name + '</strong></h5>' +
                     '</div>' +
                     '<div class="timeline-body">' +
-                    '<p class="text-truncate">' + this.description + '</p>' +
-                    '<i class="fa fa-star"> ' + this.stargazers_count + '</i>'
-                    +
+                    '<p>' + this.description + '</p>' +
+                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count + '</i>&nbsp;&nbsp;&nbsp;'+
+                    '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>'+
                     '</div>' +
                     '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate">最近一次更新' + this.pushed_at + '</p>' +
+                    '<p class="text-right text-truncate"><small>最近一次更新' + this.updated_at + '</small></p>' +
                     '</div>' +
                     '</a></div>' +
                     '</div>';
