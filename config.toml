@@ -1,9 +1,9 @@
 baseURL = "https://redblue.ga/"
 languageCode = "zh-cn"
-title = "RedBlue"
+title = "RedBlue | 赤琦"
 hasCJKLanguage = true
 googleAnalytics = "UA-123575709-1"
-copyright = "赤琦 - 你所知的我其实是那面"
+copyright = "你所知的我其实是那面"
 [taxonomies]
 
 [menu]

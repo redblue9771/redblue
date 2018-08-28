@@ -1,5 +1,5 @@
-{{ if .IsHome }}
-  <title>{{ .Site.Title }} | {{.Site.Copyright}}</title>
+{{- if .IsHome }}
+  <title>{{.Site.Title}} - {{.Site.Copyright}}</title>
 {{ else }}
-  <title>{{.LinkTitle}}丨{{.Site.Copyright}}</title>
-{{ end }}
+  <title>{{.LinkTitle}} - {{.Site.Title}}</title>
+{{ end -}}

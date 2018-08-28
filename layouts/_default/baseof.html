@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>{{ partial "header.html" . }}
-    {{block "style" .}}{{end}}
+<head>{{- partial "header.html" . -}}
+    {{- block "style" . }}{{end -}}
 </head>
 <body>
     {{- partial "nav.html" . -}}
@@ -21,14 +21,14 @@
         </div>
     </div>
     <div class="container-fluid clearfix main-area">
-        {{ block "main" . }}{{ end }}
+        {{- block "main" . }}{{ end -}}
     </div>
     <div class="container-fluid floor" id="fl">
         <footer class="floor-info">
-            {{ partial "footer.html" . }}
+            {{- partial "footer.html" . -}}
         </footer>
     </div>
     </div>
-    {{ partial "scripts.html" . }}
+    {{- partial "scripts.html" . -}}
 </body>
 </html>

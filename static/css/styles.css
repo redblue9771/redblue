@@ -250,7 +250,7 @@ aside details ol{
 
 .pagination {
     justify-content: center;
-    margin: 1em 0;
+    margin: 2em 0;
     -webkit-filter: drop-shadow( 0 0 4px #2196f3);
     filter: drop-shadow(  0 0 4px #2196f3);
 }
