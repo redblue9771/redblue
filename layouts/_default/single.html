@@ -5,7 +5,7 @@
     <table class="copyright">
     <tbody>
          <tr>
-        {{if eq (.Page.Param "info.name") ""}}
+        {{if or (eq(.Page.Param "info.name") "") (eq(.Page.Param "info.name") "赤琦")}}
         <td>协议</td>
         <td>采用
           <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
