@@ -43,11 +43,9 @@ MathJax.Hub.Config({
         var mon = formatFunc(date2.getMonth() + 1);
         var day = formatFunc(date2.getDate());
         var hour = date2.getHours();
-        var noon = hour >= 12 ? 'PM' : 'AM';
-        hour = hour >= 12 ? hour - 12 : hour;
         hour = formatFunc(hour);
         var min = formatFunc(date2.getMinutes());
-        var dateStr = year + '-' + mon + '-' + day + ' ' + noon + ' ' + hour + ':' + min;
+        var dateStr = year + '/' + mon + '/' + day + ' '  + hour + ':' + min;
         return dateStr;
     }
     var $html = "";
@@ -69,7 +67,7 @@ MathJax.Hub.Config({
                     '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>' +
                     '</div>' +
                     '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate"><small>最近一次更新' + formatUtc(this.updated_at) + '</small></p>' +
+                    '<p class="text-right text-truncate"><small>最近一次更新 ' + formatUtc(this.updated_at) + '</small></p>' +
                     '</div>' +
                     '</a></div>' +
                     '</div>';
