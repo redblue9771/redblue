@@ -1,5 +1,4 @@
-<script src="/js/scripts.js"></script>
-{{if ne .Layout "single"}}
+<script src="/js/scripts.js"></script> {{if ne .Layout "single"}}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -13,9 +12,7 @@ MathJax.Hub.Config({
          extensions: ["AMSmath.js", "AMSsymbols.js"] }
   }
 });
-</script>
-{{end}}
-{{ template "_internal/google_analytics_async.html" . }} {{if .IsHome}}
+</script> {{end}} {{ template "_internal/google_analytics_async.html" . }} {{if .IsHome}}
 <script>
     var $html = "",
         $flag = 0;
@@ -34,6 +31,25 @@ MathJax.Hub.Config({
     });
 </script>{{end}}{{if eq .Type "repositories"}}
 <script>
+    function formatUtc(UTCDateString) {
+        if (!UTCDateString) {
+            return '-';
+        }
+        function formatFunc(str) {    //格式化显示
+            return str > 9 ? str : '0' + str
+        }
+        var date2 = new Date(UTCDateString);     //这步是关键
+        var year = date2.getFullYear();
+        var mon = formatFunc(date2.getMonth() + 1);
+        var day = formatFunc(date2.getDate());
+        var hour = date2.getHours();
+        var noon = hour >= 12 ? 'PM' : 'AM';
+        hour = hour >= 12 ? hour - 12 : hour;
+        hour = formatFunc(hour);
+        var min = formatFunc(date2.getMinutes());
+        var dateStr = year + '-' + mon + '-' + day + ' ' + noon + ' ' + hour + ':' + min;
+        return dateStr;
+    }
     var $html = "";
     $.getJSON("https://api.github.com/users/redblue9771/repos", function (data) {
         $.each(data, function () {
@@ -49,11 +65,11 @@ MathJax.Hub.Config({
                     '</div>' +
                     '<div class="timeline-body">' +
                     '<p>' + this.description + '</p>' +
-                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count + '</i>&nbsp;&nbsp;&nbsp;'+
-                    '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>'+
+                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count + '</i>&nbsp;&nbsp;&nbsp;' +
+                    '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>' +
                     '</div>' +
                     '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate"><small>最近一次更新' + this.updated_at + '</small></p>' +
+                    '<p class="text-right text-truncate"><small>最近一次更新' + formatUtc(this.updated_at) + '</small></p>' +
                     '</div>' +
                     '</a></div>' +
                     '</div>';
