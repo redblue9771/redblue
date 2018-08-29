@@ -3,9 +3,8 @@ date = "2018-08-13T16:39:45+08:00"
 slug = ""
 title = "极短「CSS3」代码去 CSDN 广告"
 [info]
-name = ""
-url = ""
-
+    name = "赤琦"
+    url = ""
 +++
 ## 关于CSDN
 

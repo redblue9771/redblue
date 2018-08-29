@@ -5,14 +5,10 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#448AFF">
-<meta content='text/html; charset=utf-8' http-equiv='content-type'/>
-{{- partial "open_graph.html" . -}}
-{{- .Hugo.Generator -}}
+<meta content='text/html; charset=utf-8' http-equiv='content-type' /> {{- partial "open_graph.html" . -}} {{- .Hugo.Generator -}}
 <link rel="icon" {{- if .Site.Params.favicon }} href="{{ .Site.Params.favicon | relURL }}" {{ else }} href='{{ "/favicon.ico" | relURL }}'
   {{ end -}} type="image/x-icon" />
 <link href='{{ "/feed.xml" | relURL }}' rel="alternate" type="application/atom+xml" title="{{- .Site.Title -}}" />
-{{- with .OutputFormats.Get "rss" }}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{end -}}
+{{- with .OutputFormats.Get "rss" }} {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{end -}}
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/styles.css" />

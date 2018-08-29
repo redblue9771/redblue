@@ -1,52 +1,53 @@
 {{- define "main" }}
 <main class="single-post">
-  <hr class="d-none d-md-block"/>
+  <hr class="d-none d-md-block" />
   <address>
     <table class="copyright">
-    <tbody>
-         <tr>
-         {{if or ((eq (.Page.Param "info.name") "赤琦") (eq (.Page.Param "info.name") "")) }}
-        <td>协议</td>
-        <td>采用
-          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-            <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
-          </a>
-          进行许可
-        </td>
-      </tr>
-      <tr>
-        <td>作者</td>
-        <td>赤琦</td>
-        {{else}}
-        <td>协议</td>
-        <td>遵照原文使用协议，详情查看原文出处。若原文中没有声明或者来源互联网时，默认采用
-          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-            <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
-          </a>
-          进行许可
-        </td>
-      </tr>
-      <tr>
-        <td>作者</td>
-        <td>{{.Page.Param "info.name"}}</td>
-        {{end}}
-      </tr>
-      <tr>
-        <td>原文</td>
-        {{if eq (.Page.Param "info.url") ""}}
-        <td>{{$.Permalink}}</td>
-        {{else}}
-        <td><a href='{{.Page.Param "info.url"}}' target="_blank">{{.Page.Param "info.url"}}</a></td>
-        {{end}}
-      </tr>
-       </tbody>
+      <tbody>
+        <tr>
+          {{if eq (.Page.Param "info.name") "赤琦"}}
+          <td>协议</td>
+          <td>采用
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+              <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+            </a>
+            进行许可
+          </td>
+        </tr>
+        <tr>
+          <td>作者</td>
+          <td>赤琦</td>
+          {{else}}
+          <td>协议</td>
+          <td>遵照原文使用协议，详情查看原文出处。若原文中没有声明或者来源互联网时，默认采用
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+              <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
+            </a>
+            进行许可
+          </td>
+        </tr>
+        <tr>
+          <td>作者</td>
+          <td>{{.Page.Param "info.name"}}</td>
+          {{end}}
+        </tr>
+        <tr>
+          <td>原文</td>
+          {{if eq (.Page.Param "info.url") ""}}
+          <td>{{$.Permalink}}</td>
+          {{else}} {{if eq (.Page.Param "info.url") "来自互联网"}}
+          <td><a>{{.Page.Param "info.url"}}</a></td>
+          {{else}}
+          <td><a href='{{.Page.Param "info.url"}}' target="_blank">{{.Page.Param "info.url"}}</a></td>
+          {{end}} {{end}}
+        </tr>
+      </tbody>
     </table>
   </address>
   <article class="post-content">
     {{- if ne .Page.Description ""}}
     <blockquote>{{.Description}}</blockquote>
-    {{end -}}
-    {{- .Content -}}
+    {{end -}} {{- .Content -}}
     <p>（完）</p>
     <hr/>
   </article>
@@ -88,11 +89,11 @@
           </li>
         </ol>
       </details>
-           </li>
-      {{end}} {{end -}}
-      </ul>
-      <hr> {{ with .PrevInSection }}{{ if . }}
-      <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
-      <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+    </li>
+    {{end}} {{end -}}
+  </ul>
+  <hr> {{ with .PrevInSection }}{{ if . }}
+  <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
+  <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
 </aside>
 {{ end -}}
