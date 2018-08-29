@@ -349,11 +349,20 @@ aside details ol{
     color:#000;
 }
 
-.index-module-1 .row .col-md-4 dl dd a{
+.index-module-1 .row .col-md-4:nth-of-type(odd) dl dd a{
     color:#f2f2f2;
 }
-.index-module-1 .row .col-md-4:nth-of-type(2) dl dd a{
+
+.index-module-1 .row .col-md-4:nth-of-type(odd) dl dd a:hover{
+    color:#fff;
+}
+
+.index-module-1 .row .col-md-4:nth-of-type(even) dl dd a{
     color:#333;
+}
+
+.index-module-1 .row .col-md-4:nth-of-type(even) dl dd a:hover{
+    color:#000;
 }
 
 .index-module-1 .row .col-md-4 dl dd time{
