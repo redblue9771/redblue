@@ -5,7 +5,7 @@
     <table class="copyright">
     <tbody>
          <tr>
-         {{if or ( eq .Page.Param "info.name" "" ) ( eq .Page.Param "info.name" "赤琦" )}}
+         {{if or ((eq (.Page.Param "info.name") "赤琦") (eq (.Page.Param "info.name") "")) }}
         <td>协议</td>
         <td>采用
           <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
@@ -57,7 +57,7 @@
   {{- .TableOfContents -}}
   <hr>
   <ul class="list-unstyled">
-    {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{if ne $.CurrentSection $name}}
+    {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate }} {{if ne $.CurrentSection $name}}
     <li>
       <details>
         <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
