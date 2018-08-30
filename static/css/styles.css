@@ -206,38 +206,52 @@ img{
     top: 10% !important;
 }
 
-aside.sticky-top a:hover{
-       text-decoration: line-through;
-}
 
-nav#TableOfContents, nav#TableOfContents ul, nav#TableOfContents li, nav#TableOfContents a {
-    color: #333333 !important;
-    margin: 0;
-    padding: 0;
-}
-
-nav#TableOfContents a::after{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 14px;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content:"";
-}
-
-nav#TableOfContents a:hover{
-    color:#000 !important;
-}
 
 nav#TableOfContents ul{
     list-style-type:none;
+    padding:0;
+    margin:0
+}
+
+
+nav#TableOfContents ul ul {
+    padding-left:1em;
+    margin:0
 }
 
 nav#TableOfContents ul li ul li{
-    padding-left:.6em;
-    border-left:2px solid #777;
+    padding-left: .4em;
+    border-left: 2px solid #777;
+}
+
+nav#TableOfContents li a {
+    display:inline-block;
+    color:#777 !important;
+    text-decoration:none;
+    -webkit-transition:all .3s cubic-bezier(.23,1,.32,1);
+    transition:all .3s cubic-bezier(.23,1,.32,1)
+}
+
+nav#TableOfContents li.visible>a {
+    color:#000!important;
+    -webkit-transform:translate(5px);
+    -ms-transform:translate(5px);
+    transform:translate(5px)
+}
+
+.toc-marker {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1
+}
+
+.toc-marker path {
+    -webkit-transition:all .3s ease;
+    transition:all .3s ease
 }
 
 aside details ol{
