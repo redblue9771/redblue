@@ -49,7 +49,7 @@
     <blockquote>{{.Description}}</blockquote>
     {{end -}} {{- .Content -}}
     <p>（完）</p>
-    <hr/>
+    <hr />
   </article>
 </main>
 <aside class="sticky-top float-md-right">
@@ -93,7 +93,7 @@
     {{end}} {{end -}}
   </ul>
   <hr> {{ with .PrevInSection }}{{ if . }}
-  <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with .NextInSection }}{{ if . }}
+  <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
   <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
 </aside>
 {{ end -}}
