@@ -4,6 +4,12 @@ googleAnalytics = "UA-123575709-1"
 hasCJKLanguage = true
 languageCode = "zh-cn"
 title = "RedBlue | 赤琦"
+
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsOptions = "linenos=table"
+
 [[meanu.blog]]
 identifier = "spirits"
 name = "博客"

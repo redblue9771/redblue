@@ -100,4 +100,44 @@ go install golang.org/x/tools/cmd/guru
 等待安装完成，即可
 其他插件按照此方法找对目录，执行git clone再执行git install同样就解决问题了，Go！
 
+#### 附快捷复制表
+
+```
+go install github.com/ramya-rao-a/go-outline
+
+go install github.com/acroca/go-symbols
+
+go install golang.org/x/tools/cmd/guru
+
+go install golang.org/x/tools/cmd/gorename
+
+go install github.com/josharian/impl
+
+go install github.com/rogpeppe/godef
+
+go install github.com/sqs/goreturns
+
+go install github.com/golang/lint/golint
+
+go install github.com/cweill/gotests/gotests
+
+go install github.com/ramya-rao-a/go-outline
+
+go install github.com/acroca/go-symbols
+
+go install golang.org/x/tools/cmd/guru
+
+go install golang.org/x/tools/cmd/gorename
+
+go install github.com/josharian/impl
+
+go install github.com/rogpeppe/godef
+
+go install github.com/sqs/goreturns
+
+go install github.com/golang/lint/golint
+
+go install github.com/cweill/gotests/gotests
+```
+
 ![](/img/Gopher-ru.png)
