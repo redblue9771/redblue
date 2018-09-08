@@ -7,8 +7,6 @@ description: "最近在学习开发微信小程序，其中用到了 MVVM 模式
     url: ""
 ---
 
-> 最近在学习开发微信小程序，其中用到了 MVVM 模式，与常见的 MVC 模式有所区别，简述其来备忘。
-
 ### 什么是 MVVM？
 
 MVVM 是 Model-View-ViewModel 的简写。它最早是由微软（Microsoft）为分离模型（Model）和视图（View）而提出来的 WPF 技术结合 MVP 模式演变而来。

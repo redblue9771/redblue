@@ -1,11 +1,13 @@
 +++
 date = "2018-08-13T16:39:45+08:00"
+description = ""
 slug = ""
 title = "极短「CSS3」代码去 CSDN 广告"
 [info]
     name = "赤琦"
     url = ""
 +++
+
 ## 关于CSDN
 
 不得不说CSDN博客页上聚集了大量的知识内容，可是深恶痛绝的是满屏的广告让你不能专注于博客内容，多的不说，一张图告诉你它的广告有多少
@@ -50,29 +52,35 @@ title = "极短「CSS3」代码去 CSDN 广告"
 
 仅保留文章主要文字和相关文章，其他可自行扩展
 
-        //首先去除所有文章页以外的内容
-        body>:not(#mainBox){
+```
+//首先去除所有文章页以外的内容
+body{
+    background:url() #f2f2f2!important;
+}
+
+body>:not(#mainBox){
+    display:none!important;
+}
+//再将文章内文字部分保留（相当于去aside标签）
+#mainBox>:not(main){
+    display:none!important;
+}
+//去除评论以及部分广告
+main>:not(.blog-content-box):not(.recommend-box){
+        display:none!important;
+}
+//去除相关文章内的广告
+.recommend-box>:not(.type_blog){
             display:none!important;
-        }
-        //再将文章内文字部分保留（相当于去aside标签）
-        #mainBox>:not(main){
-            display:none!important;
-        }
-        //去除评论以及部分广告
-        main>:not(.blog-content-box):not(.recommend-box){
-                display:none!important;
-        }
-        //去除相关文章内的广告
-        .recommend-box>:not(.type_blog){
-                    display:none!important;
-        }
-        //对文章居中显示
-        main{
-            position:absolute;
-            top:3em;
-            left:50%;
-            transform:translate3d(-50%,0,0)
-        }
+}
+//对文章居中显示
+main{
+    position:absolute;
+    top:3em;
+    left:50%;
+    transform:translate3d(-50%,0,0)
+}
+```
 
 效果图
 
