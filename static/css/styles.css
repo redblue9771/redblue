@@ -52,6 +52,8 @@ pre {
 blockquote {
     font-weight: 400;
     border-left: 4px solid #ff5555;
+    margin-left: 1em;
+    padding-left: .6em;
 }
 
 .main-nav{
@@ -201,8 +203,6 @@ img{
     top: 10% !important;
 }
 
-
-
 nav#TableOfContents ul{
     list-style-type:none;
     padding:0;
@@ -211,18 +211,18 @@ nav#TableOfContents ul{
 
 
 nav#TableOfContents ul ul {
-    padding-left:1em;
+    padding-left:.6em;
     margin:0
 }
 
 nav#TableOfContents ul li ul li{
-    padding-left: .4em;
-    border-left: 2px solid #777;
+    padding-left: .3em;
+    border-left: 1px solid #777;
 }
 
 nav#TableOfContents li a {
     display:inline-block;
-    color:#777 !important;
+    color:#555 !important;
     text-decoration:none;
     -webkit-transition:all .3s cubic-bezier(.23,1,.32,1);
     transition:all .3s cubic-bezier(.23,1,.32,1)
