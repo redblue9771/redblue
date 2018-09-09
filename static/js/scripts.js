@@ -25,16 +25,6 @@
  */
     'use strict';
     $(function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
       // 获取手指在轮播图元素上的一个滑动方向（左右）
       // 获取界面上轮播图容器
       var $carousels = $('.carousel');
