@@ -9,6 +9,7 @@ title = "RedBlue | 赤琦"
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsOptions = "linenos=table"
+pygmentsStyle = "fruity"
 
 [[meanu.blog]]
 identifier = "spirits"

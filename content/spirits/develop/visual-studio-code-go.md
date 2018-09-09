@@ -53,7 +53,7 @@ Installing github.com/derekparker/delve/cmd/dlv SUCCEEDED
 
 ## 解决
 
-1. 打开你的GOPATH，我的目录C:\\Users\\RedBlue\\go
+1. 打开你的GOPATH，我的目录`C:\Users\RedBlue\go`
   
     ![](/img/go-2.jpg)  
    
@@ -65,13 +65,13 @@ Installing github.com/derekparker/delve/cmd/dlv SUCCEEDED
     下面我就讲具体的tools怎么安装：  
 
     如果`\src\github.com\golang`里面已经存在`tools`文件夹那么就可以直接复制到`\src\golang.org\x`文件夹。如果不存在的需要在golang文件夹执行
-    ```
+    ```Bash
     git clone https://github.com/golang/tools.git tools
     ```
 
     你会获得tools文件夹，将整个文件夹复制到`\src\golang.org\x`目录下回到GOPAHT执行安装命令go install + 插件名称，例如安装golang.org/x/tools/cmd/guru
 
-    ```
+    ```Bash
     go install golang.org/x/tools/cmd/guru
     ```
 
@@ -81,7 +81,7 @@ Installing github.com/derekparker/delve/cmd/dlv SUCCEEDED
 
     #### 附快捷复制表
 
-    ```bash
+    ```Bash
     go install github.com/ramya-rao-a/go-outline
 
     go install github.com/acroca/go-symbols
