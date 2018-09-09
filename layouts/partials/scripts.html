@@ -1,4 +1,4 @@
-<script src="/js/scripts.js"></script> {{if ne .Layout "single"}}
+<script src="/js/scripts.js"></script> {{if and ((eq .Type "spirits") (eq .Layout "single"))}}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
