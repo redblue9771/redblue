@@ -1,0 +1,1 @@
+hugo-lunr-zh  -o static/js/knowleges.json -c /spirits/knowleges -d content/spirits/knowleges --matter-delims --- --matter-type yaml
