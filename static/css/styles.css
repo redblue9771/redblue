@@ -100,7 +100,7 @@ p code{
     padding-bottom: 10rem;
 }
 
-.head-info {
+/* .head-info {
     text-align: right;
     -webkit-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
@@ -115,7 +115,7 @@ p code{
     overflow: hidden;
     white-space: nowrap;
     text-shadow: 0 0 2px #448AFF;
-}
+} */
 
 img{
     max-width: 100%;
@@ -151,15 +151,18 @@ img{
     font-weight: normal;
 }
 
-.head-go {
+/* .head-go {
     width: 1em;
     height: auto;
     position: fixed;
     top: 100px;
     left: calc(50% + 512px);
-    text-shadow: 0 0 2px #09a2ce;
     z-index: 1;
 }
+
+.head-go a i:before{
+    text-shadow: 0 0 2px blue;
+} */
 
 .main-area {
     max-width: 1024px;

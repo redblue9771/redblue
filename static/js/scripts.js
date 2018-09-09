@@ -19,22 +19,10 @@
 //# sourceMappingURL=bootstrap.bundle.min.js.map
 
 /**start script**/
-function barToggle() {
-  var temp = Math.abs($(".head").height() - $(".head-info").height() - 80);
-  console.log(temp, $(".head-info").offset().top)
-  if ($(".head-info").offset().top < temp) {
-    $(".head-info").fadeIn();
-  } else {
-    $(".head-info").fadeOut();
-  }
-}
 
 (function(e){
      pangu.spacingPage();
     'use strict';
-      $(window).scroll(function (){
-        barToggle();
-      })
       $(function(){
       // 获取手指在轮播图元素上的一个滑动方向（左右）
       // 获取界面上轮播图容器
