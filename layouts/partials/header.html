@@ -1,11 +1,13 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+{{- partial "open_graph.html" . -}}
 <meta charset="utf-8">
+<meta http-equiv="content-language" content="zh-CN">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#448AFF">
-<meta content='text/html; charset=utf-8' http-equiv='content-type' /> {{- partial "open_graph.html" . -}} {{- .Hugo.Generator -}}
+<meta content='text/html; charset=utf-8' http-equiv='content-type' />  {{- .Hugo.Generator -}}
 <link rel="icon" {{- if .Site.Params.favicon }} href="{{ .Site.Params.favicon | relURL }}" {{ else }} href='{{ "/favicon.ico" | relURL }}'
   {{ end -}} type="image/x-icon" />
 <link href='{{ "/feed.xml" | relURL }}' rel="alternate" type="application/atom+xml" title="{{- .Site.Title -}}" />
