@@ -376,6 +376,7 @@ aside details ol{
     filter: drop-shadow(  0 0 6px #f2f2f2);
     background-color: #f2f2f2;
     color:#000;
+    z-index:1;
 }
 
 .index-module-1 .row .col-md-4:nth-of-type(odd) dl dd a{
