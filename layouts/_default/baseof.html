@@ -4,16 +4,12 @@
 {{- partial "header.html" . -}} {{- block "style" . }}{{end -}}
 </head>
 <body>
-    {{- partial "nav.html" . -}}
+    {{partial "nav.html" .}}
     <div class="head">
         <div style="max-width: 1024px;margin: 0 auto;">
             <header class="header">
                 {{- partial "head.html" . -}}
             </header>
-            <!-- <div class="head-go d-none d-lg-block">
-                <a href="#" title="去顶部"><i class="fa fa-arrow-up"></i></a>
-                <a href="#fl" title="去底部"><i class="fa fa-arrow-down"></i></a>
-            </div> -->
         </div>
     </div>
     <div class="container-fluid clearfix main-area">
