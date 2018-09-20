@@ -5,7 +5,7 @@
     <table class="copyright">
       <tbody>
         <tr>
-          {{if eq (.Page.Param "info.name") "赤琦"}}
+          {{- if eq (.Page.Param "info.name") "赤琦"}}
           <td>协议</td>
           <td>采用
             <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
@@ -29,17 +29,17 @@
         <tr>
           <td>作者</td>
           <td>{{.Page.Param "info.name"}}</td>
-          {{end}}
+          {{end -}}
         </tr>
         <tr>
           <td>原文</td>
-          {{if eq (.Page.Param "info.url") ""}}
+          {{- if eq (.Page.Param "info.url") ""}}
           <td>{{$.Permalink}}</td>
           {{else}} {{if eq (.Page.Param "info.url") "来自互联网"}}
-          <td><a>{{.Page.Param "info.url"}}</a></td>
+          <td><a>{{- .Page.Param "info.url"}}</a></td>
           {{else}}
           <td><a href='{{.Page.Param "info.url"}}' target="_blank">{{.Page.Param "info.url"}}</a></td>
-          {{end}} {{end}}
+          {{end -}} {{end -}}
         </tr>
       </tbody>
     </table>
