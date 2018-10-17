@@ -14,6 +14,11 @@ sections:
   label: Spirits
   create: all
   match: "**/*"
+- type: directory
+  path: data
+  label: Data
+  create: none
+  match: "**/*.{json,yaml,yml,toml}"
 upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
