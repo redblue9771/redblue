@@ -5,6 +5,11 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
+  path: ''
+  label: root
+  create: all
+  match: "**/*"
+- type: directory
   path: content/richs
   label: richs
   create: all
