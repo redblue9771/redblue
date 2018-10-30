@@ -1,11 +1,13 @@
-### 联系 & Contact
+# about - 关于
 
-Email: redblue9771@outlook.com
+This is a website deployment source for ["https://redblue.ga"](https://github.com/redblue9771/)
 
-QQ: 760099879
+我的一个基于 [Hugo](https://gohugo.io) 构建的网站：["https://redblue.ga"](https://github.com/redblue9771/)
 
-### 声明 & about
+Contents using [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-版权所有 © 2017 - 2018 赤琦
+内容采用 CC BY-NC-SA 4.0 协议进行许可
 
 Copyright © 2017 - 2018 RedBlue. All Rights Reserved.
+
+版权所有 © 2017 - 2018 赤琦

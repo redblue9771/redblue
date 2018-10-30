@@ -441,7 +441,7 @@ aside details ol{
     }
     .carousel font{
         color:#f44336;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 0 0 1px #fff;
     }
     .single-post,.single-post + .sticky-top{
         width:100%;
