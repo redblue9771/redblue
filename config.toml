@@ -5,12 +5,41 @@ hasCJKLanguage = true
 languageCode = "zh-cn"
 title = "RedBlue | 赤琦"
 
-
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsOptions = "linenos=table"
 pygmentsStyle = "fruity"
 
+enableRobotsTXT = false
+disableAliases = true
+
+[params]
+disallow_search_engines = true # set robots.txt to disallow everything
+
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
+# bar
 [[meanu.blog]]
 identifier = "spirits"
 name = "博客"
@@ -20,3 +49,4 @@ identifier = "repositories"
 name = "仓库"
 url = "/repositories/"
 [taxonomies]
+
