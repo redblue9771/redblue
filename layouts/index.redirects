@@ -1,3 +1,6 @@
+＃将默认 Netlify 子域重定向到主域
+https://redblue.netlify.com/* https://redblue.ga/:splat 301！ 
+
 # redirects for Netlify - https://www.netlify.com/docs/redirects/
 {{- range $p := .Site.Pages -}}
 {{- range .Aliases }}
