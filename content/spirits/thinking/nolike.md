@@ -1,7 +1,7 @@
 +++
 date = "2018-11-04T23:28:56+08:00"
 slug = "low-desire"
-title = "低「欲」的我"
+title = "低「欲」少年"
 [info]
 name = "赤琦"
 url = ""
