@@ -1,5 +1,6 @@
 +++
 date = "2018-11-04T23:28:56+08:00"
+draft = true
 slug = "low-desire"
 title = "低「欲」少年"
 [info]
