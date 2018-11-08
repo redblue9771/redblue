@@ -1,6 +1,6 @@
 ---
 title: "Info Q"
-description: "https://www.infoq.com/cn/"
+description: "https://www.infoq.cn/"
 linktitle: "/img/slider-3.png"
 type: "slider"
 ---
