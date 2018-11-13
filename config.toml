@@ -2,7 +2,7 @@ baseURL = "https://redblue.ga/"
 copyright = "你所知的我其实是那面"
 googleAnalytics = "UA-123575709-1"
 hasCJKLanguage = true
-languageCode = "zh-cn"
+languageCode = "zh-cmn-Hans"
 title = "RedBlue | 赤琦"
 
 pygmentsCodefences = true

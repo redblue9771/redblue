@@ -52,7 +52,7 @@ title = "极短「CSS3」代码去 CSDN 广告"
 
 仅保留文章主要文字和相关文章，其他可自行扩展
 
-```
+```css
 //首先去除所有文章页以外的内容
 body{
     background:url() #f2f2f2!important;
