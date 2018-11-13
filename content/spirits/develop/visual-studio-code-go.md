@@ -54,6 +54,8 @@ Installing github.com/derekparker/delve/cmd/dlv SUCCEEDED
 ## 解决
 
 1. 打开你的GOPATH，我的目录`C:\Users\RedBlue\go`
+
+    tip:使用`go env`查看GOPATH的位置
   
     ![](/img/go-2.jpg)  
    
@@ -100,23 +102,6 @@ Installing github.com/derekparker/delve/cmd/dlv SUCCEEDED
 
     go install github.com/cweill/gotests/gotests
 
-    go install github.com/ramya-rao-a/go-outline
-
-    go install github.com/acroca/go-symbols
-
-    go install golang.org/x/tools/cmd/guru
-
-    go install golang.org/x/tools/cmd/gorename
-
-    go install github.com/josharian/impl
-
-    go install github.com/rogpeppe/godef
-
-    go install github.com/sqs/goreturns
-
-    go install github.com/golang/lint/golint
-
-    go install github.com/cweill/gotests/gotests
     ```
 
 ![](/img/Gopher-ru.png)
