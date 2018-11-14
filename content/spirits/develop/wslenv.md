@@ -43,6 +43,12 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
     [![](/img/wsl0.jpg)](/img/wsl0.jpg)
 
+5. 找不到的话尝试开启开发者模式
+
+    windows 设置 -> 更新与安全 -> 开发者模式
+
+    [![](/img/wsl7.png)](/img/wsl7.png)
+
 4. 重启系统
 
 #### 二、安装你喜欢的发行版
@@ -63,7 +69,6 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
 5. 输入用户名、密码即可开启你的 Linux 之旅
 
-    *Tip：Windows 1803 以上版本可以在目录中按住`shift + 右键`选用 Linux Shell*
 
 ## 💪🏻 WSL 使用、管理、在 VScode 中使用
 
@@ -81,6 +86,14 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
     [![](/img/wsl3.png)](/img/wsl3.png)
 
+* 在目录中快速打开
+
+    在目录下`shift + 鼠标右键`即可快速调出`在此处打开 Linux Shell`
+
+    *仅支持 Windows 1803 及以上*
+
+     [![](/img/wsl6.png)](/img/wsl6.png)
+
 #### WSL 的路径、与 win 的关系
 
 WSL 的根目录 `%localappdata%\Packages\` + 分发名 `+\LocalState\rootfs`。分发名字可通过搜索你的分发版名称找到。找到路径后可以对目录右键固定到快速访问以便使用。
@@ -89,9 +102,9 @@ WSL 的根目录 `%localappdata%\Packages\` + 分发名 `+\LocalState\rootfs`。
 
 WSL 是与 Windows 共享磁盘、环境 PATH 的，在 wsl 中输入`export`
 
-注意路径是挂载在 wsl 的 mnt 文件中，所有盘符都要替换。例如`D:/test => /mnt/d/test`。并且 wsl 中是可以直接打开 exe 的（实质是 Windows 打开的），但是 Windows 不能直接打开不带后缀名的二进制文件。PATH 虽然共享，要直接使用也是不行的。比如我在 WSL 装了 GCC，Win 的 IDE 在配置环境的时候就不能使用它，只能通过终端手动命令。
+[![export 之后](/img/wsl5.png)](/img/wsl5.png)
 
-[![](/img/wsl5.png)](/img/wsl5.png)
+注意路径是挂载在 wsl 的 mnt 文件中，所有盘符都要替换。例如`D:/test => /mnt/d/test`。并且 wsl 中是可以直接打开 exe 的（实质是 Windows 打开的），但是 Windows 不能直接打开不带后缀名的二进制文件。PATH 虽然共享，要直接使用也是不行的。比如我在 WSL 装了 GCC，Win 的 IDE 在配置环境的时候就不能使用它，只能通过终端手动命令。
 
 #### 多分发版配置
 
