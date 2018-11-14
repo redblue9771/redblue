@@ -1,5 +1,5 @@
 baseURL = "https://redblue.ga/"
-copyright = "你所知的我其实是那面"
+copyright = "Copyright © 2017 - 2018 RedBlue. All Rights Reserved."
 googleAnalytics = "UA-123575709-1"
 hasCJKLanguage = true
 languageCode = "zh-cmn-Hans"
@@ -43,10 +43,14 @@ notAlternative = true
 [[meanu.blog]]
 identifier = "spirits"
 name = "博客"
-url = "/spirits/"
+url = "/spirits"
 [[meanu.repos]]
 identifier = "repositories"
 name = "仓库"
-url = "/repositories/"
+url = "/repositories"
+[[meanu.orgs]]
+identifier = "organizations"
+name = "组织"
+url = "/organizations"
 [taxonomies]
 
