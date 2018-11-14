@@ -41,7 +41,7 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
 3. 启用或关闭 windows 功能
 
-    ![](/img/wsl0.jpg)
+    [![](/img/wsl0.jpg)](/img/wsl0.jpg)
 
 4. 重启系统
 
@@ -55,7 +55,7 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
     *Windows目前只提供 Debian 系的发行版，当然 SUSE 也很香*
 
-     ![](/img/wsl1.jpg)
+     [![](/img/wsl1.jpg)](/img/wsl1.jpg)
 
 4. 打开你的 Linux 会出现 installing ……
 
@@ -73,25 +73,25 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
     CMD 或者 PowerShell 中直接输入 bash 或者 wsl 回车
 
-    ![](/img/wsl2.png)
+    [![](/img/wsl2.png)](/img/wsl2.png)
 
 * 运行 bash
 
     win + R 输入 bash 或者 wsl 回车
 
-    ![](/img/wsl3.png)
+    [![](/img/wsl3.png)](/img/wsl3.png)
 
 #### WSL 的路径、与 win 的关系
 
 WSL 的根目录 `%localappdata%\Packages\` + 分发名 `+\LocalState\rootfs`。分发名字可通过搜索你的分发版名称找到。找到路径后可以对目录右键固定到快速访问以便使用。
 
-![](/img/wsl4.jpg)
+[![](/img/wsl4.jpg)](/img/wsl4.jpg)
 
 WSL 是与 Windows 共享磁盘、环境 PATH 的，在 wsl 中输入`export`
 
 注意路径是挂载在 wsl 的 mnt 文件中，所有盘符都要替换。例如`D:/test => /mnt/d/test`。并且 wsl 中是可以直接打开 exe 的（实质是 Windows 打开的），但是 Windows 不能直接打开不带后缀名的二进制文件。PATH 虽然共享，要直接使用也是不行的。比如我在 WSL 装了 GCC，Win 的 IDE 在配置环境的时候就不能使用它，只能通过终端手动命令。
 
-![](/img/wsl5.png)
+[![](/img/wsl5.png)](/img/wsl5.png)
 
 #### 多分发版配置
 
