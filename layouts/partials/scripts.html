@@ -65,7 +65,9 @@ MathJax.Hub.Config({
 <script>
     var $html = "",
         $flag = 0;
-    $.getJSON("https://api.github.com/users/redblue9771/repos?sort=created", function (data) {
+    fetch("https://api.github.com/users/redblue9771/repos?sort=created").then(function (response) {
+        return response.json();
+    }).then(function (data) {
         $.each(data, function () {
             if (!this.fork) {
                 if ($flag < 5) {
@@ -98,9 +100,11 @@ MathJax.Hub.Config({
         return dateStr;
     }
     var $html = "";
-    $.getJSON("https://api.github.com/users/redblue9771/repos?sort=created", function (data) {
+    fetch("https://api.github.com/users/redblue9771/repos?sort=created").then(function (response) {
+        return response.json();
+    }).then(function (data) {
         $.each(data, function () {
-            if (!this.fork){
+            if (!this.fork) {
                 $html += '<div class="timeline-item">' +
                     '<div class="timeline-point timeline-point-info">' +
                     '<i class="fa fa-star"></i>' +

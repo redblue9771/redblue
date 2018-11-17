@@ -63,8 +63,6 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
      [![](/img/wsl1.jpg)](/img/wsl1.jpg)
 
-     🔥 推荐使用轻量、安全、快速、对 Web 开发友好的 Alpine Linux [https://github.com/agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
-
 4. 打开你的 Linux 会出现 installing ……
 
     *安装失败可以重新打开，或者卸载重新安装，再或者重新开启一下 [启用 适用于 Linux 的 Windows 子系统](#启用-适用于-linux-的-windows-子系统)*
@@ -98,7 +96,7 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
 #### WSL 的路径、与 win 的关系
 
-WSL 的根目录 `%localappdata%\Packages\` + 含分发名的文件夹名 `+\LocalState\rootfs`。分发名字可通过搜索你的分发版名称找到。找到路径后可以对目录右键固定到快速访问以便使用。
+WSL 的根目录 `%localappdata%\Packages\` + 分发名 `+\LocalState\rootfs`。分发名字可通过搜索你的分发版名称找到。找到路径后可以对目录右键固定到快速访问以便使用。
 
 [![](/img/wsl4.jpg)](/img/wsl4.jpg)
 
@@ -114,13 +112,13 @@ WSL 是与 Windows 共享磁盘、环境 PATH 的，在 wsl 中输入`export`
 
 1. 打开 CMD or PowerShell
 
-2. 输入 `wslconfig` 回车即可调出并管理 Windows 上所有的 Linux 分发
+2. 输入 `wslconfig l` 回车即可调出并管理 Windows 上所有的 Linux 分发
 
     ```
     Windows PowerShell
     版权所有 (C) Microsoft Corporation。保留所有权利。
 
-    PS C:\Windows\system32> wslconfig
+    PS C:\Windows\system32> wslconfig ls
     对 Windows 上的 Linux 子系统进行操作管理
 
     用途：
