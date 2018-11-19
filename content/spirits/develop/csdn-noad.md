@@ -40,20 +40,24 @@ title = "极短「CSS3」代码去 CSDN 广告"
 
 于是打开CSS选择器文档发现了 `:not()` 选择器，也就是除了的意思。
 
-    div:not(p)//这个意思就是div下面的非p的所有标签
+```css
+div:not(p)  // 这个意思就是div下面的非p的所有标签
+```
 
 可是使用中发现要除去多个，习惯测试用逗号分隔无效（也就是有顺序，前面的隐藏了就选不到了）于是又疯狂的百度
 
 嘿嘿，原来 `:not()` 函数是可以并列的，可以说CSS3真的是好用，期待下下一代会有更优秀的选择器
 
-    div:not(p):not(a)//这个意思就是div下面的除了p和a以外的所有标签
+```css
+div:not(p):not(a)   // 这个意思就是div下面的除了p和a以外的所有标签
+```
 
 有了这个就好办了
 
 仅保留文章主要文字和相关文章，其他可自行扩展
 
 ```css
-//首先去除所有文章页以外的内容
+// 首先去除所有文章页以外的内容
 body{
     background:url() #f2f2f2!important;
 }
@@ -61,24 +65,28 @@ body{
 body>:not(#mainBox){
     display:none!important;
 }
-//再将文章内文字部分保留（相当于去aside标签）
+// 再将文章内文字部分保留（相当于去aside标签）
 #mainBox>:not(main){
     display:none!important;
 }
-//去除评论以及部分广告
+// 去除评论以及部分广告
 main>:not(.blog-content-box):not(.recommend-box){
         display:none!important;
 }
-//去除相关文章内的广告
+// 去除相关文章内的广告
 .recommend-box>:not(.type_blog){
             display:none!important;
 }
-//对文章居中显示
+// 对文章居中显示
 main{
     position:absolute;
     top:3em;
     left:50%;
     transform:translate3d(-50%,0,0)
+}
+// p 颜色控制
+p{
+    color: #000!important;
 }
 ```
 
