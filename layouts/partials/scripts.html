@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 <script src="/js/scripts.js"></script>{{if eq $.Type "spirits"}}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
+    MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
     displayMath: [['$$','$$'], ['\[','\]']],
@@ -16,7 +15,8 @@ MathJax.Hub.Config({
 </script>
 <script>
     if ($("#TableOfContents").length > 0) {
-        var h = '<svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><path stroke="#444" fill="transparent" stroke-dasharray="1, 0, 64, 416" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" d="M 11 16 L 11 48 L 11 48 L 11 80 L 11 80 L 43 80 L 43 112 L 43 112 L 43 144 L 43 144 L 43 176 L 43 176 L 43 208 L 43 208 L 11 208 L 11 240 L 11 240 L 43 240 L 43 272 L 43 272 L 43 304 L 43 304 L 43 336" stroke-dashoffset="1" opacity="1" stroke-width="3"></path></svg>'
+        var h =
+            '<svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><path stroke="#444" fill="transparent" stroke-dasharray="1, 0, 64, 416" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" d="M 11 16 L 11 48 L 11 48 L 11 80 L 11 80 L 43 80 L 43 112 L 43 112 L 43 144 L 43 144 L 43 176 L 43 176 L 43 208 L 43 208 L 11 208 L 11 240 L 11 240 L 43 240 L 43 272 L 43 272 L 43 304 L 43 304 L 43 336" stroke-dashoffset="1" opacity="1" stroke-width="3"></path></svg>'
         $("#TableOfContents").append(h);
         $("#TableOfContents").addClass("toc")
         var toc = document.querySelector('.toc'),
@@ -28,24 +28,55 @@ MathJax.Hub.Config({
         window.addEventListener('resize', drawPath, false);
         window.addEventListener('scroll', sync, false);
         drawPath();
+
         function drawPath() {
             tocItems = [].slice.call(toc.querySelectorAll('li'));
             tocItems = tocItems.map(function (item) {
                 var anchor = item.querySelector('a'),
                     target = document.getElementById(anchor.getAttribute('href').slice(1));
-                return { listItem: item, anchor: anchor, target: target };
+                return {
+                    listItem: item,
+                    anchor: anchor,
+                    target: target
+                };
             });
-            tocItems = tocItems.filter(function (item) { return !!item.target; }); var path = []; var pathIndent; tocItems.forEach(function (item, i) {
-                var x = item.anchor.offsetLeft - 5, y = item.anchor.offsetTop, height = item.anchor.offsetHeight; if (i === 0) { path.push('M', x, y, 'L', x, y + height); item.pathStart = 0; }
-                else { if (pathIndent !== x) path.push('L', pathIndent, y); path.push('L', x, y); tocPath.setAttribute('d', path.join(' ')); item.pathStart = tocPath.getTotalLength() || 0; path.push('L', x, y + height); }
-                pathIndent = x; tocPath.setAttribute('d', path.join(' ')); item.pathEnd = tocPath.getTotalLength();
-            }); pathLength = tocPath.getTotalLength(); sync();
+            tocItems = tocItems.filter(function (item) {
+                return !!item.target;
+            });
+            var path = [];
+            var pathIndent;
+            tocItems.forEach(function (item, i) {
+                var x = item.anchor.offsetLeft - 5,
+                    y = item.anchor.offsetTop,
+                    height = item.anchor.offsetHeight;
+                if (i === 0) {
+                    path.push('M', x, y, 'L', x, y + height);
+                    item.pathStart = 0;
+                } else {
+                    if (pathIndent !== x) path.push('L', pathIndent, y);
+                    path.push('L', x, y);
+                    tocPath.setAttribute('d', path.join(' '));
+                    item.pathStart = tocPath.getTotalLength() || 0;
+                    path.push('L', x, y + height);
+                }
+                pathIndent = x;
+                tocPath.setAttribute('d', path.join(' '));
+                item.pathEnd = tocPath.getTotalLength();
+            });
+            pathLength = tocPath.getTotalLength();
+            sync();
         }
+
         function sync() {
-            var windowHeight = window.innerHeight, pathStart = pathLength, pathEnd = 0, visibleItems = 0, flag = visibleItems;
+            var windowHeight = window.innerHeight,
+                pathStart = pathLength,
+                pathEnd = 0,
+                visibleItems = 0,
+                flag = visibleItems;
             tocItems.forEach(function (item) {
                 var targetBounds = item.target.getBoundingClientRect();
-                if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 - BOTTOM_MARGIN)) {
+                if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 -
+                        BOTTOM_MARGIN)) {
                     pathStart = Math.min(item.pathStart, pathStart);
                     pathEnd = Math.max(item.pathEnd, pathEnd);
                     visibleItems += 1;
@@ -56,10 +87,12 @@ MathJax.Hub.Config({
             });
             if (visibleItems > 0 && pathStart < pathEnd) {
                 tocPath.setAttribute('stroke-dashoffset', '1');
-                tocPath.setAttribute('stroke-dasharray', '1, ' + pathStart + ', ' + (pathEnd - pathStart) + ', ' + pathLength);
+                tocPath.setAttribute('stroke-dasharray', '1, ' + pathStart + ', ' + (pathEnd - pathStart) + ', ' +
+                    pathLength);
                 tocPath.setAttribute('opacity', 1);
+            } else {
+                tocPath.setAttribute('opacity', 0);
             }
-            else { tocPath.setAttribute('opacity', 0); }
         }
     }
 </script> {{end}} {{ template "_internal/google_analytics_async.html" . }} {{if .IsHome}}
@@ -73,7 +106,8 @@ MathJax.Hub.Config({
             if (!this.fork) {
                 if ($flag < 5) {
                     $html +=
-                        '<dd><a href="' + this.svn_url + '" class="d-block text-truncate" target="_blank">' + this.full_name +
+                        '<dd><a href="' + this.svn_url +
+                        '" class="d-block text-truncate" target="_blank">' + this.full_name +
                         '</a><time class="d-block text-truncate">' + this.description + '</time></dd>';
                     $flag++;
                 }
@@ -87,10 +121,11 @@ MathJax.Hub.Config({
         if (!UTCDateString) {
             return '-';
         }
-        function formatFunc(str) {    //格式化显示
+
+        function formatFunc(str) { //格式化显示
             return str > 9 ? str : '0' + str
         }
-        var date2 = new Date(UTCDateString);     //这步是关键
+        var date2 = new Date(UTCDateString); //这步是关键
         var year = date2.getFullYear();
         var mon = formatFunc(date2.getMonth() + 1);
         var day = formatFunc(date2.getDate());
@@ -117,11 +152,13 @@ MathJax.Hub.Config({
                     '</div>' +
                     '<div class="timeline-body">' +
                     '<p>' + this.description + '</p>' +
-                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count + '</i>&nbsp;&nbsp;&nbsp;' +
+                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count +
+                    '</i>&nbsp;&nbsp;&nbsp;' +
                     '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>' +
                     '</div>' +
                     '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate"><small>最近一次更新 ' + formatUtc(this.updated_at) + '</small></p>' +
+                    '<p class="text-right text-truncate"><small>最近一次更新 ' + formatUtc(this.updated_at) +
+                    '</small></p>' +
                     '</div>' +
                     '</a></div>' +
                     '</div>';
@@ -131,138 +168,4 @@ MathJax.Hub.Config({
             '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
         $("#github-list").html($html);
     });
-=======
-<script src="/js/scripts.js"></script>{{if eq $.Type "spirits"}}
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-</script>
-<script>
-    if ($("#TableOfContents").length > 0) {
-        var h = '<svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><path stroke="#444" fill="transparent" stroke-dasharray="1, 0, 64, 416" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" d="M 11 16 L 11 48 L 11 48 L 11 80 L 11 80 L 43 80 L 43 112 L 43 112 L 43 144 L 43 144 L 43 176 L 43 176 L 43 208 L 43 208 L 11 208 L 11 240 L 11 240 L 43 240 L 43 272 L 43 272 L 43 304 L 43 304 L 43 336" stroke-dashoffset="1" opacity="1" stroke-width="3"></path></svg>'
-        $("#TableOfContents").append(h);
-        $("#TableOfContents").addClass("toc")
-        var toc = document.querySelector('.toc'),
-            tocPath = document.querySelector('.toc-marker path'),
-            tocItems,
-            TOP_MARGIN = 0.1,
-            BOTTOM_MARGIN = 0.2,
-            pathLength;
-        window.addEventListener('resize', drawPath, false);
-        window.addEventListener('scroll', sync, false);
-        drawPath();
-        function drawPath() {
-            tocItems = [].slice.call(toc.querySelectorAll('li'));
-            tocItems = tocItems.map(function (item) {
-                var anchor = item.querySelector('a'),
-                    target = document.getElementById(anchor.getAttribute('href').slice(1));
-                return { listItem: item, anchor: anchor, target: target };
-            });
-            tocItems = tocItems.filter(function (item) { return !!item.target; }); var path = []; var pathIndent; tocItems.forEach(function (item, i) {
-                var x = item.anchor.offsetLeft - 5, y = item.anchor.offsetTop, height = item.anchor.offsetHeight; if (i === 0) { path.push('M', x, y, 'L', x, y + height); item.pathStart = 0; }
-                else { if (pathIndent !== x) path.push('L', pathIndent, y); path.push('L', x, y); tocPath.setAttribute('d', path.join(' ')); item.pathStart = tocPath.getTotalLength() || 0; path.push('L', x, y + height); }
-                pathIndent = x; tocPath.setAttribute('d', path.join(' ')); item.pathEnd = tocPath.getTotalLength();
-            }); pathLength = tocPath.getTotalLength(); sync();
-        }
-        function sync() {
-            var windowHeight = window.innerHeight, pathStart = pathLength, pathEnd = 0, visibleItems = 0, flag = visibleItems;
-            tocItems.forEach(function (item) {
-                var targetBounds = item.target.getBoundingClientRect();
-                if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 - BOTTOM_MARGIN)) {
-                    pathStart = Math.min(item.pathStart, pathStart);
-                    pathEnd = Math.max(item.pathEnd, pathEnd);
-                    visibleItems += 1;
-                    item.listItem.classList.add('visible');
-                } else {
-                    item.listItem.classList.remove('visible');
-                }
-            });
-            if (visibleItems > 0 && pathStart < pathEnd) {
-                tocPath.setAttribute('stroke-dashoffset', '1');
-                tocPath.setAttribute('stroke-dasharray', '1, ' + pathStart + ', ' + (pathEnd - pathStart) + ', ' + pathLength);
-                tocPath.setAttribute('opacity', 1);
-            }
-            else { tocPath.setAttribute('opacity', 0); }
-        }
-    }
-</script> {{end}} {{ template "_internal/google_analytics_async.html" . }} {{if .IsHome}}
-<script>
-    var $html = "",
-        $flag = 0;
-    fetch("https://api.github.com/users/redblue9771/repos?sort=created").then(function (response) {
-        return response.json();
-    }).then(function(data){
-        $.each(data, function () {
-            if (!this.fork) {
-                if ($flag < 5) {
-                    $html +=
-                        '<dd><a href="' + this.svn_url + '" class="d-block text-truncate" target="_blank">' + this.full_name +
-                        '</a><time class="d-block text-truncate">' + this.description + '</time></dd>';
-                    $flag++;
-                }
-            }
-        });
-        $("#github-list").append($html);
-    });
-</script>{{end}}{{if eq .Type "repositories"}}
-<script>
-    function formatUtc(UTCDateString) {
-        if (!UTCDateString) {
-            return '-';
-        }
-        function formatFunc(str) {    //格式化显示
-            return str > 9 ? str : '0' + str
-        }
-        var date2 = new Date(UTCDateString);     //这步是关键
-        var year = date2.getFullYear();
-        var mon = formatFunc(date2.getMonth() + 1);
-        var day = formatFunc(date2.getDate());
-        var hour = date2.getHours();
-        hour = formatFunc(hour);
-        var min = formatFunc(date2.getMinutes());
-        var dateStr = year + '/' + mon + '/' + day + ' ' + hour + ':' + min;
-        return dateStr;
-    }
-    var $html = "";
-    fetch("https://api.github.com/users/redblue9771/repos?sort=created").then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        $.each(data, function () {
-            if (!this.fork) {
-                $html += '<div class="timeline-item">' +
-                    '<div class="timeline-point timeline-point-info">' +
-                    '<i class="fa fa-star"></i>' +
-                    '</div>' +
-                    '<div class="timeline-event timeline-event-info"><a href=' + this.svn_url +
-                    ' target="_blank">' +
-                    '<div class="timeline-heading">' +
-                    '<h5 class="text-truncate"><strong>' + this.full_name + '</strong></h5>' +
-                    '</div>' +
-                    '<div class="timeline-body">' +
-                    '<p>' + this.description + '</p>' +
-                    '<i class="fa fa-star-half-full"> ' + this.stargazers_count + '</i>&nbsp;&nbsp;&nbsp;' +
-                    '<i class="fa fa-code-fork"> ' + this.forks_count + '</i>' +
-                    '</div>' +
-                    '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate"><small>最近一次更新 ' + formatUtc(this.updated_at) + '</small></p>' +
-                    '</div>' +
-                    '</a></div>' +
-                    '</div>';
-            }
-        })
-        $html +=
-            '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
-        $("#github-list").html($html);
-    });
->>>>>>> 4186f4fc43a7136cd07a2ec8c28e8431f23ae80d
 </script> {{end}}
