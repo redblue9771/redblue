@@ -13,6 +13,8 @@ pygmentsStyle = "fruity"
 enableRobotsTXT = false
 disableAliases = true
 
+assetDir = "static"
+
 [params]
 disallow_search_engines = true # set robots.txt to disallow everything
 

@@ -26,7 +26,11 @@
                             <h5><strong>{{.Title}}</strong></h5>
                         </div>
                         <div class="timeline-body">
+                            {{ if  eq .Description "" }}
                             <p>{{.Summary}}</p>
+                            {{else}}
+                            <p>{{.Description}}</p>
+                            {{end}}
                         </div>
                         <div class="timeline-footer">
                         {{if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
