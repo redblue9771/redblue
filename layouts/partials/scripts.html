@@ -1,5 +1,8 @@
-<script src="/js/scripts.js"></script>{{if eq $.Type "spirits"}}
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+{{ $customJs := resources.Get "js/custom.js" | resources.Minify }}
+{{ $js := slice (resources.Get "js/pangu.min.js") (resources.Get "js/jquery.min.js") (resources.Get "js/bootstrap.bundle.min.js") (resources.Get "js/mermaid.min.js") $customJs | resources.Concat "js/bundle.js" | resources.Fingerprint}}
+<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+{{if eq $.Type "spirits"}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
   tex2jax: {
