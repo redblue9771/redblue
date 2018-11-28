@@ -326,6 +326,13 @@ div.mermaidTooltip {
 /**
 * redblue
 */
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
 hr {
     width: 100%;
 }
@@ -824,7 +831,7 @@ aside details ol {
     line-height: 1;
 }
 
-#fn\:open {
+.footnotes ol li {
     font-size: .8em;
 }
 
