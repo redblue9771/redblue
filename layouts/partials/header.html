@@ -6,10 +6,9 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#448AFF">
-<meta content='text/html; charset=utf-8' http-equiv='content-type' />  {{- .Hugo.Generator -}}
+<meta content='text/html; charset=utf-8' http-equiv='content-type' /> {{- .Hugo.Generator -}}
 {{- partial "open_graph.html" . -}}
-<link rel="icon" {{- if .Site.Params.favicon }} href="{{ .Site.Params.favicon | relURL }}" {{ else }} href='{{ "/favicon.ico" | relURL }}'
-  {{ end -}} type="image/x-icon" />
+<link rel="icon" {{- if .Site.Params.favicon }} href="{{ .Site.Params.favicon | relURL }}" {{ else }} href='{{ "/favicon.ico" | relURL }}' {{ end -}} type="image/x-icon" />
 <link href='{{ "/feed.xml" | relURL }}' rel="alternate" type="application/atom+xml" title="{{- .Site.Title -}}" />
 {{- with .OutputFormats.Get "rss" }} {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{end -}}
 {{ $css := slice (resources.Get "css/bootstrap.min.css") (resources.Get "css/timeline.min.css") (resources.Get "css/custom.css") | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint}}

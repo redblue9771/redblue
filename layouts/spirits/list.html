@@ -1,20 +1,20 @@
-{{ define "main" }}
+{{- define "main" }}
 <div class="container position-relative blog-list">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
             <li>分类：</li>
-            {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{if ne $.CurrentSection $name}}
+            {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{- if ne $.CurrentSection $name}}
             <li class="breadcrumb-item">
                 <a href="{{ $name.Permalink }}">{{$name.LinkTitle}}({{len $name.Pages}})</a>
             </li>
             {{else}}
-            <li class="breadcrumb-item active" aria-current="page">{{ $name.LinkTitle}}({{len $name.Pages}})</li>
-            {{end}} {{end -}}
+            <li class="breadcrumb-item active" aria-current="page">{{$name.LinkTitle}}({{len $name.Pages}})</li>
+            {{end -}} {{end -}}
         </ol>
     </nav>
     <div class="row">
         <div class="timeline timeline-line-dotted">
-            {{ range (.Paginator 10).Pages }}
+            {{- range (.Paginator 10).Pages -}}
             <span class="timeline-label">
                 <span class="label label-info">{{- .Date.Format "02 Jan 2006" -}}</span>
             </span>
@@ -28,15 +28,15 @@
                             <h5><strong>{{.Title}}</strong></h5>
                         </div>
                         <div class="timeline-body">
-                            {{ if eq .Description "" }}
+                            {{- if eq .Description "" }}
                             <p>{{.Summary}}</p>
                             {{else}}
                             <p>{{.Description}}</p>
-                            {{end}}
+                            {{end -}}
                         </div>
                         <div class="timeline-footer">
-                            {{if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
-                            {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end}}
+                            {{- if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
+                            {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
                         </div>
                     </a>
                 </div>
@@ -46,4 +46,4 @@
     </div>
     {{- template "_internal/pagination.html" . -}}
 </div>
-{{ end }}
+{{ end -}}

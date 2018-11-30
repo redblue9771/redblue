@@ -1,18 +1,18 @@
-{{ define "main"}}
+{{- define "main"}}
 <div class="container position-relative blog-list">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
             <li>分类：</li>
-            {{range .Sections.ByDate}}
+            {{- range .Sections.ByDate}}
             <li class="breadcrumb-item">
                 <a href="{{.Permalink }}">{{.LinkTitle}}({{len .Pages}})</a>
             </li>
-            {{end}}
+            {{end -}}
         </ol>
     </nav>
     <div class="row">
         <div class="timeline timeline-line-dotted">
-            {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 }} {{- range $paginator.Pages}}
+            {{- $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 -}} {{- range $paginator.Pages}}
             <span class="timeline-label">
                 <span class="label label-info">{{- .Date.Format "02 Jan 2006" -}}</span>
             </span>
@@ -26,15 +26,15 @@
                             <h5><strong>{{.Title}}</strong></h5>
                         </div>
                         <div class="timeline-body">
-                            {{ if  eq .Description "" }}
+                            {{- if eq .Description "" }}
                             <p>{{.Summary}}</p>
                             {{else}}
                             <p>{{.Description}}</p>
-                            {{end}}
+                            {{end -}}
                         </div>
                         <div class="timeline-footer">
-                        {{if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
-                        {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end}}
+                            {{- if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
+                            {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
                         </div>
                     </a>
                 </div>
@@ -44,4 +44,4 @@
     </div>
     {{- template "_internal/pagination.html" . -}}
 </div>
-{{ end }}
+{{ end -}}
