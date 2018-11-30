@@ -618,6 +618,10 @@ img {
     font-weight: 600;
 }
 
+.copyright tbody tr td:last-child{
+    width: 100%;
+}
+
 .post-content p {
     line-height: 1.6em;
 }
