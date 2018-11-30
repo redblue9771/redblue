@@ -1,7 +1,7 @@
 {{ $customJs := resources.Get "js/custom.js" | resources.Minify }}
 {{ $js := slice (resources.Get "js/pangu.min.js") (resources.Get "js/jquery.min.js") (resources.Get "js/bootstrap.bundle.min.js") (resources.Get "js/mermaid.min.js") $customJs | resources.Concat "js/bundle.js" | resources.Fingerprint}}
 <script type="text/javascript" src="{{ $js.Permalink }}"></script>
-{{if eq $.Type "spirits"}}
+{{- if eq $.Type "spirits"}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -16,7 +16,7 @@
   }
 });
 </script>
-<script>
+<script type="text/javascript">
     if ($("#TableOfContents").length > 0) {
         var h =
             '<svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><path stroke="#444" fill="transparent" stroke-dasharray="1, 0, 64, 416" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" d="M 11 16 L 11 48 L 11 48 L 11 80 L 11 80 L 43 80 L 43 112 L 43 112 L 43 144 L 43 144 L 43 176 L 43 176 L 43 208 L 43 208 L 11 208 L 11 240 L 11 240 L 43 240 L 43 272 L 43 272 L 43 304 L 43 304 L 43 336" stroke-dashoffset="1" opacity="1" stroke-width="3"></path></svg>'
@@ -98,8 +98,8 @@
             }
         }
     }
-</script> {{end}} {{ template "_internal/google_analytics_async.html" . }} {{if .IsHome}}
-<script>
+</script> {{end -}} {{- template "_internal/google_analytics_async.html" . -}} {{- if .IsHome}}
+<script type="text/javascript">
     var $html = "",
         $flag = 0;
     fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
@@ -120,8 +120,8 @@
         }
         $("#github-list").append($html);
     });
-</script>{{end}}{{if eq .Type "repositories"}}
-<script>
+</script>{{end -}}{{- if eq .Type "repositories"}}
+<script type="text/javascript">
     function formatUtc(UTCDateString) {
         if (!UTCDateString) {
             return '-';
@@ -146,7 +146,6 @@
     }).then(function (data) {
         for (item of data) {
             if (!item.fork) {
-                console.log(item)
                 $html += '<div class="timeline-item">' +
                     '<div class="timeline-point timeline-point-info">' +
                     '<i class="fa fa-star"></i>' +
@@ -184,4 +183,4 @@
         $(
             "#github-list").html($html);
     });
-</script> {{end}}
+</script> {{end -}}

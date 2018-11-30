@@ -18,7 +18,9 @@
     <div class="row limit-area">
         <div class="col-md-4 pd-1 text-center bg-color-blue">
             <dl>
-                <dt><h4>博文</h4></dt>
+                <dt>
+                    <h4>博文</h4>
+                </dt>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
                     <a href="{{.Permalink}}" class="d-block text-truncate"> {{- .Title -}} </a>
@@ -30,16 +32,20 @@
         </div>
         <div class="col-md-4 pd-1 text-center bg-color-white">
             <dl id="github-list">
-                <dt><h4>项目</h4></dt>
+                <dt>
+                    <h4>项目</h4>
+                </dt>
             </dl>
         </div>
         <div class="col-md-4 pd-1 text-center bg-color-red">
-            <dl> 
-                    <dt><h4>关于</h4></dt>
+            <dl>
+                <dt>
+                    <h4>关于</h4>
+                </dt>
                 <dd>
-                     <p>
-                     中文：赤琦，赤红色的美玉<br/>英文：RedBlue，据赤红，琦蓝而译
-                     </p>
+                    <p>
+                        中文：赤琦，赤红色的美玉<br />英文：RedBlue，据赤红，琦蓝而译
+                    </p>
                 </dd>
                 <dd>
                     <p>
@@ -56,67 +62,11 @@
                 <dd>
                     <p>
                         <i class="fa fa-id-card-o"> 简介：</i>
-                        来自彩云之南的95后男孩，偏执的完美主义者，体现在方方面面。<br/>爱科技、爱搞机、爱摄影、爱一切美好的事物，追求源于热爱。
+                        来自彩云之南的95后男孩，偏执的完美主义者，体现在方方面面。<br />爱科技、爱搞机、爱摄影、爱一切美好的事物，追求源于热爱。
                     </p>
                 </dd>
             </dl>
         </div>
     </div>
 </div>
-<!-- <h1>Responsive Accordion</h1>
-<div class="accordion">
-    <ul>
-        <li tabindex="1">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-        <li tabindex="2">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-        <li tabindex="3">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-        <li tabindex="4">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-        <li tabindex="5">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-        <li tabindex="6">
-            <div>
-                <a href="#">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </a>
-            </div>
-        </li>
-    </ul>
-</div>
-<p class="about">
-    By <a href="http://michaelferry.com/">Michael Ferry</a>
-</p> -->
 {{end -}}
