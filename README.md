@@ -1,25 +1,63 @@
-# 💻 About - 关于  
+# RedBlue | 赤琦
 
-💎 This is a website deployment source for ["https://redblue.ga"](https://redblue.ga/)
+💻 This is a website deployment source for ["https://redblue.ga"](https://redblue.ga/)
 
-我的一个基于 [The world’s fastest framework for building websites - Hugo](https://gohugo.io) 构建的网站：💎["https://redblue.ga"](https://redblue.ga/)
+## Directories
 
-## 🛠 How to use it - 使用
+    .
+    ├── content
+    │   ├── organizations
+    │   │   └── index.md
+    │   ├── repositories
+    │   │   └── index.md
+    │   ├── richs
+    │   │   ├── discover
+    │   │   └── pohotographies
+    │   ├── spirits
+    │   │   ├── develop
+    │   │   │   └── index.md
+    │   │   ├── konwleges
+    │   │   │   └── index.md
+    │   │   ├── thinking
+    │   │   │   └── index.md
+    │   │   └── index.md
+    │   └── index.md
+    ├── layouts
+    │   ├── _default
+    │   ├── organizations
+    │   ├── partials
+    │   ├── repositories
+    │   ├── spirits
+    │   ├── index.redirects
+    │   ├── index.headers
+    │   ├── 404.html
+    │   └── index.htnml
+    ├── static
+    │   ├── admin
+    │   ├── css
+    │   ├── img
+    │   ├── js
+    │   ├── labs
+    │   ├── favicon.ico
+    │   └── robots.txt
+    ├── .gitignore
+    ├── LICENSE
+    ├── README.md
+    └── config.toml
+```
 
-Install 并I PATH [Hugo](https://gohugo.io) 的 📀 二进制文件
+## 🛠 How to use it
+
+Install and add PATH [Hugo](https://gohugo.io)
 
 ```bash
-cd $filespace // 打开文件目录
-hugo server // 用于调试 http://localhost:1313
+cd $filespace
+hugo server
+// open http://localhost:1313 with Browser
 ```
 
 ## ⚖️ LICENSE
 
-💷 Contents using [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+💷 Contents by [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-💷 内容采用 CC BY-NC-SA 4.0 协议进行许可
-
-
-Copyright © 2017 - 2018 RedBlue. All Rights Reserved. 
-
-版权所有 © 2017 - 2018 赤琦 
+👉 Code by MIT
