@@ -4,7 +4,7 @@
 
 ## Showcase
 
-💎 Perfect response
+💎 Perfect response (Base on Bootstrap)
 
 <div>
     <details open>
