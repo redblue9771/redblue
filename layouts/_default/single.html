@@ -57,33 +57,35 @@
     <li>
       <details>
         <summary>{{- $name.LinkTitle -}}({{len $name.Pages}})</summary>
-        <ol>
+      </details>
+      <div>
+        <ul>
           {{range first 5 $name.Pages}}
           <li>
             <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
           </li>
           {{end}}
-          <li>
-            <a href="{{$name.Permalink}}" title="{{$name.Title}}">...更多关于此分类</a>
-          </li>
-        </ol>
-      </details>
+        </ul>
+        <a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a>
+      </div>
+
     </li>
     {{else}}
     <li>
       <details>
         <summary><strong>{{- $name.LinkTitle -}}({{len $name.Pages}})</strong></summary>
-        <ol>
+      </details>
+      <div>
+        <ul>
           {{range first 5 $name.Pages}}
           <li>
             <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
           </li>
           {{end}}
-          <li>
-            <a href="{{$name.Permalink}}" title="{{$name.Title}}">...更多关于此分类</a>
-          </li>
-        </ol>
-      </details>
+        </ul>
+        <a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a>
+      </div>
+
     </li>
     {{end}} {{end -}}
   </ul>
