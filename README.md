@@ -4,7 +4,7 @@
 
 ## Showcase
 
-💎 PC
+💎 Perfect response
 
 <div>
     <details open>
