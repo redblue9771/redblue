@@ -692,7 +692,8 @@ aside div>a {
     line-height: 2em;
 }
 
-.single-post a,aside a:hover {
+.single-post a:hover,
+aside a:hover {
     color: #f44336;
 }
 
