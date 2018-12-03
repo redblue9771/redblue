@@ -59,6 +59,6 @@ hugo server
 
 ## ⚖️ LICENSE
 
-💷 Contents by [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+💷 Some website content is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-👉 Code by MIT
+👉 These source code are licensed under a [MIT License.](https://github.com/redblue9771/redblue/blob/master/LICENSE)
