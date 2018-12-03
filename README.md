@@ -4,8 +4,8 @@
 
 ## Showcase
 
-
 💎 PC
+
 <div>
     <details open>
         <summary>Home</summary>
@@ -33,32 +33,6 @@
         <img src="static/img/showcase(0).png" style="max-width:500px">
     </details>
 </div>
-
-* Home
-
-    ![]()
-
-* List
-
-    ![](static/img/showcase(3).png)
-
-    
-
-* Project
-
-    ![](static/img/showcase(2).png)
-
-* 404
-
-    ![](static/img/showcase(1).png)
-
-* Post (Friendly typography)
-
-    ![](static/img/showcase(5).png)
-
-💍 Mobile
-
-![](static/img/showcase(0).png)
 
 ## Main irectories
 
