@@ -34,7 +34,7 @@
     </details>
 </div>
 
-## Main irectories
+## Main Directories
 
 ```bash
 .
