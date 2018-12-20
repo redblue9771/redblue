@@ -576,6 +576,11 @@ img {
     padding: 1rem;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 0 2px #000);
+}
+
 .img-filter {
     -webkit-filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.1));
     filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.1));
