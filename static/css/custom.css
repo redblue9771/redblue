@@ -730,7 +730,8 @@ details[open]+div {
     padding: 0;
 }
 
-.blog-list .timeline-item div .timeline-heading h5 strong {
+.blog-list .timeline-item div .timeline-heading h5 strong,
+.blog-list .timeline-item:hover .timeline-point-info {
     -webkit-transition: all .3s;
     transition: all .3s;
 }

@@ -8,7 +8,7 @@
 </style>
 {{end -}} {{- define "main"}}
 <div class="limit-area text-center index-module-0">
-    <h2>推荐</h2>
+    <h2>·推荐·</h2>
     {{- partial "discover.html" . -}}
     <img src="/img/gopher_head.png" alt="" class="trans-img div-shadow">
 </div>
@@ -19,7 +19,7 @@
         <div class="col-md-4 pd-1 text-center bg-color-blue">
             <dl>
                 <dt>
-                    <h4>· 博文 ·</h4>
+                    <h4>·博文·</h4>
                 </dt>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
@@ -33,18 +33,18 @@
         <div class="col-md-4 pd-1 text-center bg-color-white">
             <dl id="github-list">
                 <dt>
-                    <h4>· 项目 ·</h4>
+                    <h4>·项目·</h4>
                 </dt>
             </dl>
         </div>
         <div class="col-md-4 pd-1 text-center bg-color-red">
             <dl>
                 <dt>
-                    <h4>· 关于 ·</h4>
+                    <h4>·关于·</h4>
                 </dt>
                 <dd>
                     <p>
-                        中文：赤琦，赤红色的美玉<br />英文：RedBlue，据赤红，琦蓝而译
+                        赤琦：赤红色的美玉<br />RedBlue：据赤红，琦蓝而译
                     </p>
                 </dd>
                 <dd>
