@@ -22,21 +22,21 @@
                 <div class="timeline-point timeline-point-info">
                     <i class="fa fa-circle"></i>
                 </div>
-                <div class="timeline-event timeline-event-info">
+                <div>
                     <a href="{{.Permalink}}">
                         <div class="timeline-heading">
                             <h5><strong>{{.Title}}</strong></h5>
                         </div>
                         <div class="timeline-body">
                             {{- if eq .Description "" }}
-                            <p>{{.Summary}}</p>
+                            <p>{{.Summary}}……</p>
                             {{else}}
-                            <p>{{.Description}}</p>
+                            <p>{{.Description}}……</p>
                             {{end -}}
                         </div>
                         <div class="timeline-footer">
-                            {{- if eq (.Param "info.name") ""}}<p class="text-right">By&nbsp;赤琦</p>
-                            {{else}}<p class="text-right">By&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
+                            {{- if eq (.Param "info.name") ""}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;赤琦</p>
+                            {{else}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
                         </div>
                     </a>
                 </div>
