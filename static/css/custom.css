@@ -412,7 +412,7 @@ p code {
 }
 
 .main-nav a:hover {
-    color: #cbbde2 !important;
+    color: #f44336 !important;
 }
 
 .highlight pre {
@@ -592,13 +592,11 @@ img {
     filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.1)) brightness(105%);
 }
 
-.post-content {
-    text-align: justify;
-}
-
 .main-area aside,
-.main-area .single-post {
+.single-post,
+.blog-list {
     word-break: break-all;
+    text-align: justify;
 }
 
 .single-post {
@@ -732,19 +730,56 @@ details[open]+div {
     padding: 0;
 }
 
-.blog-list p {
-    color: #333;
+.blog-list .timeline-item div .timeline-heading h5 strong {
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
-.blog-list h5 {
-    font-weight: bold;
+.blog-list .timeline-item:hover div .timeline-heading h5 strong {
+    color: #f44336;
+}
+
+.blog-list .timeline-item div .timeline-body,
+.blog-list .timeline-item div .timeline-footer {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    opacity: 0.8;
+}
+
+.blog-list .timeline-item:hover div .timeline-body,
+.blog-list .timeline-item:hover div .timeline-footer {
+    opacity: 1;
+}
+
+.blog-list .timeline-item:hover .timeline-point-info {
+    color: #f44336;
+}
+
+.blog-list p {
+    color: #333;
 }
 
 .pagination {
     justify-content: center;
     margin: 2em 0;
-    -webkit-filter: drop-shadow(0 0 4px #2196f3);
-    filter: drop-shadow(0 0 4px #2196f3);
+}
+
+.page-item.active .page-link {
+    color: gray;
+    background: none;
+    border: none;
+}
+
+.page-link {
+    background: none;
+    border: none;
+}
+
+.page-link:hover {
+    color: #f44336;
+    text-decoration: none;
+    background: none;
+    border: none;
 }
 
 .list-group-item {
