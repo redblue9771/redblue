@@ -568,7 +568,7 @@ img {
 
 .main-area {
     max-width: 1024px;
-    margin: -2rem auto 0;
+    margin: -4rem auto 0;
     padding: 0 1rem;
 }
 
@@ -600,10 +600,6 @@ img {
     display: inline-block;
     width: calc(100% - 14rem);
     letter-spacing: 1px;
-}
-
-.single-post>address {
-    margin-top: 3rem;
 }
 
 .copyright {
@@ -924,9 +920,6 @@ details[open]+div {
         padding: 5rem 2rem 12rem;
     }
 
-    .main-area {
-        padding-top: -6rem;
-    }
 
     .display-1 {
         font-size: 4rem;
