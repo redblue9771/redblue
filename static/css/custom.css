@@ -496,7 +496,7 @@ p code {
     height: auto;
     background: linear-gradient(-5deg, transparent 30%, #448aff 0);
     color: #fff;
-    filter: drop-shadow(0 0 10px black);
+    filter: drop-shadow(0 0 3px black);
 }
 
 /* .head-info {
@@ -714,7 +714,7 @@ details[open]+div {
     background: linear-gradient(-185deg, transparent 40%, #f44336 0);
     color: #ffffff;
     padding: 12rem 1rem 2rem;
-    filter: drop-shadow(0 0 10px black);
+    filter: drop-shadow(0 0 3px black);
 }
 
 .row {
