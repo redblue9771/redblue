@@ -409,6 +409,7 @@ p code {
 
 .main-nav a:hover {
     color: #f44336 !important;
+    text-decoration: line-through;
 }
 
 .highlight pre {
