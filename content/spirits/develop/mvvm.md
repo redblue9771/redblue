@@ -7,11 +7,11 @@ description: "最近在学习开发微信小程序，其中用到了 MVVM 模式
     url: ""
 ---
 
-### 什么是 MVVM？
+## 什么是 MVVM？
 
 MVVM 是 Model-View-ViewModel 的简写。它最早是由微软（Microsoft）为分离模型（Model）和视图（View）而提出来的 WPF 技术结合 MVP 模式演变而来。
 
-### MVVM 的通信方向
+## MVVM 的通信方向
 
 以往 MVC 模式的操作方式是获取 DOM 对象，再对 DOM 对象进行变化。举个栗子：HTML 代码
 
@@ -38,7 +38,7 @@ $(".test'").text("spirit.redblue.cf");
 
 对于修改这个我们很容易就这样做
 
-```javascript
+```js
 obj.name = "spirit.redblue.cf"
 ```
 
