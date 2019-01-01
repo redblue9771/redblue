@@ -914,6 +914,11 @@ details[open]+div {
     margin: 0 .2em;
 }
 
+.floor-info p {
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
 @media (max-width: 767.98px) {
 
     .header {
