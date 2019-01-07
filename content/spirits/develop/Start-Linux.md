@@ -6,7 +6,6 @@ title = "嵌入式「Linux」基础"
     name = "赤琦"
     url = ""
 +++
-# 嵌入式 Linux 应用
 
 ## 基本概念
 
@@ -18,13 +17,45 @@ title = "嵌入式「Linux」基础"
 
 * 三要数：**嵌入性**、**专用性**、**计算机系统**
 
+* 嵌入式系统的开发模式分为：本地开发和交叉开发
+
+* 构建交叉编译环境的主要内容：构建交叉编译器、串口、网络的通信方式
+
+* 构建交叉编译环境的硬件设备：JTAG 线、串口、网络线
+
+* 串口的作用：实现双向通信
+
+* 网络的作用：实验资源共享和数据通信
+
+* 系统设备驱动的分类：
+
+    * 字符类设备：例如键盘、LED 等，目的是为了操作方便
+
+    * 块设备：FLASH、DOC 等，经过缓存，给系统的存储提供优化
+
+    * 网络设备：实现多个系统通信
+
+    * 其他设备
+
+* 设备驱动的基本结构：
+
+    * 驱动程序的注册和注销
+
+    * 设备的打开与释放
+
+    * 设备的读写操作
+
+    * 设备的控制操作
+
+    * 设备的中断和轮询处理
+
 ### ARM 的硬件结构
 
 * ARM 是 32 位 **RISC** 处理器
 
 * 类型：ARM 710系列、ARM 940T、920T系列、StrongARM
 
-* S3C6410 有 **10** 组外部中断
+* S3C6410 有 **10** 组外部中断，有 17 组外部引脚
 
 * S3C6410 寄存器：
 
@@ -39,6 +70,48 @@ title = "嵌入式「Linux」基础"
     * GPxPUDSLP：睡眠模式上/下拉寄存器
 
 * S3C6410 的中断控制寄存器类型：**EINT 控制寄存器**；其工作模式是：**高/低电平**
+
+* BootLoader 的两种模式：启动加载模式和下载模式
+
+    * 作用：在操作系统内核运行之前，初始硬件设备，建立内存的寻址空间映射，划出操作系统的内存地址范围，加载操作系统到 RAM 中让系统自举启动
+
+    * Stage 1：
+        
+        1、 硬件设备的初始化：屏蔽所有中断、设置 CPU 速度和时钟频率、RAM 地址的初始化
+
+        2、 初始化 Stage 2 的内存地址范围
+
+        3、 加载 Stage 2 到 RAM 中
+
+        4、 设置堆栈
+
+        5、 跳转到 Stage 2 的 c 入口
+
+    * Stage 2：
+
+        1、 初始化需要用到的硬件设备
+
+        2、 检测系统的内存映射
+
+        3、 将 kernel 映像和根文件系统映像加载到 RAM
+
+        4、 设置启动参数
+
+        5、 调用内核
+        
+* 移植：将源代码编译到不同的硬件设备平台运行
+
+    * 内核移植：根据硬件平台对内核进行增加模块、裁剪、配置并重新编译以实现对硬件平台的支持
+
+        1、 修改 Kconfig 文件
+
+        2、 修改 makefile 文件
+
+        3、 make menuconfig 配置
+
+        4、 make zimage 生成映像
+
+        5、 烧写映像文件到开发板
 
 ### Linux 文件系统
 
@@ -136,6 +209,8 @@ tar -jxvf xxx.tar.bz2
 
 ```
 
+## 开发环境
+
 ### GCC 的使用
 
 ```bash
@@ -173,6 +248,109 @@ gdb -q main
 # 推出
 
 ```
+
+### QT 的简单程序设计
+
+QT 是一个跨平台的 C++ 的图形用户界面库
+
+```bash
+vi xxx.c
+# 创建 QT 程序
+
+qmake -project
+# 生成 .pro 的专案文件
+
+qmake
+# 生成 makefile 文件
+
+make
+# 执行编译
+```
+
+### SQL 结构化查询语言的安装
+
+安装 SQLite
+
+```bash
+示范包: sqlite.tar.gz
+
+tar -zvxf sqlite.tar.gz
+
+cd sqlite
+
+./configure --host=arm-linux --prefix=/opt/sqlite --disable-tcl
+
+make && make install
+
+cp -f /opt/sqlite/bin /mnt/s3c6410/bin
+
+cp -f /opt/sqlite/lib /mnt/s3c6410/lib
+
+# 切换到开发板的终端
+
+sqlite3
+```
+
+### minicom 的配置
+
+目标板与宿主机相连：PC COM ——》 ARM UART0
+
+运行终端
+
+```bash
+minicom
+```
+按下 o 键，进行串口的配置。其中波特率为 115200，8bit，无流控制
+
+保存，退出
+
+### BusyBox 安装
+
+1、 获取源码包，示范 busybox.tar.bz2
+
+2、 解压源码包 `tar -jxvf busybox.tar.bz2`
+
+3、 `cd busybox && make menuconfig` 配置
+
+4、 `make CORSS_COMPILE = arm-none-linux-gnueabi-` 配置编译
+
+5、 `make install` 安装
+
+### QT 的安装
+
+1、 获取源码包，示范 qt.tar.gz
+
+2、 解压源码包到当前目录 `tar -zxvf qt.tar.gz`
+
+3、 `cd qt && ./configure -embedded [architechture] --prefix=/opt/qt`
+
+4、 `make && make install`
+
+5、 设置环境变量 `export PATH=$PATH:/opt/qt/bin && source .bash_profile`
+
+6、 `which qmake`
+
+### NFS
+
+1、 `setup` system service 选 nfs
+
+2、 退出 setup `vi /etc/exports`
+
+3、 `service nfs restart`
+
+4、 `ifconfig` 查看网卡获得ip
+
+5、 `mount ip：`
+
+### TFTP
+
+1、 `setup` system service 选 tftp
+
+2、 去掉 ipchains 和 iptables
+
+3、 Firewall configuration 选 Nofirewall
+
+4、 退出 setup `service xinetd restart`
 
 ### 字符设备的代码
 
