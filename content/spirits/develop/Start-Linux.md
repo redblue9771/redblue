@@ -5,6 +5,7 @@ title = "嵌入式「Linux」基础"
 [info]
     name = "赤琦"
     url = ""
+draft = true
 +++
 
 ## 基本概念
