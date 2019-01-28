@@ -2,10 +2,10 @@
 date = "2019-01-06"
 description = ""
 title = "嵌入式「Linux」基础"
+draft = true
 [info]
     name = "赤琦"
     url = ""
-draft = true
 +++
 
 ## 基本概念
