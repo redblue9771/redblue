@@ -16,6 +16,19 @@
   }
 });
 </script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCz666FJ2Sk5Vh_kG9uEzAslPnz2NfNjZw",
+    authDomain: "redblue-main-web.firebaseapp.com",
+    databaseURL: "https://redblue-main-web.firebaseio.com",
+    projectId: "redblue-main-web",
+    storageBucket: "redblue-main-web.appspot.com",
+    messagingSenderId: "978708770186"
+  };
+  firebase.initializeApp(config);
+</script>
 <script type="text/javascript">
     if ($("#TableOfContents").length > 0) {
         var h =
