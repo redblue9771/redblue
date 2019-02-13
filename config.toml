@@ -56,3 +56,6 @@ name = "组织"
 url = "/organizations"
 [taxonomies]
 
+# hugo version
+[context.production.environment]
+HUGO_VERSION = "0.54"
