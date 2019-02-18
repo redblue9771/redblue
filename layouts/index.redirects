@@ -4,3 +4,6 @@
 {{ . }} {{ $p.RelPermalink -}}
 {{- end }}
 {{- end -}}
+
+# Redirect default Netlify subdomain to primary domain
+https://redblue.netlify.com/* https://redblue.fun/:splat 301!
