@@ -2,7 +2,6 @@
 date = "2019-01-06"
 description = ""
 title = "嵌入式「Linux」基础"
-draft = true
 [info]
     name = "赤琦"
     url = ""
@@ -12,7 +11,7 @@ draft = true
 
 ### 定义及组成
 
-* 嵌入式系统是以**应用**为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗有严格要求的专用型计算机系统
+* 嵌入式系统是以**应用**为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗有严格要求的专用型计算机系统(考过)
 
 * 组成：嵌入式微处理器、外围硬件设备、嵌入式操作系统、特定的应用程序
 
@@ -56,9 +55,9 @@ draft = true
 
 * 类型：ARM 710系列、ARM 940T、920T系列、StrongARM
 
-* S3C6410 有 **10** 组外部中断，有 17 组外部引脚,GPA ~ GPD
+* S3C6410 有 **10** 组外部中断，有 17 组外部I/O引脚,GPA ~ GPQ(考过)
 
-* S3C6410 寄存器：
+* S3C6410 寄存器：(考过)
 
     * GPxCON：端口配置寄存器
 
@@ -114,7 +113,7 @@ draft = true
 
         5、 烧写映像文件到开发板
 
-### Linux 文件系统
+### Linux 文件系统结构
 
 * /bin 存放二进制文件和普通用户常用的命令
 
@@ -122,7 +121,7 @@ draft = true
 
 * /dev 存放设备文件
 
-* /etc 存放系统配置文件
+* /etc 存放系统配置文件，该目录有重要文件，例如`init.d`(考过)
 
 * /home 普通用户的默认目录
 
@@ -154,7 +153,7 @@ draft = true
 
 * /usr/local 默认的编译安装目录
 
-### 常用命令
+### 常用命令(考过)
 
 ```bash
 cp bg.png img
@@ -190,7 +189,7 @@ rm -rf xxx
 ifconfig
 # 列出网卡配置（同时也可以配置）
 
-ping redblue.ga
+ping xxx
 # 网络链路测试
 
 lsmod
@@ -212,7 +211,7 @@ tar -jxvf xxx.tar.bz2
 
 ## 开发环境
 
-### GCC 的使用
+### GCC 的使用（必考）
 
 ```bash
 gcc -E main.c -o main.i
@@ -353,7 +352,7 @@ minicom
 
 4、 退出 setup `service xinetd restart`
 
-### 字符设备的代码
+### 字符设备的代码(考过)
 
 ```c
 static struct file_operations keybd_fops = {
@@ -460,7 +459,7 @@ free_irq(key_irqs[i].irq, (void *)&key_irqs[i]);
 
 ```
 
-### LED 驱动程序的动态加载
+### LED 驱动程序的动态加载(考过)
 
 1、 开发板上电，进入 NFS
 
@@ -476,7 +475,7 @@ free_irq(key_irqs[i].irq, (void *)&key_irqs[i]);
 
 7、 `./led_app 1` 来测试灯是否亮；`./led_app 0` 测试关闭灯
 
-### makefile 注释样例
+### makefile 注释样例(考过)
 
 #### 样例 1
 ```makefile
