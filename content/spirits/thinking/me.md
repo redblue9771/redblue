@@ -1,5 +1,5 @@
 ---
-title: "I'm 「赤琦」"
+title: "I'm「赤琦」"
 date: "1997-06-30"
 "info":
     name: "赤琦"
