@@ -1,3 +1,4 @@
+# 用于Netlify部署
 [build]
 publish = "public"
 command = "hugo --gc --minify"

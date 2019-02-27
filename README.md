@@ -1,9 +1,6 @@
 # RedBlue | 赤琦
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c797475a-6218-4f20-bbc6-83cf02fa0848/deploy-status)](https://app.netlify.com/sites/redblue/deploys)
-
-💻 This is a website deployment source for ["https://redblue.netlify.com"](https://redblue.netlify.com)
-
+💻 This is a website deployment source for ["https://redblue.fun"](https://redblue.fun)
 
 ## Showcase
 
