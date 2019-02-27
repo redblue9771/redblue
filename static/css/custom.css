@@ -372,7 +372,9 @@ pre {
 }
 
 blockquote {
-    font-weight: 400;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #f55;
     border-left: 4px solid #ff5555;
     margin-left: 1em;
     padding-left: .6em;
@@ -891,20 +893,6 @@ details[open]+div {
 
 .footnotes ol li {
     font-size: .8em;
-}
-
-.post-content blockquote:first-child p {
-    min-height: 2em;
-    vertical-align: text-bottom;
-}
-
-.post-content blockquote:first-child p:first-child::first-letter {
-    float: left;
-    color: #218838;
-    font-size: 2em;
-    margin-right: .4em;
-    margin-top: .2em;
-    line-height: 1em;
 }
 
 .post-content img {
