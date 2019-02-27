@@ -16,19 +16,6 @@
   }
 });
 </script>
-<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCz666FJ2Sk5Vh_kG9uEzAslPnz2NfNjZw",
-    authDomain: "redblue-main-web.firebaseapp.com",
-    databaseURL: "https://redblue-main-web.firebaseio.com",
-    projectId: "redblue-main-web",
-    storageBucket: "redblue-main-web.appspot.com",
-    messagingSenderId: "978708770186"
-  };
-  firebase.initializeApp(config);
-</script>
 <script type="text/javascript">
     if ($("#TableOfContents").length > 0) {
         var h =
@@ -111,7 +98,15 @@
             }
         }
     }
-</script> {{end -}} {{- template "_internal/google_analytics_async.html" . -}} {{- if .IsHome}}
+</script> {{end -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575709-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123575709-1');
+</script>{{- if .IsHome}}
 <script type="text/javascript">
     var $html = "",
         $flag = 0;
