@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "redblue",
-    "alias": "www.redblue.fun",
+    "alias": "redblue.fun",
     "builds": [{
         "src": "build.sh",
         "use": "@now/static-build",
@@ -32,11 +32,6 @@
             "headers": {
                 "cache-control": "public,max-age=0,must-revalidate"
             }
-        },
-        {
-            "src": "/(.*)",
-            "status": 301,
-            "headers": { "Location": "https://redblue.fun/$1" }
-          }
+        }
     ]
 }
