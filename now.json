@@ -2,9 +2,9 @@
     "version": 2,
     "name": "redblue",
     "alias": "www.redblue.fun",
-    "env": [
+    "env": {
         "redblue.fun"
-    ],
+    },
     "builds": [{
         "src": "build.sh",
         "use": "@now/static-build",
