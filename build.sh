@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# 用于Now部署
 yum install -y wget
 
 HUGO_VERSION=0.54.0
