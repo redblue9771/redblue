@@ -35,8 +35,8 @@ fields:
   hidden: false
   default: ''
 pages:
+- content/spirits/thinking/nolike.md
+- content/spirits/thinking/nolike.md
 - content/spirits/develop/csdn-noad.md
 - content/spirits/thinking/org-decentralization.md
-- content/spirits/thinking/nolike.md
-- content/spirits/thinking/nolike.md
 - content/spirits/develop/csdn-noad.md
