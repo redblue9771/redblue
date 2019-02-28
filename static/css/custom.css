@@ -414,6 +414,10 @@ p code {
     text-decoration: line-through;
 }
 
+.navbar-brand {
+    max-width: 80%;
+}
+
 .highlight pre {
     overflow: hidden;
 }
