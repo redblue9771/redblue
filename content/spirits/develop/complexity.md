@@ -1,6 +1,9 @@
 ---
 title: "「复杂度」The Algorithm Complexity"
 date: "2018-05-23"
+tags: ["hugo"]
+series: ["Blog养成记"]
+articles: ["开发"]
 "info":
     name: "赤琦"
     url: ""
