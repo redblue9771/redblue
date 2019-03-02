@@ -1,29 +1,29 @@
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        {{- range $key,$name:=( where .Site.RegularPages.ByDate.Reverse "Type" "slider") }} {{if ne $key 0}}
+        {{- range $key,$name := .Site.Data.api.Carousel }} {{if ne $key 0}}
         <div class="carousel-item">
-            <a href="{{$name.Description}}" target="_blank">
-                <img class="d-block w-100" alt="" src="{{$name.LinkTitle}}">
+            <a href="{{$name.link}}" target="_blank">
+                <img class="d-block w-100" alt="{{$name.title}}" src="{{$name.cover}}">
                 <div class="carousel-caption d-block">
                     <h4>
-                        <font style="vertical-align: inherit;">{{$name.Title}}</font>
+                        <font style="vertical-align: inherit;">{{$name.title}}</font>
                     </h4>
                     <p>
-                        <font style="vertical-align: inherit;">{{$name.Content}}</font>
+                        <font style="vertical-align: inherit;">{{$name.description}}</font>
                     </p>
                 </div>
             </a>
         </div>
         {{else}}
         <div class="carousel-item active">
-            <a href="{{$name.Description}}" target="_blank">
-                <img class="d-block w-100" alt="" src="{{$name.LinkTitle}}">
+            <a href="{{$name.link}}" target="_blank">
+                <img class="d-block w-100" alt="{{$name.Title}}" src="{{$name.cover}}">
                 <div class="carousel-caption d-block">
                     <h4>
-                        <font style="vertical-align: inherit;">{{$name.Title}}</font>
+                        <font style="vertical-align: inherit;">{{$name.title}}</font>
                     </h4>
                     <p>
-                        <font style="vertical-align: inherit;">{{$name.Content}}</font>
+                        <font style="vertical-align: inherit;">{{$name.description}}</font>
                     </p>
                 </div>
             </a>

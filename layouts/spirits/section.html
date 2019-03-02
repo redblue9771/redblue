@@ -12,7 +12,7 @@
     </nav>
     <div class="row">
         <div class="timeline timeline-line-dotted">
-            {{- $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" .Type) 10 -}} {{- range $paginator.Pages}}
+            {{- $paginator := .Paginate (where .Site.RegularPages "Type" .Type) 10 -}} {{- range $paginator.Pages}}
             <span class="timeline-label">
                 <span class="label label-info">{{- .Date.Format "02 Jan 2006" -}}</span>
             </span>

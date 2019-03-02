@@ -344,6 +344,36 @@ a:hover {
     text-decoration: none;
 }
 
+.prev,
+.next {
+    display: inline-block;
+    max-width: 50%;
+}
+
+.prev::before {
+    display: inline-block;
+    content: "←";
+    margin: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.prev:hover::before {
+    margin-right: 2em;
+}
+
+.next::after {
+    display: inline-block;
+    content: "→";
+    margin: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.next:hover::after {
+    margin-left: 2em;
+}
+
 article h1,
 article h2,
 article h3,
