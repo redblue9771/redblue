@@ -1,0 +1,41 @@
+<aside class="sticky-top float-md-right">
+    <section class="lead">
+        <i class="fa fa-mortar-board"></i>目录：
+    </section>
+    {{- .TableOfContents -}}
+    <hr />{{with .Params.series}}
+    <section>
+        {{range .}}<a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}} </a>
+        <ul>
+            {{- with $.Site.Taxonomies.series.Get . }}
+            {{ range .Pages }}
+            <li class="text-truncate"><a href="{{ .Permalink }}">{{ .LinkTitle}}</a></li>
+            {{ end }}
+            {{ end -}}
+        </ul>
+        {{end}}
+    </section>
+    <hr />{{end}}
+    <ul class="list-unstyled">
+        {{- range $key,$name:=.CurrentSection.Parent.Sections }}
+        <li>
+            <details>
+                <summary>{{if ne $.CurrentSection $name}}{{- $name.LinkTitle -}}({{len $name.Pages}}){{else}}<strong>{{- $name.LinkTitle -}}({{len $name.Pages}})</strong>{{end}}</summary>
+            </details>
+            <div>
+                <ul>
+                    {{range first 5 $name.Pages}}
+                    <li>
+                        <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
+                    </li>
+                    {{end}}
+                </ul>
+                <a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a>
+            </div>
+        </li>
+        {{end -}}
+    </ul>
+    <hr>{{ with .PrevInSection }}{{ if . }}
+    <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
+    <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+</aside>

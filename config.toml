@@ -56,9 +56,8 @@ name = "组织"
 url = "/organizations"
 
 [taxonomies]
-tag = "tags"
+tags = "tags"
 series = "series"
-category = "articles"
 
 [outputFormats.Algolia]
 baseName = "algolia"

@@ -7,7 +7,6 @@ function gtag() {
 gtag('js', new Date());
 gtag('config', 'UA-123575709-1');
 
-// 动态标题
 
 var last_known_scroll_position = 0,
     ticking = false,
@@ -17,7 +16,6 @@ function doSomething(scroll_pos) {
     let headerTitleHeight = document.getElementById("head").offsetHeight,
         postTitle = document.getElementById("post-title").textContent,
         navTitle = document.getElementById("main-title");
-    // do something with the scroll position
     if (scroll_pos > headerTitleHeight) {
         navTitle.innerText = postTitle;
     } else {
