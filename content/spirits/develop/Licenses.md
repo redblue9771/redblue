@@ -2,6 +2,7 @@
 title: 如何选择「Open License」？
 date: 2018-11-26 00:00:00 +0000
 description: 一份开源协议指北
+articles: ["开发"]
 info:
   name: 赤琦
   url: ''

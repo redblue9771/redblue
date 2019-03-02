@@ -20,7 +20,7 @@ disallow_search_engines = true # set robots.txt to disallow everything
 
 # add redirects/headers
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS", "Algolia"]
 
 # remove .{ext} from text/netlify
 [mediaTypes."text/netlify"]
@@ -56,3 +56,16 @@ name = "组织"
 url = "/organizations"
 
 [taxonomies]
+tag = "tags"
+series = "series"
+category = "articles"
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["currentsection", "content","info.name"]

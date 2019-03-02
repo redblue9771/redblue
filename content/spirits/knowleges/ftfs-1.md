@@ -2,6 +2,7 @@
 title: "快速理解「傅里叶」分析"
 date: "2018-03-30"
 description: "知乎：Heinrich；微 博：@花生油工人；知乎专栏：与时间无关的故事；谨以此文献给大连海事大学的吴楠老师，柳晓鸣老师，王新年老师以及张晶泊老师。"
+articles: ["学识"]
 "info":
     name: "韩昊"
     url: "https://zhuanlan.zhihu.com/p/19763358"
