@@ -561,35 +561,28 @@ img {
 }
 
 .divider {
-    /* minor cosmetics */
     display: table;
     text-align: center;
-    width: 75%;
-    /* divider width */
-    margin: 4px auto;
-    /* spacing above/below */
+    margin: .4em auto;
 }
 
 .divider span {
     display: table-cell;
     position: relative;
+    padding: 0 .2em;
 }
 
 .divider span:first-child,
 .divider span:last-child {
     width: 50%;
     top: 10px;
-    /* adjust vertical align */
     -moz-background-size: 100% 1px;
-    /* line width */
     background-size: 100% 1px;
-    /* line width */
     background-position: 0 0, 0 100%;
     background-repeat: no-repeat;
 }
 
 .divider span:first-child {
-    /* color changes in here */
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
     background-image: -webkit-linear-gradient(180deg, transparent, #000);
     background-image: -moz-linear-gradient(180deg, transparent, #000);
@@ -605,7 +598,6 @@ img {
 }
 
 .divider span:last-child {
-    /* color changes in here */
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
     background-image: -webkit-linear-gradient(180deg, #000, transparent);
     background-image: -moz-linear-gradient(180deg, #000, transparent);
