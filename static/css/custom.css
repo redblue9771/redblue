@@ -380,6 +380,10 @@ blockquote {
     padding-left: .6em;
 }
 
+blockquote p {
+    margin-bottom: 0;
+}
+
 .timeline-body {
     margin-bottom: .2rem;
 }
@@ -648,9 +652,10 @@ img {
     text-align: justify;
 }
 
-#blog-aside {
-    overflow-y: auto;
+#blog-aside section a,
+#blog-aside section ul li {
     font-size: 14px;
+    line-height: 2em;
 }
 
 #blog-single {
@@ -662,7 +667,7 @@ img {
 .copyright {
     width: 100%;
     color: #6c757d;
-    margin-bottom: 2em;
+    margin: 2em 0;
 }
 
 .copyright tbody tr {
@@ -677,6 +682,11 @@ img {
 
 .copyright tbody tr td:last-child {
     width: 100%;
+    font-size: 14px;
+}
+
+.tags a:not(:last-child)::after {
+    content: "、";
 }
 
 #blog-article p {
@@ -736,13 +746,6 @@ nav#TableOfContents li.visible>a {
 .toc-marker path {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-}
-
-#blog-aside div ul,
-#blog-aside div>a {
-    padding-left: 1.6rem;
-    font-size: .8em;
-    line-height: 2em;
 }
 
 #blog-single a:hover,
@@ -986,6 +989,10 @@ details[open]+div {
     #blog-single,
     #blog-single+.sticky-top {
         width: 100%;
+    }
+
+    .copyright {
+        margin-top: 0;
     }
 }
 

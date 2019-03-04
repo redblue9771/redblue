@@ -3,6 +3,7 @@ date: "2018-08-10T13:46:11+08:00"
 title: "Visual Studio Code 中的「Go配置」"
 author: "赤琦"
 original: ""
+tags: ["Golang","VS Code","开发环境"]
 ---
 
 ## 发现问题

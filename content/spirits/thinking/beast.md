@@ -4,6 +4,8 @@ date: "2016-01-14"
 description: ""
 author: "赤琦"
 original: ""
+series: ["低等动物"]
+tags: ["杂感"]
 ---
 > ——抑郁得快要恋上红唇，烈酒，香烟
 

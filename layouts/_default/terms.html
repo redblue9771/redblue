@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section>
+  <ul>
+    {{- range .Data.Pages }}
+    <li>
+        <span class="badge badge-primary"><a href="{{ .Permalink }}">{{ .Title }}()</a></span>  
+    </li>
+    {{ end -}}
+  </ul>
+</section>
+{{ end }}

@@ -1,43 +1,54 @@
 <aside class="sticky-top float-md-right" id="blog-aside">
     <section>
-        <div class="divider"><span></span><span><i class="fa fa-mortar-board"></i>目录</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-mortar-board"></i> 目录</span><span></span></div>
+        {{- .TableOfContents -}}
     </section>
-    {{- .TableOfContents -}}{{with .Params.series}} <div class="divider"><span></span><span>同系列</span><span></span></div>
+    {{with .Params.series}}
     <section>
-        {{range .}}<a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}} </a>
-        <ul>
-            {{- with $.Site.Taxonomies.series.Get . }}
-            {{ range .Pages }}
-            <li class="text-truncate"><a href="{{ .Permalink }}">{{.LinkTitle}}</a></li>
-            {{ end }}
-            {{ end -}}
-        </ul>
-        {{end}}
+        <div class="divider"><span></span><span><i class="fa fa-bookmark"></i> 系列</span><span></span></div>
+        <dl>{{range .}}
+            <dt><a href="{{ "tags" | absURL }}/{{ . | urlize }}">【{{.}}】</a></dt>
+            <dd>
+                <ul>{{- with $.Site.Taxonomies.series.Get .}}{{ range .Pages }}
+                    <li><a href="{{ .Permalink }}">{{.LinkTitle}}</a></li>
+                    {{ end }}</ul>
+            </dd>{{ end -}}
+        </dl> {{end}}
+    </section> {{end}} {{with .Params.tags}}
+    <section>
+        <div class="divider"><span></span><span><i class="fa fa-tags"></i> 标签</span><span></span></div>
+        <div class="tags">{{range .}}
+            <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}}</a>{{end}}
+        </div>
     </section>
-    {{end}} <div class="divider"><span></span><span>分类</span><span></span></div>
-    <ul class="list-unstyled">
-        {{- range $key,$name := .CurrentSection.Parent.Sections.ByDate }}
-        <li>
-            <details>
-                <summary>{{- if ne $.CurrentSection $name}}
-                    {{$name.LinkTitle}}({{len $name.Pages}})
-                    {{else}}<strong>{{$name.LinkTitle}}({{len $name.Pages}})</strong>{{end -}}
-                </summary>
-            </details>
-            <div>
-                <ul>
-                    {{range first 5 $name.Pages}}
-                    <li>
-                        <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
-                    </li>
-                    {{end}}
-                </ul>
-                <a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a>
-            </div>
-        </li>
-        {{end -}}
-    </ul>
-    {{ with .PrevInSection }}{{ if . }}<div class="divider"><span></span><span>更多</span><span></span></div>
-    <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
-    <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+    {{end}}<section>
+        <div class="divider"><span></span><span><i class="fa fa-book"></i> 分类</span><span></span></div>
+        <ul class="list-unstyled">
+            {{- range $key,$name := .CurrentSection.Parent.Sections.ByDate }}
+            <li>
+                <details>
+                    <summary>{{- if ne $.CurrentSection $name}}
+                        {{$name.LinkTitle}}({{len $name.Pages}})
+                        {{else}}<strong>{{$name.LinkTitle}}({{len $name.Pages}})</strong>{{end -}}
+                    </summary>
+                </details>
+                <div>
+                    <ul>
+                        {{range first 5 $name.Pages}}
+                        <li>
+                            <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
+                        </li>
+                        {{end}}
+                        <li><a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a></li>
+                    </ul>
+                </div>
+            </li>
+            {{end -}}
+        </ul>
+    </section>
+    {{ with .PrevInSection }}{{ if . }}<section>
+        <div class="divider"><span></span><span><i class="fa fa-link"></i> 更多</span><span></span></div>
+        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
+        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+    </section>
 </aside>

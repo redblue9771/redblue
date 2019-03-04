@@ -4,6 +4,7 @@ date: 2018-11-24 00:00:00 +0800
 description: ''
 author: "赤琦"
 original: ""
+tags: ["管理","扁平化"]
 ---
 ## 等级带来的信息抑制
 
