@@ -1,26 +1,28 @@
-<aside class="sticky-top float-md-right">
-    <section class="lead">
-        <i class="fa fa-mortar-board"></i>目录：
+<aside class="sticky-top float-md-right" id="blog-aside">
+    <section>
+        <div class="divider"><span></span><span><i class="fa fa-mortar-board"></i>目录</span><span></span></div>
     </section>
-    {{- .TableOfContents -}}
-    <hr />{{with .Params.series}}
+    {{- .TableOfContents -}}{{with .Params.series}} <div class="divider"><span></span><span>同系列</span><span></span></div>
     <section>
         {{range .}}<a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}} </a>
         <ul>
             {{- with $.Site.Taxonomies.series.Get . }}
             {{ range .Pages }}
-            <li class="text-truncate"><a href="{{ .Permalink }}">{{ .LinkTitle}}</a></li>
+            <li class="text-truncate"><a href="{{ .Permalink }}">{{.LinkTitle}}</a></li>
             {{ end }}
             {{ end -}}
         </ul>
         {{end}}
     </section>
-    <hr />{{end}}
+    {{end}} <div class="divider"><span></span><span>分类</span><span></span></div>
     <ul class="list-unstyled">
-        {{- range $key,$name:=.CurrentSection.Parent.Sections }}
+        {{- range $key,$name := .CurrentSection.Parent.Sections.ByDate }}
         <li>
             <details>
-                <summary>{{if ne $.CurrentSection $name}}{{- $name.LinkTitle -}}({{len $name.Pages}}){{else}}<strong>{{- $name.LinkTitle -}}({{len $name.Pages}})</strong>{{end}}</summary>
+                <summary>{{- if ne $.CurrentSection $name}}
+                    {{$name.LinkTitle}}({{len $name.Pages}})
+                    {{else}}<strong>{{$name.LinkTitle}}({{len $name.Pages}})</strong>{{end -}}
+                </summary>
             </details>
             <div>
                 <ul>
@@ -35,7 +37,7 @@
         </li>
         {{end -}}
     </ul>
-    <hr>{{ with .PrevInSection }}{{ if . }}
+    {{ with .PrevInSection }}{{ if . }}<div class="divider"><span></span><span>更多</span><span></span></div>
     <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
     <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
 </aside>

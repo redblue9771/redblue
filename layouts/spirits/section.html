@@ -1,5 +1,5 @@
 {{- define "main"}}
-<div class="container position-relative blog-list">
+<div class="container position-relative" id="blog-section">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
             <li>分类：</li>
@@ -33,8 +33,7 @@
                             {{end -}}
                         </div>
                         <div class="timeline-footer">
-                            {{- if eq (.Param "info.name") ""}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;赤琦</p>
-                            {{else}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
+                            <p class="text-right"><i class="fa fa-pencil"></i>&nbsp;{{- .Param "author" -}}</p>
                         </div>
                     </a>
                 </div>

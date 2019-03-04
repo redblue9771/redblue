@@ -1,9 +1,8 @@
 ---
 title: "「快文化」崇拜的尽头是孤独海"
 date: "2018-05-11"
-"info":
-    name: "Brian（微信公众号：Brian在深圳 | brianinshenzhen）"
-    url: "https://www.douban.com/note/557947118/"
+author: "Brian（微信公众号：Brian在深圳 | brianinshenzhen）"
+original: "https://www.douban.com/note/557947118/"
 ---
 
 快餐

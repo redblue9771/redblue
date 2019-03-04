@@ -2,9 +2,9 @@
 title: "再清明，似「野僧」"
 date: "2018-04-05"
 description: ""
-"info":
-    name: "赤琦"
-    url: ""
+tags: ["清明"]
+author: "赤琦"
+original: ""
 ---
 
 >清明 - 北宋王禹偁
