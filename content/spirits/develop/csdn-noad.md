@@ -4,6 +4,7 @@ description: ""
 title: "极短「CSS3」代码去 CSDN 广告"
 author: "赤琦"
 original: ""
+tags: ["CSS","广告"]
 ---
 
 ## 关于CSDN

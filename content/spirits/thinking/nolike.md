@@ -4,6 +4,8 @@ slug: "low-desire"
 title: "低「欲」少年"
 author: "赤琦"
 original: ""
+series: ["低等动物"]
+tags: ["低欲","杂感"]
 ---
 
 > 你，是否像我一样，很久没有喜欢一个东西、一件事亦或一个人。

@@ -4,6 +4,7 @@ date: "2016-06-14"
 description: ""
 author: "赤琦"
 original: ""
+tags: ["毕业", "杂感","青春"]
 ---
 此后
 

@@ -8,5 +8,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /bak/
 Disallow: /labs/
-Disallow: /tags/
 >>>>>>> 4186f4fc43a7136cd07a2ec8c28e8431f23ae80d

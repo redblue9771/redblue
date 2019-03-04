@@ -33,12 +33,6 @@
           <td>作者</td>
           <td>{{.Page.Param "author"}}</td>
         </tr>
-        {{with .Params.tags}}
-        <tr>
-          <td>标签</td>
-          <td>{{range .}}<a href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{.}} </a>{{end}}</td>
-        </tr>
-        {{end}}
       </tbody>
     </table>
   </address>
