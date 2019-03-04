@@ -2,9 +2,8 @@
 title: "驯服「野兽」"
 date: "2016-01-14"
 description: ""
-"info":
-    name: "赤琦"
-    url: ""
+author: "赤琦"
+original: ""
 ---
 > ——抑郁得快要恋上红唇，烈酒，香烟
 

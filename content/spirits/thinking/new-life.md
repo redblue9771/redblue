@@ -1,9 +1,8 @@
 ---
 title: "「涅槃」立德立言，无问西东"
 date: "2018-03-22"
-"info":
-    name: "赤琦"
-    url: ""
+author: "赤琦"
+original: ""
 ---
 
 开始

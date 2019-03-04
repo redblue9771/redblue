@@ -35,8 +35,7 @@
                             {{end -}}
                         </div>
                         <div class="timeline-footer">
-                            {{- if eq (.Param "info.name") ""}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;赤琦</p>
-                            {{else}}<p class="text-right"><i class="fa fa-pencil"></i>&nbsp;{{- .Param "info.name" -}}</p>{{end -}}
+                            <p class="text-right"><i class="fa fa-pencil"></i>&nbsp;{{- .Param "author" -}}</p>
                         </div>
                     </a>
                 </div>

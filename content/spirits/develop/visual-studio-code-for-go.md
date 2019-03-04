@@ -1,12 +1,10 @@
-+++
-date = "2018-08-10T13:46:11+08:00"
-title = "Visual Studio Code 中的「Go配置」"
-slug = "visual-studio-code-for-go"
-series = ["wdwa","asdas"]
-[info]
-    name = "赤琦"
-    url = ""
-+++
+---
+date: "2018-08-10T13:46:11+08:00"
+title: "Visual Studio Code 中的「Go配置」"
+author: "赤琦"
+original: ""
+---
+
 ## 发现问题
 
 >使用静态博客开发后Webstrom对于`{{.SIte}}`这类数据绑定的符号的格式化简直惨不忍睹，而且每次启动对于我的电脑负担真的很大，于是转向使用Visual Studio Code，不得不说对于前端这种简单的编辑使用Visual Studio Code真的是极好，良好的生态扩展和跨平台使用、还免费、极速、格式化不乱……一秒成为真爱粉！JetBrains全家桶由Visual Studio Code完美替代（当然毕竟前者是IDE，本身就大材小用了）

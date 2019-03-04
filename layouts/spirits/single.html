@@ -1,11 +1,10 @@
 {{- define "main" }}
-<main class="single-post">
-  <hr class="d-none d-md-block" />
+<main id="blog-single">
   <address>
     <table class="copyright">
       <tbody>
         <tr>
-          {{- if .Page.Param "info.reprint"}}
+          {{- if .Page.Param "original"}}
           <td>协议</td>
           <td>
             遵照原文使用协议，详情查看原文出处。
@@ -22,17 +21,17 @@
         </tr>
         <tr>
           <td>原文</td>
-          {{- if eq (.Page.Param "info.url") ""}}
+          {{- if eq (.Page.Param "original") ""}}
           <td>{{$.Permalink}}</td>
-          {{else}} {{if eq (.Page.Param "info.url") "来自互联网"}}
-          <td><a>{{- .Page.Param "info.url"}}</a></td>
+          {{else}} {{if eq (.Page.Param "original") "来自互联网"}}
+          <td><a>{{- .Page.Param "original"}}</a></td>
           {{else}}
-          <td><a href='{{.Page.Param "info.url"}}' target="_blank">{{.Page.Param "info.url"}}</a></td>
+          <td><a href='{{.Page.Param "original"}}' target="_blank">{{.Page.Param "original"}}</a></td>
           {{end -}} {{end -}}
         </tr>
         <tr>
           <td>作者</td>
-          <td>{{.Page.Param "info.name"}}</td>
+          <td>{{.Page.Param "author"}}</td>
         </tr>
         {{with .Params.tags}}
         <tr>
@@ -43,11 +42,11 @@
       </tbody>
     </table>
   </address>
-  <article class="post-content">
+  <div class="divider d-none d-md-block"><span></span><span>正文</span><span></span></div>
+  <article id="blog-article">
     {{- .Content -}}
-    <p>（完）</p>
   </article>
-  <hr />
+  <div class="divider d-none d-md-block"><span></span><span>（完）</span><span></span></div>
 </main>
-{{- partial "aside.html" . -}}
+{{- template "spirits/aside.html" . -}}
 {{ end -}}

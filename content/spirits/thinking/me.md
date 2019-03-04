@@ -1,9 +1,8 @@
 ---
 title: "I'm「赤琦」"
 date: "1997-06-30"
-"info":
-    name: "赤琦"
-    url: ""
+author: "赤琦"
+original: ""
 ---
 
 ## 你好，中国

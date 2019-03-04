@@ -2,10 +2,8 @@
 title: 团队的从「去中心化」，到扁平化组织的未来
 date: 2018-11-24 00:00:00 +0800
 description: ''
-info:
-  name: 蛋壳花生
-  url: https://zhuanlan.zhihu.com/p/42904743
-
+author: "赤琦"
+original: ""
 ---
 ## 等级带来的信息抑制
 

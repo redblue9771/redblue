@@ -2,9 +2,8 @@
 title: "「凤凰花季」亦会再见"
 date: "2016-06-14"
 description: ""
-"info":
-    name: "赤琦"
-    url: ""
+author: "赤琦"
+original: ""
 ---
 此后
 
