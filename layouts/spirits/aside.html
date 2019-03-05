@@ -1,11 +1,11 @@
 <aside class="sticky-top float-md-right" id="blog-aside">
     <section>
-        <div class="divider"><span></span><span><i class="fa fa-mortar-board"></i> 目录</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-mortar-board"></i>&nbsp;目录</span><span></span></div>
         {{- .TableOfContents -}}
     </section>
     {{with .Params.series}}
     <section>
-        <div class="divider"><span></span><span><i class="fa fa-bookmark"></i> 系列</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-bookmark"></i>&nbsp;系列</span><span></span></div>
         <dl>{{range .}}
             <dt><a href="{{ "tags" | absURL }}/{{ . | urlize }}">【{{.}}】</a></dt>
             <dd>
@@ -16,13 +16,13 @@
         </dl> {{end}}
     </section> {{end}} {{with .Params.tags}}
     <section>
-        <div class="divider"><span></span><span><i class="fa fa-tags"></i> 标签</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-tags"></i>&nbsp;标签</span><span></span></div>
         <div class="tags">{{range .}}
             <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}}</a>{{end}}
         </div>
     </section>
     {{end}}<section>
-        <div class="divider"><span></span><span><i class="fa fa-book"></i> 分类</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-book"></i>&nbsp;分类</span><span></span></div>
         <ul class="list-unstyled">
             {{- range $key,$name := .CurrentSection.Parent.Sections.ByDate }}
             <li>
@@ -47,7 +47,7 @@
         </ul>
     </section>
     {{ with .PrevInSection }}{{ if . }}<section>
-        <div class="divider"><span></span><span><i class="fa fa-link"></i> 更多</span><span></span></div>
+        <div class="divider"><span></span><span><i class="fa fa-link"></i>&nbsp;更多</span><span></span></div>
         <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
         <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
     </section>

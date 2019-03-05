@@ -407,19 +407,17 @@ p code {
     padding: .6rem 2rem;
 }
 
-.main-nav a,
-.main-nav a i {
-    color: #fff !important;
-    text-shadow: 0 0 2px blue !important;
-}
-
 .main-nav a:hover {
     color: #f44336 !important;
     text-decoration: line-through;
 }
 
 .navbar-brand {
-    max-width: 80%;
+    font-weight: 500;
+}
+
+#navbarNavAltMarkup {
+    padding-bottom: 1em;
 }
 
 .highlight pre {

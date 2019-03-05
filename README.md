@@ -1,6 +1,8 @@
 # RedBlue | 赤琦
 
-💻 This is a website deployment source for ["https://redblue.fun"](https://redblue.fun)
+This is a website deployment source for ["https://redblue.fun"](https://redblue.fun)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/de542e77-8341-4aac-aeb0-f3b1ab0e4307/deploy-status)](https://app.netlify.com/sites/redblue/deploys)
 
 ## Showcase
 
@@ -39,22 +41,19 @@
 ```bash
 .
 ├── content
-│   ├── organizations
-│   │   └── index.md
 │   ├── repositories
 │   │   └── index.md
-│   ├── richs
-│   │   ├── discover
-│   │   └── pohotographies
 │   ├── spirits
 │   │   ├── develop
 │   │   │   └── index.md
-│   │   ├── konwleges
+│   │   ├── knowleges
 │   │   │   └── index.md
 │   │   ├── thinking
 │   │   │   └── index.md
 │   │   └── index.md
 │   └── index.md
+│   data
+│   └── api.toml
 ├── layouts
 │   ├── _default
 │   ├── organizations
@@ -64,7 +63,7 @@
 │   ├── index.redirects
 │   ├── index.headers
 │   ├── 404.html
-│   └── index.htnml
+│   └── index.html
 ├── static
 │   ├── admin
 │   ├── css
@@ -73,7 +72,6 @@
 │   ├── labs
 │   ├── favicon.ico
 │   └── robots.txt
-├── .gitignore
 ├── LICENSE
 ├── README.md
 └── config.toml
