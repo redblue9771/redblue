@@ -12,7 +12,7 @@
           {{else}}
           <td>协议</td>
           <td>采用
-            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="copyright">
               <i class="fa fa-cc"></i> 知识共享署名 - 非商业性使用 - 相同方式共享4.0国际许可协议
             </a>
             进行许可
@@ -26,7 +26,7 @@
           {{else}} {{if eq (.Page.Param "original") "来自互联网"}}
           <td><a>{{- .Page.Param "original"}}</a></td>
           {{else}}
-          <td><a href='{{.Page.Param "original"}}' target="_blank">{{.Page.Param "original"}}</a></td>
+          <td><a href='{{.Page.Param "original"}}' target="_blank" rel="copyright">{{.Page.Param "original"}}</a></td>
           {{end -}} {{end -}}
         </tr>
         <tr>
@@ -39,8 +39,8 @@
   <div class="divider d-none d-md-block"><span></span><span>正文</span><span></span></div>
   <article id="blog-article">
     {{- .Content -}}
+    <p>（完）</p>
   </article>
-  <div class="divider d-none d-md-block"><span></span><span>（完）</span><span></span></div>
 </main>
 {{- template "spirits/aside.html" . -}}
 {{ end -}}

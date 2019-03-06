@@ -622,7 +622,7 @@ img {
 
 .main-area {
     max-width: 1024px;
-    margin: -4rem auto 0;
+    margin: -2rem auto 0;
     padding: 0 1rem;
     position: relative;
 }
@@ -689,7 +689,7 @@ img {
 
 #blog-article p {
     line-height: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 #blog-single+.sticky-top {
@@ -876,6 +876,48 @@ details[open]+div {
 .carousel font {
     color: #333;
     font-weight: bold;
+}
+
+#article-tags {
+    max-width: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#article-tags a {
+    margin: auto .5em;
+}
+
+.article-series>div {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 1rem;
+}
+
+
+.article-series article {
+    display: inline-block;
+    width: 16em;
+    height: 9em;
+}
+
+.shade-left,
+.shade-right {
+    position: absolute;
+    width: 3em;
+    height: 100%;
+    top: 0;
+}
+
+.shade-left {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    left: 0;
+}
+
+.shade-right {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    right: 0;
 }
 
 .bg-color-red {

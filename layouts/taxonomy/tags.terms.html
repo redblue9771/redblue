@@ -1,0 +1,5 @@
+{{- define "main" }}
+<section id="article-tags">
+{{- range .Data.Pages }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ end -}}
+</section>
+{{ end -}}

@@ -1,0 +1,15 @@
+{{- define "main" }}
+<section class="article-series position-relative">
+    <div>
+        {{range .Pages}}
+        <article class="mx-3 mb-3 shadow" style="background:url(/img/series/books.jpg) no-repeat;background-size: cover;">
+            <a href="{{ .Permalink }}" rel="glossary">
+                <h4 class="text-white mx-3">《{{ .Title }}》</h4>
+            </a>
+        </article>
+        {{end}}
+    </div>
+    <span class="shade-left"></span>
+    <span class="shade-right"></span>
+</section>
+{{ end -}}
