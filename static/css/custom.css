@@ -806,6 +806,10 @@ details[open]+div {
     color: #333;
 }
 
+#blog-section .breadcrumb {
+    padding: 0;
+}
+
 .pagination {
     justify-content: center;
     margin: 2em 0;
@@ -894,7 +898,6 @@ details[open]+div {
     white-space: nowrap;
     padding: 1rem;
 }
-
 
 .article-series article {
     display: inline-block;

@@ -1,14 +1,19 @@
 {{- define "main"}}
 <div class="container position-relative" id="blog-section">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-end">
+        <ul class="breadcrumb justify-content-end">
             <li>分类：</li>
             {{- range .Sections.ByDate}}
             <li class="breadcrumb-item">
                 <a href="{{.Permalink }}">{{.LinkTitle}}({{len .Pages}})</a>
             </li>
             {{end -}}
-        </ol>
+        </ul>
+        <ul class="breadcrumb justify-content-end">
+            <li>其他分类：</li>
+            <li class="breadcrumb-item"><a href="/tags/" rel="bookmark">按标签</a></li>
+            <li class="breadcrumb-item"><a href="/series/" rel="bookmark">按系列</a></li>
+        </ul>
     </nav>
     <div class="row">
         <div class="timeline timeline-line-dotted">
