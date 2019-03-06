@@ -3,7 +3,7 @@
     <div>
         {{range .Pages}}
         <article class="mx-3 mb-3 shadow" style="background:url(/img/series/books.jpg) no-repeat;background-size: cover;">
-            <a href="{{ .Permalink }}" rel="glossary">
+            <a href="{{ .Permalink }}" class="d-block w-100 h-100" rel="glossary">
                 <h4 class="text-white mx-3">《{{ .Title }}》</h4>
             </a>
         </article>

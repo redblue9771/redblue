@@ -1,5 +1,8 @@
 {{- define "main"}}
 <section>
+    <ul class="breadcrumb justify-content-end">
+        <a href="/{{.Data.Plural}}/" rel="bookmark"><i class="fa fa-arrow-circle-left"></i> 所有{{.Data.Plural}}</a></li>
+    </ul>
     {{ range .Pages.GroupByDate "2006.01" }}
     <h4>{{ .Key }}</h4>
     <ul>

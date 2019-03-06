@@ -1,7 +1,7 @@
 {{- define "main" }}
 <div class="container position-relative blog-list">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-end">
+        <ul class="breadcrumb justify-content-end">
             <li>分类：</li>
             {{- range $key,$name:=.CurrentSection.Parent.Sections.ByDate}} {{- if ne $.CurrentSection $name}}
             <li class="breadcrumb-item">
@@ -10,7 +10,12 @@
             {{else}}
             <li class="breadcrumb-item active" aria-current="page">{{$name.LinkTitle}}({{len $name.Pages}})</li>
             {{end -}} {{end -}}
-        </ol>
+        </ul>
+        <ul class="breadcrumb justify-content-end">
+            <li>其他分类：</li>
+            <li class="breadcrumb-item"><a href="/tags/" rel="bookmark">按标签</a></li>
+            <li class="breadcrumb-item"><a href="/series/" rel="bookmark">按系列</a></li>
+        </ul>
     </nav>
     <div class="row">
         <div class="timeline timeline-line-dotted">
