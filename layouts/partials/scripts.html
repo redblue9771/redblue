@@ -97,92 +97,111 @@
             tocPath.setAttribute('opacity', 0);
         }
     }
+
 </script> {{end -}}
 {{- if .IsHome}}
 <script type="text/javascript">
-    var $html = "",
-        $flag = 0;
-    fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        $html = "<dt><h4>·项目·</h4></dt>";
-        for (item of data) {
-            if (!item.fork) {
-                if ($flag < 5) {
-                    $html +=
-                        '<dd><a href="' + item.html_url +
-                        '" class="d-block text-truncate" target="_blank">' + item.full_name +
-                        '</a><time class="d-block text-truncate">' + item.description + '</time></dd>';
-                    $flag++;
-                    continue;
+    (() => {
+        var $html = "",
+            $flag = 0;
+        fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            $html = "<dt><h4>·项目·</h4></dt>";
+            for (item of data) {
+                if (!item.fork) {
+                    if ($flag < 5) {
+                        $html +=
+                            '<dd><a href="' + item.html_url +
+                            '" class="d-block text-truncate" target="_blank">' + item.full_name +
+                            '</a><time class="d-block text-truncate">' + item.description + '</time></dd>';
+                        $flag++;
+                        continue;
+                    }
+                    break;
                 }
-                break;
             }
-        }
-        document.getElementById("github-list").innerHTML = $html;
-    });
+            document.getElementById("github-list").innerHTML = $html;
+        });
+    })();
 
 </script>{{end -}}{{- if eq .Type "repositories"}}
 <script type="text/javascript">
-    function formatUtc(UTCDateString) {
-        if (!UTCDateString) {
-            return '-';
-        }
-
-        function formatFunc(str) { //格式化显示
-            return str > 9 ? str : '0' + str
-        }
-        var date2 = new Date(UTCDateString); //这步是关键
-        var year = date2.getFullYear();
-        var mon = formatFunc(date2.getMonth() + 1);
-        var day = formatFunc(date2.getDate());
-        var hour = date2.getHours();
-        hour = formatFunc(hour);
-        var min = formatFunc(date2.getMinutes());
-        var dateStr = year + '/' + mon + '/' + day + ' ' + hour + ':' + min;
-        return dateStr;
-    }
-    var $html = "";
-    fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        for (item of data) {
-            if (!item.fork) {
-                $html += '<div class="timeline-item">' +
-                    '<div class="timeline-point timeline-point-info">' +
-                    '<i class="fa fa-star"></i>' +
-                    '</div>' +
-                    '<div class="timeline-event timeline-event-info"><a href=' + item.html_url +
-                    ' target="_blank">' +
-                    '<div class="timeline-heading">' +
-                    '<h5 class="text-truncate"><strong>' + item.full_name + '</strong></h5>' +
-                    '</div>' +
-                    '<div class="timeline-body">' +
-                    '<p>' + item.description + '</p><small>' +
-                    '<i class="fa fa-code"> ' + item.language +
-                    '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-star-half-full"> ' + item.stargazers_count +
-                    '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-code-fork"> ' + item.forks_count +
-                    '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-balance-scale"> ';
-                if (item.license !== null) {
-                    $html += item.license.spdx_id
-                } else {
-                    $html += item.license
-                }
-
-                $html +=
-                    '</i></small></div>' +
-                    '<div class="timeline-footer">' +
-                    '<p class="text-right text-truncate"><i class="fa fa-terminal"></i> <small>最近一次更新：' +
-                    formatUtc(item.updated_at) +
-                    '</small></p>' +
-                    '</div>' +
-                    '</a></div>' +
-                    '</div>';
+    (() => {
+        function formatUtc(UTCDateString) {
+            if (!UTCDateString) {
+                return '-';
             }
+
+            function formatFunc(str) { //格式化显示
+                return str > 9 ? str : '0' + str
+            }
+            var date2 = new Date(UTCDateString); //这步是关键
+            var year = date2.getFullYear();
+            var mon = formatFunc(date2.getMonth() + 1);
+            var day = formatFunc(date2.getDate());
+            var hour = date2.getHours();
+            hour = formatFunc(hour);
+            var min = formatFunc(date2.getMinutes());
+            var dateStr = year + '/' + mon + '/' + day + ' ' + hour + ':' + min;
+            return dateStr;
         }
-        $html +=
-            '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
-        document.getElementById("github-list").innerHTML = $html;
-    });
+        var $html = "";
+        fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            for (item of data) {
+                if (!item.fork) {
+                    $html += '<div class="timeline-item">' +
+                        '<div class="timeline-point timeline-point-info">' +
+                        '<i class="fa fa-star"></i>' +
+                        '</div>' +
+                        '<div class="timeline-event timeline-event-info"><a href=' + item.html_url +
+                        ' target="_blank">' +
+                        '<div class="timeline-heading">' +
+                        '<h5 class="text-truncate"><strong>' + item.full_name + '</strong></h5>' +
+                        '</div>' +
+                        '<div class="timeline-body">' +
+                        '<p>' + item.description + '</p><small>' +
+                        '<i class="fa fa-code"> ' + item.language +
+                        '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-star-half-full"> ' + item.stargazers_count +
+                        '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-code-fork"> ' + item.forks_count +
+                        '</i>&nbsp;&nbsp;&nbsp;<i class="fa fa-balance-scale"> ';
+                    if (item.license !== null) {
+                        $html += item.license.spdx_id
+                    } else {
+                        $html += item.license
+                    }
+
+                    $html +=
+                        '</i></small></div>' +
+                        '<div class="timeline-footer">' +
+                        '<p class="text-right text-truncate"><i class="fa fa-terminal"></i> <small>最近一次更新：' +
+                        formatUtc(item.updated_at) +
+                        '</small></p>' +
+                        '</div>' +
+                        '</a></div>' +
+                        '</div>';
+                }
+            }
+            $html +=
+                '<span class="timeline-label"><a href="#" class="btn btn-default" title="back-top"><i class="fa fa-fw fa-history"></i></a></span>';
+            document.getElementById("github-list").innerHTML = $html;
+        });
+    })();
 
 </script> {{end -}}
+{{- if eq .Type "tags"}}
+<script type="text/javascript">
+    (() => {
+        var $Tags = document.querySelectorAll('#article-tags > a'),
+            colors = ['#29b7dc', '#6a9bd3', '#3a4f92', '#a7e2f1', '#9dbde2'];
+        $Tags.forEach((e) => {
+            var randomFz = Math.floor((Math.random() * 16) + 16),
+                randomC = Math.floor(Math.random() * 5);
+            e.setAttribute("style", 'color:' + colors[randomC] + '!important;font-size:' + randomFz + 'px');
+        })
+    })();
+
+</script>
+{{end -}}

@@ -7,10 +7,10 @@
     <section>
         <div class="divider"><span></span><span><i class="fa fa-bookmark"></i>&nbsp;系列</span><span></span></div>
         <dl>{{range .}}
-            <dt><a href="{{ "tags" | absURL }}/{{ . | urlize }}">【{{.}}】</a></dt>
+            <dt><a href="{{ "tags" | absURL }}/{{ . | urlize }}">《{{.}}》</a></dt>
             <dd>
                 <ul>{{- with $.Site.Taxonomies.series.Get .}}{{ range .Pages }}
-                    <li><a href="{{ .Permalink }}">{{.LinkTitle}}</a></li>
+                    <li><a href="{{ .Permalink }}" rel="bookmark">{{.LinkTitle}}</a></li>
                     {{ end }}</ul>
             </dd>{{ end -}}
         </dl> {{end}}
@@ -18,7 +18,7 @@
     <section>
         <div class="divider"><span></span><span><i class="fa fa-tags"></i>&nbsp;标签</span><span></span></div>
         <div class="tags">{{range .}}
-            <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{.}}</a>{{end}}
+            <a href="{{ "tags" | absURL }}/{{ . | urlize }}" rel="bookmark">{{.}}</a>{{end}}
         </div>
     </section>
     {{end}}<section>
@@ -36,10 +36,10 @@
                     <ul>
                         {{range first 5 $name.Pages}}
                         <li>
-                            <a href="{{ .Permalink }}" title="{{.Title}}">{{.Title}}</a>
+                            <a href="{{ .Permalink }}" title="{{.Title}}" rel="bookmark">{{.Title}}</a>
                         </li>
                         {{end}}
-                        <li><a href="{{$name.Permalink}}" title="{{$name.Title}}">更多关于此分类的文章</a></li>
+                        <li><a href="{{$name.Permalink}}" title="{{$name.Title}}" rel="next">更多关于此分类的文章</a></li>
                     </ul>
                 </div>
             </li>
@@ -48,7 +48,7 @@
     </section>
     {{ with .PrevInSection }}{{ if . }}<section>
         <div class="divider"><span></span><span><i class="fa fa-link"></i>&nbsp;更多</span><span></span></div>
-        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
-        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}">下一篇：{{.Title}}</a>{{ end }}{{ end }}
+        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}" rel="prev">上一篇：{{.Title}}</a>{{ end }}{{ end }} {{ with.NextInSection }}{{ if . }}
+        <a href="{{ .Permalink }}" class="d-block" title="{{.Title}}" rel="next">下一篇：{{.Title}}</a>{{ end }}{{ end }}
     </section>
 </aside>
