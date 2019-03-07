@@ -500,6 +500,10 @@ p code {
     margin: 0;
 }
 
+.fa {
+    margin: 0 0.2em;
+}
+
 .head {
     width: 100%;
     height: auto;
@@ -1001,6 +1005,16 @@ details[open]+div {
 
 #blog-article strong {
     margin: 0 .2em;
+}
+
+#blog-article table {
+    text-align: center;
+}
+
+#blog-article table td,
+#blog-article table th {
+    border: 1px solid brown;
+    padding: 0 0.5em;
 }
 
 .floor-info p {

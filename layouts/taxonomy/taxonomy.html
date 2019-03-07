@@ -9,12 +9,13 @@
         {{ range .Pages }}
         <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <p>{{.Summary}}…</p>
-            <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}
+            <div>{{.Summary}}…</div>
+            <p class="meta tags">
+                <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
                 {{ range .Params.tags }}
                 <a href="{{ "tags" | absURL }}/{{ . | urlize }}" rel="bookmark">#{{.}}</a>
                 {{ end }}
-            </div>
+            </p>
         </li>
         {{ end }}
     </ul>
