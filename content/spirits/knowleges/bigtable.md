@@ -1,5 +1,5 @@
 +++
-title = "「BigTable」: A Distributed Storage System for Structured Data.pdf"
+title = "「BigTable」: A Distributed Storage System for Structured Data"
 author = "Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber"
 date = "2019-03-08 00:00:02 +0800"
 tags = ["分布式", "Google", "Hadoop", "BigTable", "软件模型","数据库"]
