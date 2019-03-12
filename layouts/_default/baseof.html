@@ -6,19 +6,23 @@
 <body>
     {{partial "nav.html" .}}
     <div class="head" id="head">
-        <div style="max-width: 1024px;margin: 0 auto;">
-            <header class="header">
-                {{- partial "head.html" . -}}
-            </header>
-        </div>
+            <div class="header">
+                <header>
+                  {{- partial "head.html" . -}}
+                </header>
+            </div>
+            <div class="header-after"></div>
     </div>
     <div class="container-fluid clearfix main-area">
         {{- block "main" . }}{{ end -}}
     </div>
     <div class="container-fluid floor" id="fl">
-        <footer class="floor-info">
-            {{partial "footer.html" .}}
-        </footer>
+        <div class="floor-info-before"></div>
+        <div class="floor-info">
+            <footer>
+                    {{partial "footer.html" .}}
+            </footer>
+        </div>
     </div>
     {{- partial "scripts.html" . -}}
 </body>
