@@ -13,13 +13,16 @@ var last_known_scroll_position = 0,
     currentTitle = document.getElementById("main-title").textContent;
 
 function doSomething(scroll_pos) {
-    let headerTitleHeight = document.getElementById("head").offsetHeight,
+    let headerTitleHeight = document.getElementById("head").offsetHeight / 2,
+        nav = document.getElementById("main-nav"),
         postTitle = document.getElementById("post-title").textContent,
         navTitle = document.getElementById("main-title");
     if (scroll_pos > headerTitleHeight) {
         navTitle.innerText = postTitle;
+        nav.setAttribute("style", "background: #448AFF;");
     } else {
         navTitle.innerText = currentTitle;
+        nav.setAttribute("style", "background: transparent;");
     }
 }
 
