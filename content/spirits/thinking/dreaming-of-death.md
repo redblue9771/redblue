@@ -5,6 +5,7 @@ description = ""
 author = "赤琦"
 original = ""
 tags = ["杂感"]
+draft = true
 +++
 
 我爱很多人，但是爱我的不多，不过我天生有一个爱我的妈妈，却习以为常，爱得不温不火，成了一抹灵曦。
