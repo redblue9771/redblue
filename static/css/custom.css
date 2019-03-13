@@ -1004,10 +1004,6 @@ details[open]+div {
 	margin: 0 .2em;
 }
 
-#blog-article table {
-	text-align: center;
-}
-
 #blog-article table td,
 #blog-article table th {
 	border: 1px solid brown;
