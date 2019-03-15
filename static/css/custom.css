@@ -637,7 +637,7 @@ img {
 
 .main-area #blog-aside,
 #blog-single,
-#blog-section {
+	{
 	word-break: break-all;
 	text-align: justify;
 }
@@ -1051,7 +1051,7 @@ details[open]+div {
 	}
 
 	#blog-single,
-    #blog-single+.sticky-top {
+	#blog-single+.sticky-top {
 		width: 100%;
 	}
 
@@ -1070,7 +1070,7 @@ details[open]+div {
 	}
 
 	.header header h2,
-    .header header time {
+	.header header time {
 		font-size: 1.8rem;
 	}
 
