@@ -526,6 +526,7 @@ p code {
 	background: -o-linear-gradient(95deg, transparent 8.75vw, #448aff 0);
 	background: linear-gradient(-5deg, transparent 8.75vw, #448aff 0);
 	height: 8.75vw;
+	margin-top: -1px;
 }
 
 img {
@@ -673,6 +674,7 @@ img {
 .copyright tbody tr td:last-child {
 	width: 100%;
 	font-size: 14px;
+	word-break: break-all;
 }
 
 .tags a:not(:last-child)::after {
@@ -1015,6 +1017,7 @@ details[open]+div {
 	background: -o-linear-gradient(275deg, transparent 8.75vw, #f44336 0);
 	background: linear-gradient(-185deg, transparent 8.75vw, #f44336 0);
 	height: 8.75vw;
+	margin-bottom: -1px;
 }
 
 .floor-info {
