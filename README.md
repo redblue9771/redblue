@@ -3,6 +3,8 @@
 This is a website deployment source for ["https://redblue.fun"](https://redblue.fun)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/de542e77-8341-4aac-aeb0-f3b1ab0e4307/deploy-status)](https://app.netlify.com/sites/redblue/deploys)
+![](https://img.shields.io/github/last-commit/redblue9771/redblue.svg)
+![](https://img.shields.io/github/license/redblue9771/redblue.svg)
 
 ## Showcase
 
