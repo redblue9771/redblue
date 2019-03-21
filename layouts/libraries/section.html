@@ -1,0 +1,12 @@
+{{- define "main" }}
+<section>
+    {{ range readDir "./static/libraries" }}{{$name:=.Name}}
+    <h3>{{ .Name }}</h3>
+       <ul>
+           {{ range readDir (printf "./static/libraries/%s" .Name) }}
+             <li id="{{.Name}}"><a href="/libraries/{{$name}}/{{ .Name | relURL }}" target="_blank" rel="index"> {{ .Name }}</a></li>
+           {{ end }}
+       </ul> 
+    {{ end }}
+</section>
+{{ end -}}

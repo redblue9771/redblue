@@ -6,9 +6,14 @@ This is a website deployment source for ["https://redblue.fun"](https://redblue.
 ![](https://img.shields.io/github/last-commit/redblue9771/redblue.svg)
 ![](https://img.shields.io/github/license/redblue9771/redblue.svg)
 
-## Showcase
+## Built With
 
-💎 Perfect response (Base on Bootstrap)
+* [Hugo](https://github.com/gohugoio/hugo) - A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
+* [BootStrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+* [BootStrap.Native](https://github.com/thednp/bootstrap.native) - The jQuery plugins for Bootstrap 4 redeveloped with native JavaScript, providing same basic functionality, but lighter in size and delivering higher performance for your application.
+
+
+## Showcase
 
 <div>
     <details open>
@@ -48,13 +53,13 @@ This is a website deployment source for ["https://redblue.fun"](https://redblue.
 │   ├── spirits
 │   │   ├── develop
 │   │   │   └── index.md
-│   │   ├── knowleges
+│   │   ├── knowledge
 │   │   │   └── index.md
 │   │   ├── thinking
 │   │   │   └── index.md
 │   │   └── index.md
 │   └── index.md
-│   data
+├── data
 │   └── api.toml
 ├── layouts
 │   ├── _default
@@ -62,35 +67,41 @@ This is a website deployment source for ["https://redblue.fun"](https://redblue.
 │   ├── partials
 │   ├── repositories
 │   ├── spirits
+│   ├── shortcodes
+│   ├── taxonomy
 │   ├── index.redirects
 │   ├── index.headers
 │   ├── 404.html
 │   └── index.html
 ├── static
 │   ├── admin
-│   ├── css
+│   ├── fonts
 │   ├── img
-│   ├── js
 │   ├── labs
 │   ├── favicon.ico
 │   └── robots.txt
+├── assets
+│   ├── css
+│   └── js
 ├── LICENSE
 ├── README.md
 └── config.toml
 ```
 
-## 🛠 How to use it
+## Running the tests
 
-Install and add PATH [Hugo](https://gohugo.io)
+1、 Install and add PATH [Hugo](https://gohugo.io)
 
+2、 Bash
 ```bash
 cd $filespace
 hugo server
-// open http://localhost:1313 with Browser
 ```
 
-## ⚖️ LICENSE
+2、 Open http://localhost:1313 with Browser
+
+## License
 
 💷 Some website content is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-👉 These source code are licensed under a [MIT License.](https://github.com/redblue9771/redblue/blob/master/LICENSE)
+👉 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
