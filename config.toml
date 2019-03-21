@@ -13,8 +13,6 @@ pygmentsStyle = "fruity"
 enableRobotsTXT = false
 disableAliases = true
 
-assetDir = "static"
-
 [params]
 disallow_search_engines = true # set robots.txt to disallow everything
 
@@ -40,20 +38,6 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
-
-# bar
-[[meanu.blog]]
-identifier = "spirits"
-name = "博客"
-url = "/spirits"
-[[meanu.repos]]
-identifier = "repositories"
-name = "仓库"
-url = "/repositories"
-[[meanu.orgs]]
-identifier = "organizations"
-name = "组织"
-url = "/organizations"
 
 [taxonomies]
 tags = "tags"
