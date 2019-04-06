@@ -10,7 +10,7 @@
       <div>简述：{{.description}}</div>
       {{end}}
       <div class="tags mb-3">标签：{{range $k,$v:=.tag}}<a rel="bookmark">#{{$v}}</a>{{end}}</div>
-      <button type="button" class="btn btn-outline-primary float-right btn-sm">Download / Read</button>
+      <a class="btn btn-outline-primary float-right btn-sm" href="/libraries/{{.path}}" target="_blank" rel="contents">Download / Read</a>
     </li>
     {{ end }}
   </ul>
