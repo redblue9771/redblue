@@ -1,19 +1,19 @@
 {{- define "main" }}
 <section>
-  {{ range $key,$value := .Site.Data.libraries }}
-  <h3>{{ $key }}</h3>
+  {{- range $key,$value := .Site.Data.libraries }}
+  <h3 class="mb-3">{{ $key }}</h3>
   <ul>
-    {{ range $value}}
+    {{- range $value }}
     <li id="{{.name}}" class="clearfix mb-3">
       <div>《 {{.name}} 》- {{.author}}</div>
-      {{if ne .description ""}}
-      <div>简述：{{.description}}</div>
-      {{end}}
-      <div class="tags mb-3">标签：{{range $k,$v:=.tag}}<a rel="bookmark">#{{$v}}</a>{{end}}</div>
+      {{- if ne .description ""}}
+      <div class="text-muted">简述：{{.description}}</div>
+      {{end -}}
+      <div class="text-muted tags mb-3">关键词：{{range $k,$v:=.tag}}<a rel="bookmark">{{$v}}</a>{{end}}</div>
       <a class="btn btn-outline-primary float-right btn-sm" href="/libraries/{{.path}}" target="_blank" rel="contents">Download / Read</a>
     </li>
-    {{ end }}
+    {{ end -}}
   </ul>
-  {{ end }}
+  {{ end -}}
 </section>
 {{ end -}}
