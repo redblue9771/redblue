@@ -1,12 +1,19 @@
 {{- define "main" }}
 <section>
-    {{ range readDir "./static/libraries" }}{{$name:=.Name}}
-    <h3>{{ .Name }}</h3>
-       <ul>
-           {{ range readDir (printf "./static/libraries/%s" .Name) }}
-             <li id="{{.Name}}"><a href="/libraries/{{$name}}/{{ .Name | relURL }}" target="_blank" rel="index"> {{ .Name }}</a></li>
-           {{ end }}
-       </ul> 
+  {{ range $key,$value := .Site.Data.libraries }}
+  <h3>{{ $key }}</h3>
+  <ul>
+    {{ range $value}}
+    <li id="{{.name}}" class="clearfix mb-3">
+      <div>《 {{.name}} 》- {{.author}}</div>
+      {{if ne .description ""}}
+      <div>简述：{{.description}}</div>
+      {{end}}
+      <div class="tags mb-3">标签：{{range $k,$v:=.tag}}<a rel="bookmark">#{{$v}}</a>{{end}}</div>
+      <button type="button" class="btn btn-outline-primary float-right btn-sm">Download / Read</button>
+    </li>
     {{ end }}
+  </ul>
+  {{ end }}
 </section>
 {{ end -}}
