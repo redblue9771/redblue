@@ -2,8 +2,8 @@
 title = "团队的从「去中心化」，到扁平化组织的未来"
 date = "2018-11-24 00:00:00 +0800"
 description = ''
-author = "赤琦"
-original = ""
+author = "蛋壳花生"
+original = "https://zhuanlan.zhihu.com/p/42904743"
 tags = ["管理","扁平化"]
 +++
 

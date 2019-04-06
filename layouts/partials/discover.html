@@ -1,6 +1,6 @@
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        {{- range $key,$name := .Site.Data.api.Carousel }} {{if ne $key 0}}
+        {{- range $key,$name := .Site.Data.carousel }} {{if ne $key "Carousel_0"}}
         <div class="carousel-item">
             <a href="{{$name.link}}" target="_blank">
                 <img class="d-block w-100" alt="{{$name.title}}" src="{{$name.cover}}">
