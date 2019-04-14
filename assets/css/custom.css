@@ -1064,6 +1064,10 @@ details[open]+div {
 }
 
 @media (max-width: 575.98px) {
+	div#main-nav:hover{
+		background-color: #448AFF!important;
+	}
+	
 	.trans-img {
 		width: 70%;
 	}
