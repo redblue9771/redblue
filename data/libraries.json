@@ -41,5 +41,18 @@
                 "GFS"
             ]
         }
+    ],
+    "Fuchsia OS":[
+        {
+            "name": "Fuchsia 简介",
+            "author": "许中兴",
+            "path": "pdf/201806fuchsia.pdf",
+            "description": "",
+            "tag": [
+                "Fuchsia",
+                "Google",
+                "操作系统"
+            ]
+        }
     ]
 }
