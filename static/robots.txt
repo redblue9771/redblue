@@ -2,3 +2,7 @@ User-agent: *
 Disallow: /admin/
 Disallow: /bak/
 Disallow: /labs/
+Disallow: /libraries/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /static/
