@@ -1,7 +1,7 @@
 {{- define "main" }}
 <section>
   {{- range $key,$value := .Site.Data.libraries }}
-  <h3 class="mb-3">{{ $key }}</h3>
+  <h3 class="mb-3 text-new">{{ $key }}</h3>
   <ul>
     {{- range $value }}
     <li id="{{.name}}" class="clearfix mb-3">

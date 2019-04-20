@@ -9,8 +9,8 @@ This is a website deployment source for ["https://redblue.fun"](https://redblue.
 ## Built With
 
 * [Hugo](https://github.com/gohugoio/hugo) - A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
-* [BootStrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
-* [BootStrap.Native](https://github.com/thednp/bootstrap.native) - The jQuery plugins for Bootstrap 4 redeveloped with native JavaScript, providing same basic functionality, but lighter in size and delivering higher performance for your application.
+* [Bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+* [Bootstrap.Native](https://github.com/thednp/bootstrap.native) - The jQuery plugins for Bootstrap 4 redeveloped with native JavaScript, providing same basic functionality, but lighter in size and delivering higher performance for your application.
 
 
 ## Showcase
@@ -104,4 +104,4 @@ hugo server
 
 💷 Some website content is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-👉 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+👉 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
