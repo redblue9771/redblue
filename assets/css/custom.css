@@ -612,9 +612,9 @@ img {
 
 .main-area {
 	max-width: 1024px;
-	margin: 0 auto;
-	padding: 1rem;
 	position: relative;
+	margin: 0 auto;
+	padding: 1rem 2rem;
 }
 
 .carousel-control-prev-icon,
@@ -1064,10 +1064,10 @@ details[open]+div {
 }
 
 @media (max-width: 575.98px) {
-	div#main-nav:hover{
-		background-color: #448AFF!important;
+	div#main-nav:hover {
+		background-color: #448AFF !important;
 	}
-	
+
 	.trans-img {
 		width: 70%;
 	}
