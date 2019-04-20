@@ -533,6 +533,17 @@ img {
 	max-width: 100%;
 }
 
+.text-new {
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	color: #2196f3;
+}
+
+.text-new:hover {
+	color: #f44336;
+}
+
 .head a,
 .floor-info footer a {
 	color: #f2f2f2;
@@ -637,8 +648,7 @@ img {
 }
 
 .main-area #blog-aside,
-#blog-single,
-	{
+#blog-single {
 	word-break: break-all;
 	text-align: justify;
 }
