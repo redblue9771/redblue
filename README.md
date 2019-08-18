@@ -2,16 +2,14 @@
 
 This is a website deployment source for ["https://redblue.fun"](https://redblue.fun)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/de542e77-8341-4aac-aeb0-f3b1ab0e4307/deploy-status)](https://app.netlify.com/sites/redblue/deploys)
 ![](https://img.shields.io/github/last-commit/redblue9771/redblue.svg)
 ![](https://img.shields.io/github/license/redblue9771/redblue.svg)
 
 ## Built With
 
-* [Hugo](https://github.com/gohugoio/hugo) - A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
-* [Bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
-* [Bootstrap.Native](https://github.com/thednp/bootstrap.native) - The jQuery plugins for Bootstrap 4 redeveloped with native JavaScript, providing same basic functionality, but lighter in size and delivering higher performance for your application.
-
+- [Hugo](https://github.com/gohugoio/hugo) - A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
+- [Bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+- [Bootstrap.Native](https://github.com/thednp/bootstrap.native) - The jQuery plugins for Bootstrap 4 redeveloped with native JavaScript, providing same basic functionality, but lighter in size and delivering higher performance for your application.
 
 ## Showcase
 
@@ -93,6 +91,7 @@ This is a website deployment source for ["https://redblue.fun"](https://redblue.
 1、 Install and add PATH [Hugo](https://gohugo.io)
 
 2、 Bash
+
 ```bash
 cd $filespace
 hugo server
