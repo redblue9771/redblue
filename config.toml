@@ -13,6 +13,8 @@ pygmentsStyle = "fruity"
 enableRobotsTXT = false
 disableAliases = true
 
+enableGitInfo = true
+
 [params]
 disallow_search_engines = true # set robots.txt to disallow everything
 
