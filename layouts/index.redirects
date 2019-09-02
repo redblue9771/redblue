@@ -1,5 +1,5 @@
 # redirects for Netlify - https://www.netlify.com/docs/redirects/
-{{- range $p := .Site.Pages -}}
+{{- range $p := .Site.RegularPages -}}
 {{- range .Aliases }}
 {{ . }} {{ $p.RelPermalink -}}
 {{- end }}
