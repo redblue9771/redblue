@@ -4,11 +4,10 @@
         max-width: 100%;
         padding: 1rem 0 !important;
     }
-
 </style>
 {{end -}} {{- define "main"}}
 <div class="limit-area text-center index-module-0">
-    <h2>·推荐·</h2>
+    <h2>·&nbsp;推荐&nbsp;·</h2>
     {{- partial "discover.html" . -}}
     <div>
         <div height="20vh,40vh" width="75vw,70vw"></div>
@@ -22,7 +21,7 @@
         <div class="col-md-4 pd-1 text-center bg-color-blue">
             <dl>
                 <dt>
-                    <h4>·博文·</h4>
+                    <h4>·&nbsp;博文&nbsp;·</h4>
                 </dt>
                 {{- range first 5 (where .Site.RegularPages.ByDate.Reverse "Type" "spirits") -}}
                 <dd>
@@ -35,7 +34,7 @@
         <div class="col-md-4 pd-1 text-center bg-color-white">
             <dl id="github-list">
                 <dt>
-                    <h4>·项目·</h4>
+                    <h4>·&nbsp;项目&nbsp;·</h4>
                 </dt>
                 <dd>
                     <p><i class="fa fa-spinner fa-pulse"></i>从 github.com/redblue 拉取中…</p>
@@ -45,7 +44,7 @@
         <div class="col-md-4 pd-1 text-center bg-color-red">
             <dl>
                 <dt>
-                    <h4>·关于·</h4>
+                    <h4>·&nbsp;关于&nbsp;·</h4>
                 </dt>
                 <dd>
                     <p>
@@ -73,5 +72,10 @@
             </dl>
         </div>
     </div>
+</div>
+<div class="limit-area pt-5">
+    <h4 class="d-block text-center">·&nbsp;编码统计&nbsp;·</h4>
+    <figure><embed src="https://wakatime.com/share/@redblue/31eeb3ce-ba04-46d4-be43-9c09edf88c5c.svg"></embed>
+    </figure>
 </div>
 {{end -}}

@@ -81,7 +81,7 @@
         tocItems.forEach(function (item) {
             var targetBounds = item.target.getBoundingClientRect();
             if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 -
-                    BOTTOM_MARGIN)) {
+                BOTTOM_MARGIN)) {
                 pathStart = Math.min(item.pathStart, pathStart);
                 pathEnd = Math.max(item.pathEnd, pathEnd);
                 visibleItems += 1;
@@ -109,7 +109,7 @@
         fetch("https://api.github.com/users/redblue9771/repos?sort=pushed").then(function (response) {
             return response.json();
         }).then(function (data) {
-            $html = "<dt><h4>·项目·</h4></dt>";
+            $html = "<dt><h4>·&nbsp;项目&nbsp;·</h4></dt>";
             for (item of data) {
                 if (!item.fork) {
                     if ($flag < 5) {
