@@ -1,8 +1,8 @@
 {{define "main"}}
 <div class="col-md-12">
-    <div class="row">
-        <h3 style="margin-bottom:1em;">
-            <a href="https://github.com/redblue9771"><i class="fa fa-tags"></i> Repositories</a>
+    <div class="row mb-5">
+        <h3 class="mb-4">
+            <a href="https://github.com/redblue9771" target="_blank"><i class="fa fa-tags"></i> Repositories</a>
         </h3>
         <div class="timeline timeline-single-column" id="github-list">
             <div class="timeline-item">
@@ -19,6 +19,22 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <h3 class="mb-4">
+            <a href="https://gist.github.com/redblue9771" target="_blank"><i class="fa fa-tags"></i> Gist</a>
+        </h3>
+    </div>
+    <div class="row">
+        <ul>
+            {{ $urlPre := "https://api.github.com" }}
+            {{ $gistJ := getJSON $urlPre "/users/redblue9771/gists" }}
+            {{ range first 5 $gistJ }}
+            {{ if .public }}
+            <li><a href="{{ .html_url }}" target="_blank">{{ .description }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
     </div>
 </div>
 {{end}}
