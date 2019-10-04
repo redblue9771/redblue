@@ -11,147 +11,147 @@ tags = ["Linux","嵌入式"]
 
 ### 定义及组成
 
-* 嵌入式系统是以**应用**为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗有严格要求的专用型计算机系统
+- 嵌入式系统是以**应用**为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗有严格要求的专用型计算机系统
 
-* 组成：嵌入式微处理器、外围硬件设备、嵌入式操作系统、特定的应用程序
+- 组成：嵌入式微处理器、外围硬件设备、嵌入式操作系统、特定的应用程序
 
-* 三要素：**嵌入性**、**专用性**、**计算机系统**
+- 三要素：**嵌入性**、**专用性**、**计算机系统**
 
-* 嵌入式系统的开发模式分为：本地开发和交叉开发
+- 嵌入式系统的开发模式分为：本地开发和交叉开发
 
-* 构建交叉编译环境的主要内容：构建交叉编译器、串口、网络的通信方式
+- 构建交叉编译环境的主要内容：构建交叉编译器、串口、网络的通信方式
 
-* 构建交叉编译环境的硬件设备：JTAG 线、串口、网络线
+- 构建交叉编译环境的硬件设备：JTAG 线、串口、网络线
 
-* 串口的作用：实现双向通信
+- 串口的作用：实现双向通信
 
-* 网络的作用：实验资源共享和数据通信
+- 网络的作用：实验资源共享和数据通信
 
-* 系统设备驱动的分类：
+- 系统设备驱动的分类：
 
-    * 字符类设备：例如键盘、LED 等，目的是为了操作方便
+  - 字符类设备：例如键盘、LED 等，目的是为了操作方便
 
-    * 块设备：FLASH、DOC 等，经过缓存，给系统的存储提供优化
+  - 块设备：FLASH、DOC 等，经过缓存，给系统的存储提供优化
 
-    * 网络设备：实现多个系统通信
+  - 网络设备：实现多个系统通信
 
-    * 其他设备
+  - 其他设备
 
-* 设备驱动的基本结构：
+- 设备驱动的基本结构：
 
-    * 驱动程序的注册和注销
+  - 驱动程序的注册和注销
 
-    * 设备的打开与释放
+  - 设备的打开与释放
 
-    * 设备的读写操作
+  - 设备的读写操作
 
-    * 设备的控制操作
+  - 设备的控制操作
 
-    * 设备的中断和轮询处理
+  - 设备的中断和轮询处理
 
 ### ARM 的硬件结构
 
-* ARM 是 32 位 **RISC** 处理器
+- ARM 是 32 位 **RISC** 处理器
 
-* 类型：ARM 710系列、ARM 940T、920T系列、StrongARM
+- 类型：ARM 710 系列、ARM 940T、920T 系列、StrongARM
 
-* S3C6410 有 **10** 组外部中断，有 17 组外部I/O引脚,GPA ~ GPQ
+- S3C6410 有 **10** 组外部中断，有 17 组外部 I/O 引脚,GPA ~ GPQ
 
-* S3C6410 寄存器：
+- S3C6410 寄存器：
 
-    * GPxCON：端口配置寄存器
+  - GPxCON：端口配置寄存器
 
-    * GPxDAT：端口数据寄存器
+  - GPxDAT：端口数据寄存器
 
-    * GPxPUD：上/下拉寄存器
+  - GPxPUD：上/下拉寄存器
 
-    * GPxCONSLP：睡眠模式配置寄存器
+  - GPxCONSLP：睡眠模式配置寄存器
 
-    * GPxPUDSLP：睡眠模式上/下拉寄存器
+  - GPxPUDSLP：睡眠模式上/下拉寄存器
 
-* S3C6410 的中断控制寄存器类型：**EINT 控制寄存器**；其工作模式是：**高/低电平**
+- S3C6410 的中断控制寄存器类型：**EINT 控制寄存器**；其工作模式是：**高/低电平**
 
-* BootLoader 的两种模式：启动加载模式和下载模式
+- BootLoader 的两种模式：启动加载模式和下载模式
 
-    * 作用：在操作系统内核运行之前，初始硬件设备，建立内存的寻址空间映射，划出操作系统的内存地址范围，加载操作系统到 RAM 中让系统自举启动
+  - 作用：在操作系统内核运行之前，初始硬件设备，建立内存的寻址空间映射，划出操作系统的内存地址范围，加载操作系统到 RAM 中让系统自举启动
 
-    * Stage 1：
-        
-        1、 硬件设备的初始化：屏蔽所有中断、设置 CPU 速度和时钟频率、RAM 地址的初始化
+  - Stage 1：
 
-        2、 初始化 Stage 2 的内存地址范围
+    1、 硬件设备的初始化：屏蔽所有中断、设置 CPU 速度和时钟频率、RAM 地址的初始化
 
-        3、 加载 Stage 2 到 RAM 中
+    2、 初始化 Stage 2 的内存地址范围
 
-        4、 设置堆栈
+    3、 加载 Stage 2 到 RAM 中
 
-        5、 跳转到 Stage 2 的 c 入口
+    4、 设置堆栈
 
-    * Stage 2：
+    5、 跳转到 Stage 2 的 c 入口
 
-        1、 初始化需要用到的硬件设备
+  - Stage 2：
 
-        2、 检测系统的内存映射
+    1、 初始化需要用到的硬件设备
 
-        3、 将 kernel 映像和根文件系统映像加载到 RAM
+    2、 检测系统的内存映射
 
-        4、 设置启动参数
+    3、 将 kernel 映像和根文件系统映像加载到 RAM
 
-        5、 调用内核
-        
-* 移植：将源代码编译到不同的硬件设备平台运行
+    4、 设置启动参数
 
-    * 内核移植：根据硬件平台对内核进行增加模块、裁剪、配置并重新编译以实现对硬件平台的支持
+    5、 调用内核
 
-        1、 修改 Kconfig 文件
+- 移植：将源代码编译到不同的硬件设备平台运行
 
-        2、 修改 makefile 文件
+  - 内核移植：根据硬件平台对内核进行增加模块、裁剪、配置并重新编译以实现对硬件平台的支持
 
-        3、 make menuconfig 配置
+    1、 修改 Kconfig 文件
 
-        4、 make zimage 生成映像
+    2、 修改 makefile 文件
 
-        5、 烧写映像文件到开发板
+    3、 make menuconfig 配置
+
+    4、 make zimage 生成映像
+
+    5、 烧写映像文件到开发板
 
 ### Linux 文件系统结构
 
-* /bin 存放二进制文件和普通用户常用的命令
+- /bin 存放二进制文件和普通用户常用的命令
 
-* /boot 存放内核和引导文件（例如 GRUB）
+- /boot 存放内核和引导文件（例如 GRUB）
 
-* /dev 存放设备文件
+- /dev 存放设备文件
 
-* /etc 存放系统配置文件，该目录有重要文件，例如`init.d`
+- /etc 存放系统配置文件，该目录有重要文件，例如`init.d`
 
-* /home 普通用户的默认目录
+- /home 普通用户的默认目录
 
-* /lib 存放库文件
+- /lib 存放库文件
 
-* /lost+found 存放系统奔溃或者意外关机产生的碎片文件
+- /lost+found 存放系统奔溃或者意外关机产生的碎片文件
 
-* /mnt 存储设备的挂载目录
+- /mnt 存储设备的挂载目录
 
-* /opt 可选目录，即用户可以自定义的安装目录
+- /opt 可选目录，即用户可以自定义的安装目录
 
-* /proc 系统运行时的内核和进程信息
+- /proc 系统运行时的内核和进程信息
 
-* /root 超级权限 root 用户的目录
+- /root 超级权限 root 用户的目录
 
-* /sbin 存放仅超级权限用户可以执行的管理系统的命令
+- /sbin 存放仅超级权限用户可以执行的管理系统的命令
 
-* /tmp 存放程序运行时的临时文件
+- /tmp 存放程序运行时的临时文件
 
-* /usr 系统存放与程序相关的文件
+- /usr 系统存放与程序相关的文件
 
-* /sys 存放系统核心文件
+- /sys 存放系统核心文件
 
-* /media 用于挂载
+- /media 用于挂载
 
-* /cdrom 光驱目录
+- /cdrom 光驱目录
 
-* /var 大文件的溢出区
+- /var 大文件的溢出区
 
-* /usr/local 默认的编译安装目录
+- /usr/local 默认的编译安装目录
 
 ### 常用命令
 
@@ -300,6 +300,7 @@ sqlite3
 ```bash
 minicom
 ```
+
 按下 o 键，进行串口的配置。其中波特率为 115200，8bit，无流控制
 
 保存，退出
@@ -338,7 +339,7 @@ minicom
 
 3、 `service nfs restart`
 
-4、 `ifconfig` 查看网卡获得ip
+4、 `ifconfig` 查看网卡获得 ip
 
 5、 `mount ip：`
 
@@ -360,7 +361,7 @@ static struct file_operations keybd_fops = {
     read : keybd_read,
     release : keybd_release,
 };
-int keybd_open(struct inode *inode, struct file *filp) 
+int keybd_open(struct inode *inode, struct file *filp)
 {
     printk("open ok\n");
     return 0;
@@ -388,8 +389,8 @@ static void __exit keybd_exit(void)
 {
     devfs_unregister(devfs_keybd);
 }
-module_init(keybd_init); 
-module_exit(keybd_exit); 
+module_init(keybd_init);
+module_exit(keybd_exit);
 ```
 
 ### 按键驱动
@@ -404,7 +405,7 @@ void init_dev(void)
     s3c_gpio_cfgpin(key_table[3], S3C_GPIO_SFN(2));
     s3c_gpio_cfgpin(key_table[4], S3C_GPIO_SFN(2));
     s3c_gpio_cfgpin(key_table[5], S3C_GPIO_SFN(2));
-    
+
     unsigned int tmp;
     tmp = readl(S3C64XX_GPNCON);
     printk("%x\n", tmp);
@@ -463,7 +464,7 @@ free_irq(key_irqs[i].irq, (void *)&key_irqs[i]);
 
 1、 开发板上电，进入 NFS
 
-2、 将 led_app 和 led.ko 拷贝到挂载的NFS文件系统中
+2、 将 led_app 和 led.ko 拷贝到挂载的 NFS 文件系统中
 
 3、 切换到串口终端 `ls` 查看是否拷贝成功
 
@@ -478,6 +479,7 @@ free_irq(key_irqs[i].irq, (void *)&key_irqs[i]);
 ### makefile 注释样例
 
 #### 样例 1
+
 ```makefile
 edit: main.o kbd.o command.o
 # 定义目标文件 edit 和源文件 main.o 等
@@ -500,7 +502,9 @@ clean:
     rm edit main.o kbd.o command.o display.o insert.o
     # 删除目标文件
 ```
+
 #### 样例 2
+
 ```makefile
 CC = /opt/host/armv4l/bin/armv4l-unknown-linux-gcc
 # 定义 gcc
@@ -519,5 +523,5 @@ led.o: led.c
 clean:
 # 定义clean
     -rm -f *.o
-    # 删除中间文件  
+    # 删除中间文件
 ```

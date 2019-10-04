@@ -27,29 +27,27 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
 该子系统不能运行所有 Linux 软件，例如那些图形用户界面，以及那些需要未实现的 Linux 内核服务的软件。 不过，这可以用在外部 X 服务器上运行的图形 X 窗口系统缓解。
 
-*Tip：适用于 Windows 1607 (build 14316)及其以上版本，需要开启开发者模式，并且最好是专业版以上版本，具体支持情况请 Google*
-
-
+_Tip：适用于 Windows 1607 (build 14316)及其以上版本，需要开启开发者模式，并且最好是专业版以上版本，具体支持情况请 Google_
 
 ## 🕵🏻 简单两步开启 WSL
 
-####  一、启用 适用于 Linux 的 Windows 子系统
+#### 一、启用 适用于 Linux 的 Windows 子系统
 
-1. 控制面板 
+1. 控制面板
 
-2. 程序和卸载 
+2. 程序和卸载
 
 3. 启用或关闭 windows 功能
 
-    [![](/img/wsl0.jpg)](/img/wsl0.jpg)
+   [![](/img/wsl0.jpg)](/img/wsl0.jpg)
 
-5. 找不到的话尝试开启开发者模式
+4. 找不到的话尝试开启开发者模式
 
-    windows 设置 -> 更新与安全 -> 开发者模式
+   windows 设置 -> 更新与安全 -> 开发者模式
 
-    [![](/img/wsl7.png)](/img/wsl7.png)
+   [![](/img/wsl7.png)](/img/wsl7.png)
 
-4. 重启系统
+5. 重启系统
 
 #### 二、安装你喜欢的发行版
 
@@ -59,42 +57,41 @@ WSL 提供了一个微软开发的 Linux 兼容内核接口（不包含 Linux �
 
 3. 安装你喜欢的任意发行版
 
-    *Windows目前只提供 Debian 系的发行版，当然 SUSE 也很香*
+   _Windows 目前只提供 Debian 系的发行版，当然 SUSE 也很香_
 
-     [![](/img/wsl1.jpg)](/img/wsl1.jpg)
+   [![](/img/wsl1.jpg)](/img/wsl1.jpg)
 
-     🔥 推荐使用轻量、安全、快速、对 Web 开发友好的 Alpine Linux [https://github.com/agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
+   🔥 推荐使用轻量、安全、快速、对 Web 开发友好的 Alpine Linux [https://github.com/agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
 
 4. 打开你的 Linux 会出现 installing ……
 
-    *安装失败可以重新打开，或者卸载重新安装，再或者重新开启一下 [启用 适用于 Linux 的 Windows 子系统](#启用-适用于-linux-的-windows-子系统)*
+   _安装失败可以重新打开，或者卸载重新安装，再或者重新开启一下 [启用 适用于 Linux 的 Windows 子系统](#启用-适用于-linux-的-windows-子系统)_
 
 5. 输入用户名、密码即可开启你的 Linux 之旅
-
 
 ## 💪🏻 WSL 使用、管理、在 VScode 中使用
 
 #### 快速访问
 
-* 快速启动 bash
+- 快速启动 bash
 
-    CMD 或者 PowerShell 中直接输入 bash 或者 wsl 回车
+  CMD 或者 PowerShell 中直接输入 bash 或者 wsl 回车
 
-    [![](/img/wsl2.png)](/img/wsl2.png)
+  [![](/img/wsl2.png)](/img/wsl2.png)
 
-* 运行 bash
+- 运行 bash
 
-    win + R 输入 bash 或者 wsl 回车
+  win + R 输入 bash 或者 wsl 回车
 
-    [![](/img/wsl3.png)](/img/wsl3.png)
+  [![](/img/wsl3.png)](/img/wsl3.png)
 
-* 在目录中快速打开
+- 在目录中快速打开
 
-    在目录下`shift + 鼠标右键`即可快速调出`在此处打开 Linux Shell`
+  在目录下`shift + 鼠标右键`即可快速调出`在此处打开 Linux Shell`
 
-    *仅支持 Windows 1803 及以上*
+  _仅支持 Windows 1803 及以上_
 
-     [![](/img/wsl6.png)](/img/wsl6.png)
+  [![](/img/wsl6.png)](/img/wsl6.png)
 
 #### WSL 的路径、与 win 的关系
 
@@ -116,32 +113,32 @@ WSL 是与 Windows 共享磁盘、环境 PATH 的，在 wsl 中输入`export`
 
 2. 输入 `wslconfig` 回车即可调出并管理 Windows 上所有的 Linux 分发
 
-    ```
-    Windows PowerShell
-    版权所有 (C) Microsoft Corporation。保留所有权利。
+   ```
+   Windows PowerShell
+   版权所有 (C) Microsoft Corporation。保留所有权利。
 
-    PS C:\Windows\system32> wslconfig
-    对 Windows 上的 Linux 子系统进行操作管理
+   PS C:\Windows\system32> wslconfig
+   对 Windows 上的 Linux 子系统进行操作管理
 
-    用途：
-        /l, /list [/all]
-            列出已注册的分发版。
-            /all - 有选择地列出所有分发版，包括
-                当前正在安装或卸载的分发版。
+   用途：
+       /l, /list [/all]
+           列出已注册的分发版。
+           /all - 有选择地列出所有分发版，包括
+               当前正在安装或卸载的分发版。
 
-        /s, /setdefault <DistributionName>
-            将该分发版设为默认。
+       /s, /setdefault <DistributionName>
+           将该分发版设为默认。
 
-        /t, /terminate <DistributionName>
-            终止分发。
+       /t, /terminate <DistributionName>
+           终止分发。
 
-        /u, /unregister <DistributionName>
-            取消分发版注册。
+       /u, /unregister <DistributionName>
+           取消分发版注册。
 
-        /upgrade <DistributionName>
-            将分发版升级至 WslFs 文件系统格式。
-    PS C:\Windows\system32>
-    ```
+       /upgrade <DistributionName>
+           将分发版升级至 WslFs 文件系统格式。
+   PS C:\Windows\system32>
+   ```
 
 #### VSCode 配置
 
